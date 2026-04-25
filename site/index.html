@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>江苏演唱会·集</title>
+    <title>演唱会·集</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -93,9 +93,28 @@
         }
         .update-info strong { color: var(--green); }
 
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            background: rgba(233, 69, 96, 0.1);
+            border: 1px solid rgba(233, 69, 96, 0.3);
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .location-badge:hover {
+            background: rgba(233, 69, 96, 0.2);
+        }
+        .location-badge .loc-icon { font-size: 15px; }
+
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 16px;
             max-width: 1400px;
             margin: 24px auto 0;
@@ -116,9 +135,61 @@
         .stat-card .value.blue { color: var(--blue); }
         .stat-card .value.yellow { color: var(--yellow); }
 
-        .filter-bar {
+        /* 省份切换栏 */
+        .province-bar {
             max-width: 1400px;
             margin: 24px auto 0;
+            padding: 0 40px;
+        }
+        .province-bar-inner {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 16px 20px;
+        }
+        .province-bar-label {
+            font-size: 13px;
+            color: var(--text2);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .province-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .province-tag {
+            padding: 6px 14px;
+            border-radius: 16px;
+            font-size: 13px;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            color: var(--text2);
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .province-tag:hover {
+            border-color: var(--primary);
+            color: var(--text);
+        }
+        .province-tag.active {
+            background: rgba(233, 69, 96, 0.15);
+            border-color: var(--primary);
+            color: var(--primary);
+            font-weight: 600;
+        }
+        .province-tag .tag-count {
+            font-size: 11px;
+            margin-left: 4px;
+            opacity: 0.7;
+        }
+
+        .filter-bar {
+            max-width: 1400px;
+            margin: 20px auto 0;
             padding: 0 40px;
             display: flex;
             gap: 12px;
@@ -152,6 +223,9 @@
             padding: 0 40px;
             color: var(--text2);
             font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         .results-info strong { color: var(--text); }
 
@@ -311,91 +385,6 @@
         .toast.success { background: var(--green); color: #000; }
         .toast.error { background: var(--red); color: #fff; }
 
-        .city-chart {
-            max-width: 1400px;
-            margin: 24px auto 0;
-            padding: 0 40px;
-        }
-        .city-chart-inner {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 24px;
-        }
-        .city-chart h3 {
-            font-size: 16px;
-            margin-bottom: 16px;
-            color: var(--text2);
-        }
-        .city-bars { display: flex; flex-direction: column; gap: 10px; }
-        .city-bar {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            cursor: pointer;
-        }
-        .city-bar .name {
-            width: 60px;
-            text-align: right;
-            font-size: 14px;
-            flex-shrink: 0;
-            transition: color 0.2s;
-        }
-        .city-bar:hover .name,
-        .city-bar.active .name {
-            color: var(--primary);
-        }
-        .city-bar .bar-bg {
-            flex: 1;
-            height: 28px;
-            background: var(--surface2);
-            border-radius: 6px;
-            overflow: hidden;
-        }
-        .city-bar .bar-fill {
-            height: 100%;
-            border-radius: 6px;
-            background: linear-gradient(90deg, var(--primary), var(--accent2));
-            transition: width 0.6s ease, filter 0.2s, transform 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 8px;
-            font-size: 12px;
-            font-weight: 600;
-            min-width: 30px;
-        }
-        .city-bar .bar-fill:hover {
-            filter: brightness(1.3);
-            transform: scaleY(1.08);
-        }
-        .city-bar .bar-fill.active {
-            filter: brightness(1.4);
-            box-shadow: 0 0 12px var(--primary-glow);
-        }
-
-        .loading-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(15, 15, 26, 0.85);
-            z-index: 999;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 16px;
-        }
-        .loading-overlay.show { display: flex; }
-        .spinner {
-            width: 40px; height: 40px;
-            border: 3px solid var(--border);
-            border-top-color: var(--primary);
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        .loading-text { color: var(--text2); font-size: 14px; }
-
         .auto-refresh-bar {
             max-width: 1400px;
             margin: 0 auto 40px;
@@ -412,26 +401,16 @@
             font-variant-numeric: tabular-nums;
         }
 
-        /* 骨架屏 */
-        .skeleton {
-            background: linear-gradient(90deg, var(--surface) 25%, var(--surface2) 50%, var(--surface) 75%);
-            background-size: 200% 100%;
-            animation: shimmer 1.5s infinite;
-            border-radius: 8px;
-        }
-        @keyframes shimmer {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-
         @media (max-width: 768px) {
             .header { padding: 20px; }
-            .stats-grid, .filter-bar, .results-info, .concert-list, .city-chart, .auto-refresh-bar {
+            .stats-grid, .filter-bar, .results-info, .concert-list, .province-bar, .auto-refresh-bar {
                 padding: 0 16px;
             }
             .concert-list { grid-template-columns: 1fr; }
             .card-img, .card-img-placeholder { width: 70px; height: 95px; }
             .header-content { flex-direction: column; align-items: flex-start; }
+            .province-tags { gap: 6px; }
+            .province-tag { padding: 5px 10px; font-size: 12px; }
         }
     </style>
 </head>
@@ -441,30 +420,38 @@
     <header class="header">
         <div class="header-content">
             <div>
-                <h1>🎵 江苏<span>演唱会·集</span></h1>
-                <p class="subtitle">实时追踪江苏地区演唱会场次与开票信息</p>
+                <h1>🎵 <span>演唱会·集</span></h1>
+                <p class="subtitle">全国演唱会信息聚合，自动定位你所在省份</p>
             </div>
             <div class="header-right">
-                <span class="update-info">更新时间：<strong id="updateTime">加载中...</strong></span>
+                <span class="location-badge" id="locationBadge" title="点击查看全部省份">
+                    <span class="loc-icon">📍</span>
+                    <span id="locationText">定位中...</span>
+                </span>
+                <span class="update-info">更新：<strong id="updateTime">加载中...</strong></span>
             </div>
         </div>
     </header>
 
     <section class="stats-grid" id="statsGrid">
         <div class="stat-card">
-            <div class="label">演唱会总数</div>
+            <div class="label">当前显示</div>
             <div class="value primary" id="totalCount">-</div>
         </div>
         <div class="stat-card">
             <div class="label">覆盖城市</div>
             <div class="value blue" id="cityCount">-</div>
         </div>
+        <div class="stat-card">
+            <div class="label">全国总计</div>
+            <div class="value yellow" id="nationalCount">-</div>
+        </div>
     </section>
 
-    <section class="city-chart" id="cityChart" style="display:none;">
-        <div class="city-chart-inner">
-            <h3>📍 城市分布</h3>
-            <div class="city-bars" id="cityBars"></div>
+    <section class="province-bar" id="provinceBar" style="display:none;">
+        <div class="province-bar-inner">
+            <div class="province-bar-label">🌏 选择省份</div>
+            <div class="province-tags" id="provinceTags"></div>
         </div>
     </section>
 
@@ -502,9 +489,69 @@
 
     <script>
         let allConcerts = [];
-        let cities = {};
-        let currentCityFilter = '';
+        let currentConcerts = [];
+        let provinces = {};
+        let currentProvince = '';
         const DATA_URL = 'data.json';
+
+        // 英文省份 → 中文映射
+        const PROVINCE_EN_CN = {
+            "Beijing": "北京", "Shanghai": "上海", "Tianjin": "天津", "Chongqing": "重庆",
+            "Hebei": "河北", "Shanxi": "山西", "Liaoning": "辽宁", "Jilin": "吉林",
+            "Heilongjiang": "黑龙江", "Jiangsu": "江苏", "Zhejiang": "浙江", "Anhui": "安徽",
+            "Fujian": "福建", "Jiangxi": "江西", "Shandong": "山东", "Henan": "河南",
+            "Hubei": "湖北", "Hunan": "湖南", "Guangdong": "广东", "Hainan": "海南",
+            "Sichuan": "四川", "Guizhou": "贵州", "Yunnan": "云南", "Shaanxi": "陕西",
+            "Gansu": "甘肃", "Qinghai": "青海", "Taiwan": "台湾",
+            "Inner Mongolia": "内蒙古", "Guangxi": "广西", "Tibet": "西藏", "Xinjiang": "新疆",
+            "Ningxia": "宁夏", "Hong Kong": "香港", "Macau": "澳门", "Macau": "澳门",
+        };
+
+        // IP 定位 - 全部 HTTPS + CORS 兼容
+        async function detectLocation() {
+            const apis = [
+                // freeipapi.com（免费，HTTPS，CORS *，返回英文省份名）
+                async () => {
+                    const resp = await fetch('https://freeipapi.com/api/json');
+                    const data = await resp.json();
+                    return data.regionName || '';
+                },
+                // ipregistry.co（试用，HTTPS，CORS *）
+                async () => {
+                    const resp = await fetch('https://api.ipregistry.co/?key=tryout');
+                    const data = await resp.json();
+                    return data.location?.region?.name || '';
+                },
+            ];
+
+            for (const api of apis) {
+                try {
+                    const provinceEn = await api();
+                    if (provinceEn) {
+                        // 英文 → 中文
+                        return PROVINCE_EN_CN[provinceEn]
+                            || PROVINCE_EN_CN[provinceEn.replace(/\s+Sheng$/, '').replace(/\s+SAR$/, '')]
+                            || provinceEn;
+                    }
+                } catch {}
+            }
+            return '';
+        }
+
+        // 匹配省份名（支持中文直接匹配）
+        function matchProvince(detected) {
+            if (!detected) return '';
+            // 直接在已知的省份列表中查找
+            for (const p of Object.keys(provinces)) {
+                if (p === detected) return p;
+            }
+            // 去掉常见后缀再匹配
+            let clean = detected.replace(/[省市自治区壮族回族维吾尔特别行政区ShengSAR]+$/, '').trim();
+            for (const p of Object.keys(provinces)) {
+                if (p === clean || p.includes(clean) || clean.includes(p)) return p;
+            }
+            return '';
+        }
 
         function getStatusClass(status) {
             if (status === '预售') return 'status-presale';
@@ -550,68 +597,42 @@
                 </a>`;
         }
 
-        function renderPage(concerts, updateTime) {
-            // 更新时间
-            document.getElementById('updateTime').textContent = updateTime || '暂无';
+        function switchProvince(province) {
+            currentProvince = province;
 
-            // 统计
-            cities = {};
-            concerts.forEach(c => {
+            // 更新标签样式
+            document.querySelectorAll('.province-tag').forEach(tag => {
+                tag.classList.toggle('active', tag.dataset.province === province);
+            });
+
+            // 筛选数据
+            if (province) {
+                currentConcerts = allConcerts.filter(c => c.province === province);
+                document.getElementById('locationBadge').querySelector('#locationText').textContent = province;
+            } else {
+                currentConcerts = allConcerts;
+                document.getElementById('locationBadge').querySelector('#locationText').textContent = '全国';
+            }
+
+            // 更新统计
+            const cities = {};
+            currentConcerts.forEach(c => {
                 const city = c.city || '未知';
                 cities[city] = (cities[city] || 0) + 1;
             });
-
-            document.getElementById('totalCount').textContent = concerts.length;
+            document.getElementById('totalCount').textContent = currentConcerts.length;
             document.getElementById('cityCount').textContent = Object.keys(cities).length;
 
-            // 城市分布图
-            const cityChart = document.getElementById('cityChart');
-            const cityBars = document.getElementById('cityBars');
-            if (Object.keys(cities).length > 0) {
-                cityChart.style.display = '';
-                const sorted = Object.entries(cities).sort((a, b) => b[1] - a[1]);
-                const maxCount = sorted[0][1];
-                cityBars.innerHTML = sorted.map(([city, count]) => `
-                    <div class="city-bar" data-city="${city}" onclick="filterByCity('${city}')">
-                        <span class="name">${city}</span>
-                        <div class="bar-bg">
-                            <div class="bar-fill" style="width: ${count / maxCount * 100}%">${count}</div>
-                        </div>
-                    </div>
-                `).join('');
-            }
-
-            // 城市筛选下拉
+            // 更新城市下拉
             const filterCity = document.getElementById('filterCity');
-            const currentVal = filterCity.value;
             filterCity.innerHTML = '<option value="">全部城市</option>' +
                 Object.keys(cities).sort().map(city => `<option value="${city}">${city}</option>`).join('');
-            filterCity.value = currentVal;
+            filterCity.value = '';
 
             // 显示筛选栏
             document.getElementById('filterBar').style.display = '';
 
-            // 渲染卡片
-            allConcerts = concerts;
             applyFilter();
-        }
-
-        function filterByCity(city) {
-            const select = document.getElementById('filterCity');
-            if (currentCityFilter === city) {
-                select.value = '';
-                currentCityFilter = '';
-            } else {
-                select.value = city;
-                currentCityFilter = city;
-            }
-            document.querySelectorAll('.city-bar').forEach(bar => {
-                const isActive = bar.dataset.city === currentCityFilter;
-                bar.classList.toggle('active', isActive);
-                bar.querySelector('.bar-fill').classList.toggle('active', isActive);
-            });
-            applyFilter();
-            document.getElementById('resultsInfo').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         function applyFilter() {
@@ -619,15 +640,7 @@
             const status = document.getElementById('filterStatus').value;
             const keyword = document.getElementById('filterKeyword').value.toLowerCase();
 
-            currentCityFilter = city;
-            document.querySelectorAll('.city-bar').forEach(bar => {
-                const isActive = bar.dataset.city === currentCityFilter;
-                bar.classList.toggle('active', isActive);
-                const fill = bar.querySelector('.bar-fill');
-                if (fill) fill.classList.toggle('active', isActive);
-            });
-
-            const filtered = allConcerts.filter(c => {
+            const filtered = currentConcerts.filter(c => {
                 if (city && c.city !== city) return false;
                 if (status && c.status !== status) return false;
                 if (keyword && !(c.name || '').toLowerCase().includes(keyword) &&
@@ -642,13 +655,14 @@
                 list.innerHTML = `
                     <div class="empty-state" style="grid-column:1/-1;">
                         <div class="icon">🔍</div>
-                        <p>没有匹配的演唱会</p>
+                        <p>当前省份暂无匹配的演唱会</p>
                     </div>`;
                 info.innerHTML = `共 <strong>0</strong> 场匹配结果`;
                 return;
             }
 
-            info.innerHTML = `共 <strong>${filtered.length}</strong> 场演唱会`;
+            info.innerHTML = `<span>共 <strong>${filtered.length}</strong> 场演唱会</span>
+                <span style="font-size:12px;">当前：${currentProvince || '全国'}</span>`;
             list.innerHTML = filtered.map(renderCard).join('');
         }
 
@@ -691,22 +705,55 @@
                 const resp = await fetch(DATA_URL + '?t=' + Date.now());
                 const result = await resp.json();
                 if (result.total !== allConcerts.length) {
-                    showToast(`🎶 发现更新：${result.total} 场，页面即将刷新`, 'success');
+                    showToast(`🎶 数据已更新：${result.total} 场，页面即将刷新`, 'success');
                     setTimeout(() => location.reload(), 2000);
                 } else {
                     showToast('✅ 已自动检查，暂无新数据', 'success');
                 }
-            } catch (e) {
-                // 静默
-            }
+            } catch (e) {}
         }
+
+        // 定位徽章点击 → 切换回全国
+        document.getElementById('locationBadge').addEventListener('click', () => {
+            switchProvince('');
+        });
 
         // 页面加载
         async function init() {
             try {
                 const resp = await fetch(DATA_URL + '?t=' + Date.now());
                 const data = await resp.json();
-                renderPage(data.concerts || [], data.update_time || '');
+                allConcerts = data.concerts || [];
+                provinces = data.provinces || {};
+
+                document.getElementById('updateTime').textContent = data.update_time || '暂无';
+                document.getElementById('nationalCount').textContent = allConcerts.length;
+
+                // 渲染省份标签
+                const provinceBar = document.getElementById('provinceBar');
+                const provinceTags = document.getElementById('provinceTags');
+                const sortedProvinces = Object.entries(provinces).sort((a, b) => b[1] - a[1]);
+                provinceTags.innerHTML = `<span class="province-tag" data-province="" onclick="switchProvince('')">全国</span>` +
+                    sortedProvinces.map(([p, count]) =>
+                        `<span class="province-tag" data-province="${p}" onclick="switchProvince('${p}')">${p}<span class="tag-count">${count}</span></span>`
+                    ).join('');
+                provinceBar.style.display = '';
+
+                // IP 定位
+                const detected = await detectLocation();
+                const matched = matchProvince(detected);
+                if (matched && provinces[matched]) {
+                    document.getElementById('locationText').textContent = matched;
+                    switchProvince(matched);
+                    showToast(`📍 已定位到${matched}，共 ${provinces[matched]} 场演唱会`, 'success');
+                } else {
+                    document.getElementById('locationText').textContent = '全国';
+                    switchProvince('');
+                    if (detected) {
+                        document.getElementById('locationText').textContent = `${detected}(暂无数据)`;
+                    }
+                }
+
                 startAutoRefresh();
             } catch (e) {
                 document.getElementById('concertList').innerHTML = `
