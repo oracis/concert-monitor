@@ -576,8 +576,21 @@
             "Macau": "澳门", "Hong Kong": "香港",
         };
 
-        // IP 定位：线上用 CF /cdn-cgi/trace，本地用 dev_server.py 模拟同一接口
+        // IP 定位：优先用 ipwho.is（不受 CDN 影响），CF trace 作为 fallback
         async function detectLocation() {
+            // 方案1: ipwho.is - 免费、无需 key、基于真实 IP
+            try {
+                const resp = await fetch('https://ipwho.is/');
+                if (resp.ok) {
+                    const data = await resp.json();
+                    if (data.success && data.region) {
+                        return EN_PROVINCE_TO_CN[data.region] || data.region;
+                    }
+                }
+            } catch (e) {
+                console.warn('ipwho.is 定位失败，尝试 CF trace:', e);
+            }
+            // 方案2: CF /cdn-cgi/trace（可能在 CDN 节点处返回不准确结果）
             try {
                 const resp = await fetch('/cdn-cgi/trace');
                 const text = await resp.text();
@@ -588,7 +601,7 @@
                 }
                 if (loc) return LOC_CODE_TO_PROVINCE[loc] || loc;
             } catch (e) {
-                console.warn('定位失败:', e);
+                console.warn('CF trace 定位失败:', e);
             }
             return '';
         }
