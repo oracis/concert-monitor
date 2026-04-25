@@ -638,8 +638,7 @@
             const hasMulti = c.url2;
             // 多源时也用 <a> 标签，直接点击跳到最优平台
             const href = `href="${c.url || '#'}" target="_blank" rel="noopener noreferrer"`;
-            const source2Name = c.source2 || '其他';
-            const source2Label = source2Name.replace('网', '');
+            const source2Label = c.source2 || '其他';
             const buyLinks = hasMulti
                 ? `<span class="card-footer-link" onclick="event.stopPropagation();window.open('${c.url2}','_blank')">${source2Label}</span>`
                 : '';
