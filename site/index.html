@@ -564,61 +564,46 @@
             "NX": "宁夏", "XJ": "新疆", "XZ": "西藏", "TW": "台湾",
             "MO": "澳门", "HK": "香港",
         };
-        // 英文省份名（ipwho.is region 字段）→ 中文省份
-        const EN_PROVINCE_TO_CN = {
-            "Beijing": "北京", "Shanghai": "上海", "Tianjin": "天津", "Chongqing": "重庆",
-            "Hebei": "河北", "Shanxi": "山西", "Inner Mongolia": "内蒙古", "Liaoning": "辽宁", "Jilin": "吉林",
-            "Heilongjiang": "黑龙江", "Jiangsu": "江苏", "Zhejiang": "浙江", "Anhui": "安徽", "Fujian": "福建",
-            "Jiangxi": "江西", "Shandong": "山东", "Henan": "河南", "Hubei": "湖北", "Hunan": "湖南",
-            "Guangdong": "广东", "Guangxi": "广西", "Hainan": "海南", "Sichuan": "四川", "Guizhou": "贵州",
-            "Yunnan": "云南", "Shaanxi": "陕西", "Gansu": "甘肃", "Qinghai": "青海",
-            "Ningxia": "宁夏", "Xinjiang": "新疆", "Tibet": "西藏", "Taiwan": "台湾",
-            "Macau": "澳门", "Hong Kong": "香港",
-        };
+        // JSONP 方式调用 pconline IP 定位（国内最快、最稳定）
+        function detectLocationJsonp() {
+            return new Promise((resolve) => {
+                const timeout = setTimeout(() => {
+                    console.warn('pconline IP 定位超时');
+                    resolve('');
+                }, 4000);
 
-        // IP 定位：带超时，防卡死
-        async function fetchWithTimeout(url, timeout = 3000) {
-            const controller = new AbortController();
-            const timer = setTimeout(() => controller.abort(), timeout);
-            try {
-                const resp = await fetch(url, { signal: controller.signal });
-                clearTimeout(timer);
-                return resp;
-            } catch (e) {
-                clearTimeout(timer);
-                throw e;
-            }
+                window.IPCallBack = function(data) {
+                    clearTimeout(timeout);
+                    delete window.IPCallBack;
+                    document.head.removeChild(script);
+                    if (data && data.pro) {
+                        // data.pro 格式："江苏省"、"广东省"等，strip 后缀
+                        resolve(data.pro.replace(/省|市|自治区|壮族|维吾尔|回族|特别行政区/g, ''));
+                    } else {
+                        resolve('');
+                    }
+                };
+
+                const script = document.createElement('script');
+                script.src = 'https://whois.pconline.com.cn/ipJson.jsp';
+                script.onerror = function() {
+                    clearTimeout(timeout);
+                    delete window.IPCallBack;
+                    if (script.parentNode) document.head.removeChild(script);
+                    console.warn('pconline script 加载失败');
+                    resolve('');
+                };
+                document.head.appendChild(script);
+            });
         }
 
         async function detectLocation() {
-            // 方案1: ipwho.is - 免费、无需 key、基于真实 IP
+            // 方案1: pconline JSONP（国内稳定、速度快、无需 CORS）
             try {
-                const resp = await fetchWithTimeout('https://ipwho.is/', 3000);
-                if (resp.ok) {
-                    const data = await resp.json();
-                    if (data.success && data.region) {
-                        return EN_PROVINCE_TO_CN[data.region] || data.region;
-                    }
-                }
+                const province = await detectLocationJsonp();
+                if (province) return province;
             } catch (e) {
-                console.warn('ipwho.is 定位超时或失败，尝试 CF trace:', e);
-            }
-            // 方案2: CF /cdn-cgi/trace（可能在 CDN 节点处返回不准确结果）
-            try {
-                const resp = await fetchWithTimeout('/cdn-cgi/trace', 2000);
-                const text = await resp.text();
-                const lines = text.split('\n');
-                let loc = '';
-                for (const line of lines) {
-                    if (line.startsWith('loc=')) loc = line.split('=')[1];
-                }
-                if (loc) {
-                    const province = LOC_CODE_TO_PROVINCE[loc];
-                    // 排除国家代码（CF 节点定位到 US 等国家时不可信）
-                    if (province) return province;
-                }
-            } catch (e) {
-                console.warn('CF trace 定位失败:', e);
+                console.warn('pconline 定位失败:', e);
             }
             return '';
         }
