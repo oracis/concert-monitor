@@ -564,34 +564,36 @@
             "NX": "宁夏", "XJ": "新疆", "XZ": "西藏", "TW": "台湾",
             "MO": "澳门", "HK": "香港",
         };
-        // 通用 JSONP IP 定位
-        function detectLocationJsonp(url, cbBase, extractor) {
+        // pconline JSONP IP 定位（国内稳定、速度快、无需 CORS）
+        function detectLocationJsonp() {
             return new Promise((resolve) => {
+                const cbName = 'IPCallBack_' + Date.now();
                 const timeout = setTimeout(() => {
-                    console.warn('JSONP 定位超时:', url);
+                    console.warn('pconline IP 定位超时');
+                    delete window[cbName];
+                    if (script.parentNode) document.head.removeChild(script);
                     resolve('');
                 }, 5000);
 
-                const cbName = cbBase + '_' + Date.now();
                 window[cbName] = function(data) {
                     clearTimeout(timeout);
                     delete window[cbName];
                     if (script.parentNode) document.head.removeChild(script);
-                    try {
-                        const result = extractor(data);
-                        resolve(result);
-                    } catch (e) {
+                    if (data && data.pro) {
+                        // data.pro 格式："江苏省"、"广东省"等，strip 后缀
+                        resolve(data.pro.replace(/省|市|自治区|壮族|维吾尔|回族|特别行政区/g, ''));
+                    } else {
                         resolve('');
                     }
                 };
 
                 const script = document.createElement('script');
-                script.src = url + cbName;
+                script.src = 'https://whois.pconline.com.cn/ipJson.jsp?callback=' + cbName + '&_t=' + Date.now();
                 script.onerror = function() {
                     clearTimeout(timeout);
                     delete window[cbName];
                     if (script.parentNode) document.head.removeChild(script);
-                    console.warn('JSONP script 加载失败:', url);
+                    console.warn('pconline script 加载失败');
                     resolve('');
                 };
                 document.head.appendChild(script);
@@ -601,11 +603,7 @@
         async function detectLocation() {
             // 方案1: pconline JSONP（国内稳定、速度快、无需 CORS）
             try {
-                const province = await detectLocationJsonp(
-                    'https://whois.pconline.com.cn/ipJson.jsp?ip=&json=true&callback=',
-                    'IPCallBack',
-                    (data) => data && data.pro ? data.pro.replace(/省|市|自治区|壮族|维吾尔|回族|特别行政区/g, '') : ''
-                );
+                const province = await detectLocationJsonp();
                 if (province) return province;
             } catch (e) {
                 console.warn('pconline 定位失败:', e);
