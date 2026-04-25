@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>江苏演唱会·集</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0f0f1a;
+            --surface: #1a1a2e;
+            --surface2: #16213e;
+            --border: #2a2a4a;
+            --primary: #e94560;
+            --primary-glow: rgba(233, 69, 96, 0.3);
+            --accent: #0f3460;
+            --accent2: #533483;
+            --text: #eee;
+            --text2: #aab;
+            --green: #00d68f;
+            --yellow: #ffaa00;
+            --red: #ff3d71;
+            --blue: #0095ff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        /* 顶部渐变条 */
+        .top-bar {
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent2), var(--blue), var(--primary));
+            background-size: 200% 100%;
+            animation: gradient 4s ease infinite;
+        }
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* 头部 */
+        .header {
+            padding: 32px 40px 24px;
+            background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .header h1 span { color: var(--primary); }
+        .header .subtitle {
+            color: var(--text2);
+            font-size: 14px;
+            margin-top: 4px;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .update-info {
+            color: var(--text2);
+            font-size: 13px;
+        }
+        .update-info strong { color: var(--green); }
+        .btn-refresh {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+        .btn-refresh:hover { filter: brightness(1.15); transform: translateY(-1px); }
+        .btn-refresh:active { transform: translateY(0); }
+        .btn-refresh.loading { opacity: 0.7; pointer-events: none; }
+
+        /* 统计卡片 */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            max-width: 1400px;
+            margin: 24px auto 0;
+            padding: 0 40px;
+        }
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.2s;
+        }
+        .stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+        .stat-card .label { color: var(--text2); font-size: 13px; margin-bottom: 8px; }
+        .stat-card .value { font-size: 28px; font-weight: 700; }
+        .stat-card .value.primary { color: var(--primary); }
+        .stat-card .value.green { color: var(--green); }
+        .stat-card .value.blue { color: var(--blue); }
+        .stat-card .value.yellow { color: var(--yellow); }
+
+        /* 筛选栏 */
+        .filter-bar {
+            max-width: 1400px;
+            margin: 24px auto 0;
+            padding: 0 40px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .filter-bar label {
+            color: var(--text2);
+            font-size: 14px;
+            margin-right: -4px;
+        }
+        .filter-bar select,
+        .filter-bar input {
+            background: var(--surface);
+            color: var(--text);
+            border: 1px solid var(--border);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .filter-bar select:focus,
+        .filter-bar input:focus { border-color: var(--primary); }
+        .filter-bar input { width: 200px; }
+        .filter-bar select option { background: var(--surface); }
+        .filter-tag {
+            display: inline-block;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--text2);
+        }
+        .filter-tag:hover, .filter-tag.active {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(233, 69, 96, 0.1);
+        }
+
+        /* 结果信息 */
+        .results-info {
+            max-width: 1400px;
+            margin: 20px auto 0;
+            padding: 0 40px;
+            color: var(--text2);
+            font-size: 14px;
+        }
+        .results-info strong { color: var(--text); }
+
+        /* 演唱会卡片列表 */
+        .concert-list {
+            max-width: 1400px;
+            margin: 16px auto 40px;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 20px;
+        }
+        .concert-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: all 0.25s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .concert-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        .concert-card:hover .card-name {
+            color: var(--primary);
+        }
+        .card-footer-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            background: rgba(233, 69, 96, 0.12);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .card-footer-link:hover {
+            background: rgba(233, 69, 96, 0.25);
+        }
+        .card-inner {
+            display: flex;
+            gap: 16px;
+            padding: 18px;
+        }
+        .card-img {
+            width: 90px;
+            height: 120px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+            background: var(--surface2);
+        }
+        .card-img-placeholder {
+            width: 90px;
+            height: 120px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+        }
+        .card-body { flex: 1; min-width: 0; }
+        .card-name {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 6px;
+        }
+        .card-artist {
+            font-size: 13px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .card-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-size: 12px;
+            color: var(--text2);
+        }
+        .card-meta span { display: flex; align-items: center; gap: 4px; }
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 18px;
+            border-top: 1px solid var(--border);
+            background: rgba(0,0,0,0.15);
+        }
+        .card-price {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--yellow);
+        }
+        .card-status {
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+        .status-selling { background: rgba(0, 214, 143, 0.15); color: var(--green); }
+        .status-presale { background: rgba(0, 149, 255, 0.15); color: var(--blue); }
+        .status-soldout { background: rgba(255, 61, 113, 0.15); color: var(--red); }
+        .status-ended { background: rgba(170, 170, 187, 0.15); color: var(--text2); }
+        .status-unknown { background: rgba(170, 170, 187, 0.15); color: var(--text2); }
+        .status-pending { background: rgba(255, 165, 0, 0.15); color: var(--orange, #ff8c00); }
+        .status-replenish { background: rgba(76, 175, 80, 0.15); color: var(--green, #4caf50); }
+
+        /* 数据来源标签 */
+        .source-badge {
+            display: inline-block;
+            font-size: 11px;
+            padding: 1px 6px;
+            border-radius: 3px;
+            margin-left: 6px;
+            font-weight: 500;
+            vertical-align: middle;
+        }
+        .source-badge.piaoniu { background: rgba(233, 30, 99, 0.15); color: #e91e63; }
+        .source-badge.ypiao { background: rgba(255, 152, 0, 0.15); color: #ff9800; }
+        .source-badge.damai { background: rgba(255, 61, 113, 0.15); color: #ff3d71; }
+        .source-badge.other { background: rgba(170, 170, 187, 0.15); color: var(--text2); }
+
+        /* 空状态 */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text2);
+        }
+        .empty-state .icon { font-size: 48px; margin-bottom: 16px; }
+        .empty-state p { font-size: 16px; }
+
+        /* Toast 提示 */
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 14px 24px;
+            border-radius: 10px;
+            font-size: 14px;
+            z-index: 1000;
+            transform: translateX(120%);
+            transition: transform 0.3s ease;
+            max-width: 360px;
+        }
+        .toast.show { transform: translateX(0); }
+        .toast.success { background: var(--green); color: #000; }
+        .toast.error { background: var(--red); color: #fff; }
+
+        /* 城市分布图 */
+        .city-chart {
+            max-width: 1400px;
+            margin: 24px auto 0;
+            padding: 0 40px;
+        }
+        .city-chart-inner {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+        }
+        .city-chart h3 {
+            font-size: 16px;
+            margin-bottom: 16px;
+            color: var(--text2);
+        }
+        .city-bars { display: flex; flex-direction: column; gap: 10px; }
+        .city-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+        .city-bar .name {
+            width: 60px;
+            text-align: right;
+            font-size: 14px;
+            flex-shrink: 0;
+            transition: color 0.2s;
+        }
+        .city-bar:hover .name,
+        .city-bar.active .name {
+            color: var(--primary);
+        }
+        .city-bar .bar-bg {
+            flex: 1;
+            height: 28px;
+            background: var(--surface2);
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+        .city-bar .bar-fill {
+            height: 100%;
+            border-radius: 6px;
+            background: linear-gradient(90deg, var(--primary), var(--accent2));
+            transition: width 0.6s ease, filter 0.2s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            min-width: 30px;
+            cursor: pointer;
+        }
+        .city-bar .bar-fill:hover {
+            filter: brightness(1.3);
+            transform: scaleY(1.08);
+        }
+        .city-bar .bar-fill.active {
+            filter: brightness(1.4);
+            box-shadow: 0 0 12px var(--primary-glow);
+        }
+
+        /* 加载动画 */
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 15, 26, 0.8);
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .loading-overlay.show { display: flex; }
+        .spinner {
+            width: 40px; height: 40px;
+            border: 3px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .loading-text { color: var(--text2); font-size: 14px; }
+
+        /* 自动刷新倒计时 */
+        .auto-refresh-bar {
+            max-width: 1400px;
+            margin: 0 auto 40px;
+            padding: 0 40px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            color: var(--text2);
+            font-size: 13px;
+        }
+        .auto-refresh-bar .countdown {
+            color: var(--primary);
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .header { padding: 20px; }
+            .stats-grid, .filter-bar, .results-info, .concert-list, .city-chart, .auto-refresh-bar {
+                padding: 0 16px;
+            }
+            .concert-list { grid-template-columns: 1fr; }
+            .card-img, .card-img-placeholder { width: 70px; height: 95px; }
+            .header-content { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar"></div>
+
+    <header class="header">
+        <div class="header-content">
+            <div>
+                <h1>🎵 江苏<span>演唱会·集</span></h1>
+                <p class="subtitle">实时追踪江苏地区演唱会场次与开票信息</p>
+            </div>
+            <div class="header-right">
+                <span class="update-info">更新时间：<strong>{{ update_time }}</strong></span>
+                <button class="btn-refresh" id="btnRefresh" onclick="refreshData()">🔄 刷新数据</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="stats-grid">
+        <div class="stat-card">
+            <div class="label">演唱会总数</div>
+            <div class="value primary">{{ total_count }}</div>
+        </div>
+        <div class="stat-card">
+            <div class="label">覆盖城市</div>
+            <div class="value blue">{{ cities|length }}</div>
+        </div>
+    </section>
+
+    {% if cities %}
+    <section class="city-chart">
+        <div class="city-chart-inner">
+            <h3>📍 城市分布</h3>
+            <div class="city-bars">
+                {% set max_count = cities.values()|max %}
+                {% for city, count in cities|dictsort(by='value', reverse=true) %}
+                <div class="city-bar" data-city="{{ city }}" onclick="filterByCity('{{ city }}')">
+                    <span class="name">{{ city }}</span>
+                    <div class="bar-bg">
+                        <div class="bar-fill" style="width: {{ (count / max_count * 100)|int }}%">
+                            {{ count }}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <section class="filter-bar">
+        <label>筛选：</label>
+        <select id="filterCity" onchange="applyFilter()">
+            <option value="">全部城市</option>
+            {% for city in cities.keys()|sort %}
+            <option value="{{ city }}">{{ city }}</option>
+            {% endfor %}
+        </select>
+        <select id="filterStatus" onchange="applyFilter()">
+            <option value="">全部状态</option>
+            <option value="在售">在售</option>
+            <option value="预售">预售</option>
+            <option value="已售罄">已售罄</option>
+            <option value="已结束">已结束</option>
+        </select>
+        <input type="text" id="filterKeyword" placeholder="搜索歌手/演唱会名..." oninput="applyFilter()">
+    </section>
+
+    <div class="results-info" id="resultsInfo">
+        共 <strong>{{ total_count }}</strong> 场演唱会
+    </div>
+
+    <main class="concert-list" id="concertList">
+        {% if not concerts %}
+        <div class="empty-state" style="grid-column: 1/-1;">
+            <div class="icon">🎤</div>
+            <p>暂无数据，点击"刷新数据"抓取最新演唱会信息</p>
+        </div>
+        {% endif %}
+
+        {% for c in concerts %}
+        <a class="concert-card" href="{{ c.url }}" target="_blank" rel="noopener noreferrer"
+           data-city="{{ c.city }}" data-status="{{ c.status }}"
+           data-name="{{ c.name }}" data-artist="{{ c.artist }}">
+            <div class="card-inner">
+                {% if c.img %}
+                <img class="card-img" src="{{ c.img }}" alt="{{ c.name }}"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="card-img-placeholder" style="display:none">🎵</div>
+                {% else %}
+                <div class="card-img-placeholder">🎵</div>
+                {% endif %}
+                <div class="card-body">
+                    <div class="card-name">{{ c.name }}</div>
+                    {% if c.artist %}
+                    <div class="card-artist">🎤 {{ c.artist }}</div>
+                    {% endif %}
+                    <div class="card-meta">
+                        <span>📅 {{ c.time or '待定' }}</span>
+                        <span>📍 {{ c.city }} · {{ c.venue or '待定' }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <span class="card-price">{{ c.price or '暂无' }}</span>
+                <span style="display:flex;align-items:center;gap:6px;">
+                    {% if c.status == '预售' %}
+                    <span class="card-status status-presale">预售</span>
+                    {% elif c.status == '在售' %}
+                    <span class="card-status status-selling">在售</span>
+                    {% elif c.status == '已售罄' %}
+                    <span class="card-status status-soldout">已售罄</span>
+                    {% elif c.status == '已结束' %}
+                    <span class="card-status status-ended">已结束</span>
+                    {% elif c.status == '待定' %}
+                    <span class="card-status status-pending">待定</span>
+                    {% elif c.status == '补票中' %}
+                    <span class="card-status status-replenish">补票中</span>
+                    {% else %}
+                    <span class="card-status status-unknown">{{ c.status or '未知' }}</span>
+                    {% endif %}
+                    <span class="source-badge {% if c.source == '票牛网' %}piaoniu{% elif c.source == '有票网' %}ypiao{% else %}other{% endif %}">{{ c.source }}</span>
+                    <span class="card-footer-link">购票 →</span>
+                </span>
+            </div>
+        </a>
+        {% endfor %}
+    </main>
+
+    <div class="auto-refresh-bar" id="autoRefreshBar">
+        <span>自动刷新倒计时：</span>
+        <span class="countdown" id="countdown">30:00</span>
+    </div>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <div class="loading-text">正在抓取演唱会数据，请稍候...</div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // 全部演唱会数据（从模板渲染的JS变量中获取）
+        const allConcerts = {{ concerts|tojson }};
+
+        let currentCityFilter = '';
+
+        function filterByCity(city) {
+            const select = document.getElementById('filterCity');
+            // 如果点击的是当前已选城市，则取消筛选
+            if (currentCityFilter === city) {
+                select.value = '';
+                currentCityFilter = '';
+            } else {
+                select.value = city;
+                currentCityFilter = city;
+            }
+            // 更新柱状图高亮状态
+            document.querySelectorAll('.city-bar').forEach(bar => {
+                const isActive = bar.dataset.city === currentCityFilter;
+                bar.classList.toggle('active', isActive);
+                bar.querySelector('.bar-fill').classList.toggle('active', isActive);
+            });
+            applyFilter();
+            // 平滑滚动到卡片列表
+            document.getElementById('resultsInfo').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function getStatusClass(status) {
+            if (status === '预售') return 'status-presale';
+            if (status === '在售') return 'status-selling';
+            if (status === '已售罄') return 'status-soldout';
+            if (status === '已结束') return 'status-ended';
+            if (status === '待定') return 'status-pending';
+            if (status === '补票中') return 'status-replenish';
+            return 'status-unknown';
+        }
+
+        function getSourceClass(source) {
+            if (source === '票牛网') return 'piaoniu';
+            if (source === '有票网') return 'ypiao';
+            if (source === '大麦网') return 'damai';
+            return 'other';
+        }
+
+        function applyFilter() {
+            const city = document.getElementById('filterCity').value;
+            const status = document.getElementById('filterStatus').value;
+            const keyword = document.getElementById('filterKeyword').value.toLowerCase();
+
+            // 同步柱状图高亮
+            currentCityFilter = city;
+            document.querySelectorAll('.city-bar').forEach(bar => {
+                const isActive = bar.dataset.city === currentCityFilter;
+                bar.classList.toggle('active', isActive);
+                bar.querySelector('.bar-fill').classList.toggle('active', isActive);
+            });
+
+            const filtered = allConcerts.filter(c => {
+                if (city && c.city !== city) return false;
+                if (status && c.status !== status) return false;
+                if (keyword && !(c.name || '').toLowerCase().includes(keyword) &&
+                    !(c.artist || '').toLowerCase().includes(keyword)) return false;
+                return true;
+            });
+
+            const list = document.getElementById('concertList');
+            const info = document.getElementById('resultsInfo');
+
+            if (filtered.length === 0) {
+                list.innerHTML = `
+                    <div class="empty-state" style="grid-column:1/-1;">
+                        <div class="icon">🔍</div>
+                        <p>没有匹配的演唱会</p>
+                    </div>`;
+                info.innerHTML = `共 <strong>0</strong> 场匹配结果`;
+                return;
+            }
+
+            info.innerHTML = `共 <strong>${filtered.length}</strong> 场演唱会`;
+            list.innerHTML = filtered.map(c => `
+                <a class="concert-card" href="${c.url || '#'}" target="_blank" rel="noopener noreferrer">
+                    <div class="card-inner">
+                        ${c.img
+                            ? `<img class="card-img" src="${c.img}" alt="${c.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">🎵</div>`
+                            : `<div class="card-img-placeholder">🎵</div>`}
+                        <div class="card-body">
+                            <div class="card-name">${c.name}</div>
+                            ${c.artist ? `<div class="card-artist">🎤 ${c.artist}</div>` : ''}
+                            <div class="card-meta">
+                                <span>📅 ${c.time || '待定'}</span>
+                                <span>📍 ${c.city} · ${c.venue || '待定'}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-price">${c.price || '暂无'}</span>
+                        <span style="display:flex;align-items:center;gap:6px;">
+                            <span class="card-status ${getStatusClass(c.status)}">${c.status || '未知'}</span>
+                            <span class="source-badge ${getSourceClass(c.source)}">${c.source}</span>
+                            <span class="card-footer-link">购票 →</span>
+                        </span>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        async function refreshData() {
+            const btn = document.getElementById('btnRefresh');
+            const overlay = document.getElementById('loadingOverlay');
+            btn.classList.add('loading');
+            btn.textContent = '⏳ 抓取中...';
+            overlay.classList.add('show');
+
+            try {
+                const resp = await fetch('/api/refresh');
+                const data = await resp.json();
+                if (data.success) {
+                    showToast(`✅ ${data.message}`, 'success');
+                    setTimeout(() => location.reload(), 1500);
+                } else {
+                    showToast(`❌ ${data.message}`, 'error');
+                }
+            } catch (e) {
+                showToast('❌ 刷新失败，请稍后重试', 'error');
+            } finally {
+                btn.classList.remove('loading');
+                btn.textContent = '🔄 刷新数据';
+                overlay.classList.remove('show');
+            }
+        }
+
+        function showToast(msg, type) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.className = `toast ${type}`;
+            requestAnimationFrame(() => toast.classList.add('show'));
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        // 自动刷新（每30分钟）
+        const REFRESH_INTERVAL = 30 * 60; // 秒
+        let countdownSeconds = REFRESH_INTERVAL;
+        let refreshTimer = null;
+
+        function updateCountdown() {
+            const m = String(Math.floor(countdownSeconds / 60)).padStart(2, '0');
+            const s = String(countdownSeconds % 60).padStart(2, '0');
+            document.getElementById('countdown').textContent = `${m}:${s}`;
+        }
+
+        function startAutoRefresh() {
+            countdownSeconds = REFRESH_INTERVAL;
+            updateCountdown();
+            if (refreshTimer) clearInterval(refreshTimer);
+            refreshTimer = setInterval(async () => {
+                countdownSeconds--;
+                updateCountdown();
+                if (countdownSeconds <= 0) {
+                    clearInterval(refreshTimer);
+                    await autoRefresh();
+                    startAutoRefresh(); // 重新开始倒计时
+                }
+            }, 1000);
+        }
+
+        async function autoRefresh() {
+            try {
+                const resp = await fetch('/api/concerts');
+                const result = await resp.json();
+                if (result.total !== allConcerts.length) {
+                    showToast(`🎶 发现更新：${result.total} 场（当前 ${allConcerts.length} 场），页面即将刷新`, 'success');
+                    setTimeout(() => location.reload(), 2000);
+                } else {
+                    showToast('✅ 已自动检查，暂无新数据', 'success');
+                }
+            } catch (e) {
+                // 静默失败，不打扰用户
+            }
+        }
+
+        // 页面加载后启动自动刷新
+        startAutoRefresh();
+    </script>
+</body>
+</html>

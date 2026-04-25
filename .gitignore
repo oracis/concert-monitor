@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+data/concerts_*.json
+.venv/
+*.pyc
+.env
