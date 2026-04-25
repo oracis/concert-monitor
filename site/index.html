@@ -576,11 +576,24 @@
             "Macau": "澳门", "Hong Kong": "香港",
         };
 
-        // IP 定位：优先用 ipwho.is（不受 CDN 影响），CF trace 作为 fallback
+        // IP 定位：带超时，防卡死
+        async function fetchWithTimeout(url, timeout = 3000) {
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), timeout);
+            try {
+                const resp = await fetch(url, { signal: controller.signal });
+                clearTimeout(timer);
+                return resp;
+            } catch (e) {
+                clearTimeout(timer);
+                throw e;
+            }
+        }
+
         async function detectLocation() {
             // 方案1: ipwho.is - 免费、无需 key、基于真实 IP
             try {
-                const resp = await fetch('https://ipwho.is/');
+                const resp = await fetchWithTimeout('https://ipwho.is/', 3000);
                 if (resp.ok) {
                     const data = await resp.json();
                     if (data.success && data.region) {
@@ -588,18 +601,22 @@
                     }
                 }
             } catch (e) {
-                console.warn('ipwho.is 定位失败，尝试 CF trace:', e);
+                console.warn('ipwho.is 定位超时或失败，尝试 CF trace:', e);
             }
             // 方案2: CF /cdn-cgi/trace（可能在 CDN 节点处返回不准确结果）
             try {
-                const resp = await fetch('/cdn-cgi/trace');
+                const resp = await fetchWithTimeout('/cdn-cgi/trace', 2000);
                 const text = await resp.text();
                 const lines = text.split('\n');
                 let loc = '';
                 for (const line of lines) {
                     if (line.startsWith('loc=')) loc = line.split('=')[1];
                 }
-                if (loc) return LOC_CODE_TO_PROVINCE[loc] || loc;
+                if (loc) {
+                    const province = LOC_CODE_TO_PROVINCE[loc];
+                    // 排除国家代码（CF 节点定位到 US 等国家时不可信）
+                    if (province) return province;
+                }
             } catch (e) {
                 console.warn('CF trace 定位失败:', e);
             }
