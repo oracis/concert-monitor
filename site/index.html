@@ -564,7 +564,7 @@
             "NX": "宁夏", "XJ": "新疆", "XZ": "西藏", "TW": "台湾",
             "MO": "澳门", "HK": "香港",
         };
-        // pconline JSONP IP 定位（国内稳定、速度快、无需 CORS）
+        // pconline IP 定位（HTTPS，国内稳定、速度快、无需 CORS）
         function detectLocationJsonp() {
             return new Promise((resolve) => {
                 const cbName = 'IPCallBack_' + Date.now();
@@ -580,7 +580,6 @@
                     delete window[cbName];
                     if (script.parentNode) document.head.removeChild(script);
                     if (data && data.pro) {
-                        // data.pro 格式："江苏省"、"广东省"等，strip 后缀
                         resolve(data.pro.replace(/省|市|自治区|壮族|维吾尔|回族|特别行政区/g, ''));
                     } else {
                         resolve('');
@@ -588,7 +587,7 @@
                 };
 
                 const script = document.createElement('script');
-                script.src = 'https://whois.pconline.com.cn/ipJson.jsp?callback=' + cbName + '&_t=' + Date.now();
+                script.src = 'https://whois.pconline.com.cn/ipJson.jsp?callback=' + cbName;
                 script.onerror = function() {
                     clearTimeout(timeout);
                     delete window[cbName];
@@ -601,7 +600,7 @@
         }
 
         async function detectLocation() {
-            // 方案1: pconline JSONP（国内稳定、速度快、无需 CORS）
+            // 方案1: pconline HTTPS JSONP（国内稳定、速度快）
             try {
                 const province = await detectLocationJsonp();
                 if (province) return province;
@@ -614,7 +613,19 @@
                 const resp = await fetch('/cdn-cgi/trace', { signal: AbortSignal.timeout(3000) });
                 const text = await resp.text();
                 const match = text.match(/loc=(\w+)/);
-                if (match) return match[1];
+                if (match) {
+                    const code = match[1];
+                    const cfMap = {
+                        'BJ': '北京', 'SH': '上海', 'TJ': '天津', 'CQ': '重庆',
+                        'HE': '河北', 'SX': '山西', 'NM': '内蒙古', 'LN': '辽宁', 'JL': '吉林',
+                        'HL': '黑龙江', 'JS': '江苏', 'ZJ': '浙江', 'AH': '安徽', 'FJ': '福建',
+                        'JX': '江西', 'SD': '山东', 'HA': '河南', 'HB': '湖北', 'HN': '湖南',
+                        'GD': '广东', 'GX': '广西', 'HI': '海南', 'SC': '四川', 'GZ': '贵州',
+                        'YN': '云南', 'XZ': '西藏', 'SN': '陕西', 'GS': '甘肃', 'QH': '青海',
+                        'NX': '宁夏', 'XJ': '新疆', 'TW': '台湾', 'HK': '香港', 'MO': '澳门'
+                    };
+                    if (cfMap[code]) return cfMap[code];
+                }
             } catch (e) {
                 console.warn('CF trace 定位失败:', e);
             }
