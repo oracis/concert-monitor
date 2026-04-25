@@ -237,6 +237,27 @@ def fetch_html(url: str) -> str:
     return resp.text
 
 
+def parse_show_time(show_time: str) -> tuple:
+    """解析演出时间，返回 (开始日期, 结束日期) 的 datetime 元组。
+    支持格式：2026.05.22-05.23 / 2026.05.22~05.23 / 2026.05.22 - 05.23 等。
+    如果没有结束日期，结束日期 = 开始日期。
+    """
+    if not show_time:
+        return (None, None)
+    # 尝试匹配双日期格式：2026.05.22-05.23 或 2026.05.22 - 05.23
+    dual = re.search(r"(\d{4})[.\-/](\d{1,2})[.\-/](\d{1,2})\s*[-~～至]\s*(\d{1,2})[.\-/](\d{1,2})", show_time)
+    if dual:
+        start = datetime(int(dual.group(1)), int(dual.group(2)), int(dual.group(3)))
+        end = datetime(int(dual.group(1)), int(dual.group(4)), int(dual.group(5)))
+        return (start, end)
+    # 单日期
+    single = re.search(r"(\d{4})[.\-/](\d{1,2})[.\-/](\d{1,2})", show_time)
+    if single:
+        d = datetime(int(single.group(1)), int(single.group(2)), int(single.group(3)))
+        return (d, d)
+    return (None, None)
+
+
 def detect_status_piaoniu(item_html: str, show_time: str) -> str:
     """票牛网：综合判断演唱会状态"""
     if "售空" in item_html or "售罄" in item_html:
@@ -246,20 +267,16 @@ def detect_status_piaoniu(item_html: str, show_time: str) -> str:
     if "热卖" in item_html or "抢票" in item_html:
         return "在售"
 
-    if show_time:
-        try:
-            date_str = re.search(r"(\d{4})[.\-/](\d{1,2})[.\-/](\d{1,2})", show_time)
-            if date_str:
-                show_date = datetime(int(date_str.group(1)), int(date_str.group(2)), int(date_str.group(3)))
-                days_until = (datetime.now() - show_date).days
-                if days_until > 0:
-                    return "已结束"
-                elif days_until <= -3:
-                    return "在售"
-                else:
-                    return "预售"
-        except (ValueError, IndexError):
-            pass
+    start, end = parse_show_time(show_time)
+    if start:
+        days_until = (datetime.now() - start).days
+        days_until_end = (datetime.now() - end).days
+        if days_until_end > 0:
+            return "已结束"
+        elif days_until <= -3:
+            return "在售"
+        else:
+            return "预售"
     return "在售"
 
 
@@ -267,19 +284,16 @@ def detect_status_ypiao(show_time: str) -> str:
     """有票网：基于时间推断状态"""
     if not show_time or show_time == "等待官宣" or "待定" in show_time:
         return "待定"
-    try:
-        date_str = re.search(r"(\d{4})[.\-/](\d{1,2})[.\-/](\d{1,2})", show_time)
-        if date_str:
-            show_date = datetime(int(date_str.group(1)), int(date_str.group(2)), int(date_str.group(3)))
-            days_until = (datetime.now() - show_date).days
-            if days_until > 0:
-                return "已结束"
-            elif days_until >= -7:
-                return "在售"
-            else:
-                return "预售"
-    except (ValueError, IndexError):
-        pass
+    start, end = parse_show_time(show_time)
+    if start:
+        days_until = (datetime.now() - start).days
+        days_until_end = (datetime.now() - end).days
+        if days_until_end > 0:
+            return "已结束"
+        elif days_until >= -7:
+            return "在售"
+        else:
+            return "预售"
     return "预售"
 
 
@@ -352,12 +366,20 @@ def scrape_piaoniu() -> List[Dict]:
                 status = detect_status_piaoniu(item_html, show_time)
 
                 img = ""
-                # 票牛网用 data-src 懒加载，优先取 data-src
+                # 票牛网图片有三种格式，按优先级依次尝试：
+                # 1. img data-src（南京等城市常用）
                 img_match = re.search(r'<img[^>]+data-src="(https?://[^"]+)"', item_html)
+                # 2. div data-style（苏州等城市常用，background-image 方式）
+                if not img_match:
+                    img_match = re.search(r'data-style="background-image:url\((https?://[^)]+)\)"', item_html)
+                # 3. img src（兜底）
                 if not img_match:
                     img_match = re.search(r'<img[^>]+src="(https?://[^"]+poster[^"]*)"', item_html)
                 if img_match:
                     img = img_match.group(1)
+                    # 协议自适应：// 开头补 https
+                    if img.startswith("//"):
+                        img = "https:" + img
 
                 province = get_province(item_city)
                 all_concerts.append({

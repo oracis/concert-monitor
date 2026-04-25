@@ -87,11 +87,6 @@
             align-items: center;
             gap: 16px;
         }
-        .update-info {
-            color: var(--text2);
-            font-size: 13px;
-        }
-        .update-info strong { color: var(--green); }
 
         .location-badge {
             display: inline-flex;
@@ -112,33 +107,80 @@
         }
         .location-badge .loc-icon { font-size: 15px; }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 16px;
+        .stats-summary {
             max-width: 1400px;
             margin: 24px auto 0;
             padding: 0 40px;
         }
-        .stat-card {
+        .stats-summary-inner {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 20px;
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
-            transition: all 0.2s;
+            border-radius: 14px;
+            flex-wrap: wrap;
         }
-        .stat-card:hover { border-color: var(--primary); transform: translateY(-2px); }
-        .stat-card .label { color: var(--text2); font-size: 13px; margin-bottom: 8px; }
-        .stat-card .value { font-size: 28px; font-weight: 700; }
-        .stat-card .value.primary { color: var(--primary); }
-        .stat-card .value.green { color: var(--green); }
-        .stat-card .value.blue { color: var(--blue); }
-        .stat-card .value.yellow { color: var(--yellow); }
-
+        .stats-summary-left {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+        .stats-total {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+        .stats-total-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.2;
+        }
+        .stats-chips {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            flex: 1;
+            align-items: center;
+        }
+        .stats-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            user-select: none;
+        }
+        .stats-chip:hover { border-color: var(--primary); color: var(--primary); }
+        .stats-chip.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+        .stats-chip .chip-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+        }
+        .chip-dot.selling { background: #52c41a; }
+        .chip-dot.presale { background: #1890ff; }
+        .chip-dot.soldout { background: #ff4d4f; }
+        .chip-dot.ended { background: #999; }
+        .chip-dot.pending { background: #faad14; }
+        .stats-summary-right {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-left: auto;
+            flex-shrink: 0;
+        }
         /* 省份切换栏 */
         .province-bar {
             max-width: 1400px;
-            margin: 24px auto 0;
+            margin: 16px auto 0;
             padding: 0 40px;
         }
         .province-bar-inner {
@@ -189,7 +231,7 @@
 
         .filter-bar {
             max-width: 1400px;
-            margin: 20px auto 0;
+            margin: 16px auto 0;
             padding: 0 40px;
             display: flex;
             gap: 12px;
@@ -403,7 +445,7 @@
 
         @media (max-width: 768px) {
             .header { padding: 20px; }
-            .stats-grid, .filter-bar, .results-info, .concert-list, .province-bar, .auto-refresh-bar {
+            .stats-summary, .filter-bar, .results-info, .concert-list, .province-bar, .auto-refresh-bar {
                 padding: 0 16px;
             }
             .concert-list { grid-template-columns: 1fr; }
@@ -421,30 +463,27 @@
         <div class="header-content">
             <div>
                 <h1>🎵 <span>演唱会·集</span></h1>
-                <p class="subtitle">全国演唱会信息聚合，自动定位你所在省份</p>
+                <p class="subtitle">全国演唱会信息聚合</p>
             </div>
             <div class="header-right">
                 <span class="location-badge" id="locationBadge" title="点击查看全部省份">
                     <span class="loc-icon">📍</span>
                     <span id="locationText">定位中...</span>
                 </span>
-                <span class="update-info">更新：<strong id="updateTime">加载中...</strong></span>
             </div>
         </div>
     </header>
 
-    <section class="stats-grid" id="statsGrid">
-        <div class="stat-card">
-            <div class="label">当前显示</div>
-            <div class="value primary" id="totalCount">-</div>
-        </div>
-        <div class="stat-card">
-            <div class="label">覆盖城市</div>
-            <div class="value blue" id="cityCount">-</div>
-        </div>
-        <div class="stat-card">
-            <div class="label">全国总计</div>
-            <div class="value yellow" id="nationalCount">-</div>
+    <section class="stats-summary" id="statsSummary">
+        <div class="stats-summary-inner">
+            <div class="stats-summary-left">
+                <span class="stats-total" id="totalCount">-</span>
+                <span class="stats-total-label">场演唱会</span>
+            </div>
+            <div class="stats-chips" id="statusChips"></div>
+            <div class="stats-summary-right">
+                <span class="stats-update" id="updateTime"></span>
+            </div>
         </div>
     </section>
 
@@ -494,61 +533,58 @@
         let currentProvince = '';
         const DATA_URL = 'data.json';
 
-        // 英文省份 → 中文映射
-        const PROVINCE_EN_CN = {
+        // Cloudflare loc 代码 → 中文省份
+        const LOC_CODE_TO_PROVINCE = {
+            "BJ": "北京", "SH": "上海", "TJ": "天津", "CQ": "重庆",
+            "HE": "河北", "SX": "山西", "NM": "内蒙古", "LN": "辽宁", "JL": "吉林",
+            "HL": "黑龙江", "JS": "江苏", "ZJ": "浙江", "AH": "安徽", "FJ": "福建",
+            "JX": "江西", "SD": "山东", "HA": "河南", "HB": "湖北", "HN": "湖南",
+            "GD": "广东", "GX": "广西", "HI": "海南", "SC": "四川", "GZ": "贵州",
+            "YN": "云南", "SN": "陕西", "GS": "甘肃", "QH": "青海",
+            "NX": "宁夏", "XJ": "新疆", "XZ": "西藏", "TW": "台湾",
+            "MO": "澳门", "HK": "香港",
+        };
+        // 英文省份名（ipwho.is region 字段）→ 中文省份
+        const EN_PROVINCE_TO_CN = {
             "Beijing": "北京", "Shanghai": "上海", "Tianjin": "天津", "Chongqing": "重庆",
-            "Hebei": "河北", "Shanxi": "山西", "Liaoning": "辽宁", "Jilin": "吉林",
-            "Heilongjiang": "黑龙江", "Jiangsu": "江苏", "Zhejiang": "浙江", "Anhui": "安徽",
-            "Fujian": "福建", "Jiangxi": "江西", "Shandong": "山东", "Henan": "河南",
-            "Hubei": "湖北", "Hunan": "湖南", "Guangdong": "广东", "Hainan": "海南",
-            "Sichuan": "四川", "Guizhou": "贵州", "Yunnan": "云南", "Shaanxi": "陕西",
-            "Gansu": "甘肃", "Qinghai": "青海", "Taiwan": "台湾",
-            "Inner Mongolia": "内蒙古", "Guangxi": "广西", "Tibet": "西藏", "Xinjiang": "新疆",
-            "Ningxia": "宁夏", "Hong Kong": "香港", "Macau": "澳门", "Macau": "澳门",
+            "Hebei": "河北", "Shanxi": "山西", "Inner Mongolia": "内蒙古", "Liaoning": "辽宁", "Jilin": "吉林",
+            "Heilongjiang": "黑龙江", "Jiangsu": "江苏", "Zhejiang": "浙江", "Anhui": "安徽", "Fujian": "福建",
+            "Jiangxi": "江西", "Shandong": "山东", "Henan": "河南", "Hubei": "湖北", "Hunan": "湖南",
+            "Guangdong": "广东", "Guangxi": "广西", "Hainan": "海南", "Sichuan": "四川", "Guizhou": "贵州",
+            "Yunnan": "云南", "Shaanxi": "陕西", "Gansu": "甘肃", "Qinghai": "青海",
+            "Ningxia": "宁夏", "Xinjiang": "新疆", "Tibet": "西藏", "Taiwan": "台湾",
+            "Macau": "澳门", "Hong Kong": "香港",
         };
 
-        // IP 定位 - 全部 HTTPS + CORS 兼容
+        // IP 定位：线上用 CF /cdn-cgi/trace，本地用 dev_server.py 模拟同一接口
         async function detectLocation() {
-            const apis = [
-                // freeipapi.com（免费，HTTPS，CORS *，返回英文省份名）
-                async () => {
-                    const resp = await fetch('https://freeipapi.com/api/json');
-                    const data = await resp.json();
-                    return data.regionName || '';
-                },
-                // ipregistry.co（试用，HTTPS，CORS *）
-                async () => {
-                    const resp = await fetch('https://api.ipregistry.co/?key=tryout');
-                    const data = await resp.json();
-                    return data.location?.region?.name || '';
-                },
-            ];
-
-            for (const api of apis) {
-                try {
-                    const provinceEn = await api();
-                    if (provinceEn) {
-                        // 英文 → 中文
-                        return PROVINCE_EN_CN[provinceEn]
-                            || PROVINCE_EN_CN[provinceEn.replace(/\s+Sheng$/, '').replace(/\s+SAR$/, '')]
-                            || provinceEn;
-                    }
-                } catch {}
+            try {
+                const resp = await fetch('/cdn-cgi/trace');
+                const text = await resp.text();
+                const lines = text.split('\n');
+                let loc = '';
+                for (const line of lines) {
+                    if (line.startsWith('loc=')) loc = line.split('=')[1];
+                }
+                if (loc) return LOC_CODE_TO_PROVINCE[loc] || loc;
+            } catch (e) {
+                console.warn('定位失败:', e);
             }
             return '';
         }
 
-        // 匹配省份名（支持中文直接匹配）
+        // 匹配省份名（兼容 CF loc 代码和 API 返回的中文名）
         function matchProvince(detected) {
             if (!detected) return '';
-            // 直接在已知的省份列表中查找
-            for (const p of Object.keys(provinces)) {
-                if (p === detected) return p;
+            // CF loc 代码 → 省份名
+            if (LOC_CODE_TO_PROVINCE[detected]) {
+                detected = LOC_CODE_TO_PROVINCE[detected];
             }
-            // 去掉常见后缀再匹配
-            let clean = detected.replace(/[省市自治区壮族回族维吾尔特别行政区ShengSAR]+$/, '').trim();
+            // 直接匹配
+            if (provinces[detected]) return detected;
+            // 模糊匹配
             for (const p of Object.keys(provinces)) {
-                if (p === clean || p.includes(clean) || clean.includes(p)) return p;
+                if (p === detected || p.includes(detected) || detected.includes(p)) return p;
             }
             return '';
         }
@@ -575,7 +611,7 @@
                 <a class="concert-card" href="${c.url || '#'}" target="_blank" rel="noopener noreferrer">
                     <div class="card-inner">
                         ${c.img
-                            ? `<img class="card-img" src="${c.img}" alt="${c.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">🎵</div>`
+                            ? `<img class="card-img" src="${c.img}" alt="${c.name}" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">🎵</div>`
                             : `<div class="card-img-placeholder">🎵</div>`}
                         <div class="card-body">
                             <div class="card-name">${c.name}</div>
@@ -616,12 +652,28 @@
 
             // 更新统计
             const cities = {};
+            const statusMap = {};
             currentConcerts.forEach(c => {
                 const city = c.city || '未知';
                 cities[city] = (cities[city] || 0) + 1;
+                const s = c.status || '待定';
+                statusMap[s] = (statusMap[s] || 0) + 1;
             });
             document.getElementById('totalCount').textContent = currentConcerts.length;
-            document.getElementById('cityCount').textContent = Object.keys(cities).length;
+
+            // 状态标签
+            const statusOrder = ['在售', '预售', '已售罄', '已结束', '待定'];
+            const dotClass = { '在售': 'selling', '预售': 'presale', '已售罄': 'soldout', '已结束': 'ended', '待定': 'pending' };
+            const chipsEl = document.getElementById('statusChips');
+            chipsEl.innerHTML = statusOrder
+                .filter(s => statusMap[s])
+                .map(s => `<span class="stats-chip" data-status="${s}" onclick="toggleStatusChip(this)"><span class="chip-dot ${dotClass[s]}"></span>${s} ${statusMap[s]}</span>`)
+                .join('');
+
+            // 更新时间（从全局数据获取）
+            if (allConcerts.length > 0) {
+                document.getElementById('updateTime').textContent = allConcerts._updateTime || '';
+            }
 
             // 更新城市下拉
             const filterCity = document.getElementById('filterCity');
@@ -632,6 +684,22 @@
             // 显示筛选栏
             document.getElementById('filterBar').style.display = '';
 
+            applyFilter();
+        }
+
+        // 状态标签点击筛选
+        function toggleStatusChip(el) {
+            const status = el.dataset.status;
+            const filterStatus = document.getElementById('filterStatus');
+            // 同步到下拉框
+            if (el.classList.contains('active')) {
+                el.classList.remove('active');
+                filterStatus.value = '';
+            } else {
+                document.querySelectorAll('.stats-chip').forEach(c => c.classList.remove('active'));
+                el.classList.add('active');
+                filterStatus.value = status;
+            }
             applyFilter();
         }
 
@@ -724,10 +792,10 @@
                 const resp = await fetch(DATA_URL + '?t=' + Date.now());
                 const data = await resp.json();
                 allConcerts = data.concerts || [];
+                allConcerts._updateTime = data.update_time ? '更新于 ' + data.update_time.slice(5, 16) : '';
                 provinces = data.provinces || {};
 
-                document.getElementById('updateTime').textContent = data.update_time || '暂无';
-                document.getElementById('nationalCount').textContent = allConcerts.length;
+                document.getElementById('updateTime').textContent = allConcerts._updateTime;
 
                 // 渲染省份标签
                 const provinceBar = document.getElementById('provinceBar');
