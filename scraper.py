@@ -258,6 +258,197 @@ def parse_show_time(show_time: str) -> tuple:
     return (None, None)
 
 
+def normalize_name(name: str) -> str:
+    """标准化演唱会名称，用于相似度比较。
+    去除站点标签、括号变体、破折号等差异，保留核心关键词。
+    """
+    n = name
+    # HTML 实体还原
+    n = n.replace("&middot;", "·").replace("&mdash;", "—").replace("&ldquo;", "「").replace("&rdquo;", "」")
+    # 去除常见前缀
+    n = re.sub(r"^(20\d{2})年?", "", n)
+    # 统一括号为中文括号
+    n = n.replace("(", "（").replace(")", "）").replace("（", "").replace("）", "")
+    # 统一破折号为普通短横
+    n = n.replace("—", "-").replace("–", "-")
+    # 去除多余空格
+    n = re.sub(r"\s+", "", n)
+    # 去除"-站"后缀
+    n = re.sub(r"-\S*站$", "", n)
+    return n.lower()
+
+
+def extract_date_for_match(show_time: str) -> str:
+    """提取日期用于匹配，只取月.日部分。"""
+    if not show_time:
+        return ""
+    m = re.search(r"(\d{1,2})[.\-/](\d{1,2})", show_time)
+    if m:
+        return f"{m.group(1).zfill(2)}.{m.group(2).zfill(2)}"
+    return ""
+
+
+def extract_core_name(name: str) -> str:
+    """提取演唱会名称的核心部分（去后缀如"巡回演唱会"、"站"等），
+    保留歌手名和演出主题。
+    """
+    n = normalize_name(name)
+    # 去除常见后缀
+    n = re.sub(r"(巡回)?演唱会$", "", n)
+    n = re.sub(r"worldtour.*$", "", n, flags=re.IGNORECASE)
+    n = re.sub(r"20\d{2}年?$", "", n)
+    return n.strip()
+
+
+def name_similarity(a: str, b: str) -> float:
+    """名称相似度：基于核心名称的公共子序列长度占比。
+    要求核心关键词（歌手名+主题）必须匹配。
+    """
+    ca, cb = extract_core_name(a), extract_core_name(b)
+    if not ca or not cb:
+        return 0.0
+    if len(ca) < 3 or len(cb) < 3:
+        return 0.0
+    # 找最长的公共连续子串
+    max_len = 0
+    for i in range(len(ca)):
+        for j in range(len(cb)):
+            k = 0
+            while i + k < len(ca) and j + k < len(cb) and ca[i + k] == cb[j + k]:
+                k += 1
+            if k > max_len:
+                max_len = k
+    ref_len = min(len(ca), len(cb))
+    return max_len / ref_len if ref_len > 0 else 0.0
+
+
+def merge_concerts(concerts: List[Dict]) -> List[Dict]:
+    """智能合并同一演唱会来自不同数据源的重复项。
+    合并规则：同城市 + 名称相似度≥0.5 + 日期相同或相近(±1天) → 合并。
+    合并时取信息最全的字段，保留所有来源链接。
+    """
+    merged = []
+    used = [False] * len(concerts)
+
+    for i, a in enumerate(concerts):
+        if used[i]:
+            continue
+        used[i] = True
+        a_city = a.get("city", "")
+        a_date = extract_date_for_match(a.get("time", ""))
+
+        for j in range(i + 1, len(concerts)):
+            if used[j]:
+                continue
+            b = concerts[j]
+            # 必须同城市
+            if b.get("city", "") != a_city:
+                continue
+            # 必须不同来源
+            if b.get("source", "") == a.get("source", ""):
+                continue
+            # 名称相似度
+            sim = name_similarity(a.get("name", ""), b.get("name", ""))
+            if sim < 0.6:
+                continue
+            # 日期比较
+            b_date = extract_date_for_match(b.get("time", ""))
+            if a_date and b_date:
+                # 解析为月日数字比较
+                try:
+                    am, ad = map(int, a_date.split("."))
+                    bm, bd = map(int, b_date.split("."))
+                    # 允许±1天误差（同月或跨月）
+                    diff_days = abs((am * 31 + ad) - (bm * 31 + bd))
+                    if diff_days > 1:
+                        continue
+                except (ValueError, IndexError):
+                    continue
+            elif a_date != b_date:
+                # 一个有日期一个没有，按名称相似度放行（≥0.7）
+                if sim < 0.7:
+                    continue
+
+            # 合并！信息取最全的
+            logger.info(f"  合并: [{a.get('source')}] {a.get('name')[:20]} + [{b.get('source')}] {b.get('name')[:20]}")
+
+            # 时间取信息更全的（跨日期 > 带时间 > 纯日期）
+            a_time, b_time = a.get("time", ""), b.get("time", "")
+            a_score = (1 if "-" in a_time else 0) + (1 if a_time[5:7] else 0) + len(a_time)
+            b_score = (1 if "-" in b_time else 0) + (1 if b_time[5:7] else 0) + len(b_time)
+            if b_score > a_score:
+                a["time"] = b_time
+
+            # 场馆取更长的
+            if len(b.get("venue", "")) > len(a.get("venue", "")):
+                a["venue"] = b["venue"]
+
+            # 价格取更低的
+            try:
+                pa = int(re.search(r"\d+", a.get("price", "0")).group()) if re.search(r"\d+", a.get("price", "")) else 99999
+                pb = int(re.search(r"\d+", b.get("price", "0")).group()) if re.search(r"\d+", b.get("price", "")) else 99999
+                if pb > 0 and pb < pa:
+                    a["price"] = b["price"]
+            except (AttributeError, ValueError):
+                pass
+
+            # 图片：优先取有图片的
+            if not a.get("img") and b.get("img"):
+                a["img"] = b["img"]
+
+            # 来源与链接合并，智能选择主链接
+            a_src = a.get("source", "")
+            b_src = b.get("source", "")
+            a_status = a.get("status", "")
+            b_status = b.get("status", "")
+
+            # 解析价格用于比较
+            def _price_val(concert):
+                try:
+                    m = re.search(r"\d+", concert.get("price", "0"))
+                    return int(m.group()) if m else 99999
+                except (AttributeError, ValueError):
+                    return 99999
+
+            pa, pb = _price_val(a), _price_val(b)
+
+            # 智能选择主链接：优先在售 → 更便宜
+            def _sale_score(status, price_val):
+                score = 0
+                if status == "在售":
+                    score += 100
+                elif status == "预售":
+                    score += 50
+                elif status == "热卖":
+                    score += 80
+                # 价格越低越好
+                if price_val > 0 and price_val < 99999:
+                    score -= price_val
+                return score
+
+            a_score = _sale_score(a_status, pa)
+            b_score = _sale_score(b_status, pb)
+
+            # 确定主链接和副链接
+            if b_score > a_score:
+                # b 更优，b 成为主链接
+                a["url"] = b.get("url", a.get("url", ""))
+                a["url2"] = a.get("url", "")  # 原来的 a url 变副链接
+                a["source"] = b_src  # 显示更优平台的名称
+                a["source2"] = a_src  # 记录副平台
+            else:
+                # a 更优或持平，a 保持主链接
+                a["url2"] = b.get("url", "")
+                a["source"] = a_src  # 显示 a 的平台名
+                a["source2"] = b_src  # 记录副平台
+
+            used[j] = True
+
+        merged.append(a)
+
+    return merged
+
+
 def detect_status_piaoniu(item_html: str, show_time: str) -> str:
     """票牛网：综合判断演唱会状态"""
     if "售空" in item_html or "售罄" in item_html:
@@ -300,6 +491,7 @@ def detect_status_ypiao(show_time: str) -> str:
 def scrape_piaoniu() -> List[Dict]:
     """抓取票牛网全国主要城市演唱会"""
     all_concerts = []
+    seen_ids = set()  # 全局去重，同一演出可能出现在多个城市推荐列表中
 
     for city_name, url in PIAONIU_CITIES.items():
         try:
@@ -310,7 +502,6 @@ def scrape_piaoniu() -> List[Dict]:
                 r'<li[^>]*class="item"[^>]*>(.*?)</li>',
                 re.DOTALL | re.IGNORECASE
             )
-            seen_ids = set()
             for match in item_pattern.finditer(html):
                 item_html = match.group(1)
 
@@ -535,14 +726,8 @@ def scrape_all() -> List[Dict]:
     except Exception as e:
         logger.error(f"[有票网] 抓取异常: {e}")
 
-    # 去重（以名称+城市+时间为key）
-    seen = set()
-    unique = []
-    for c in all_data:
-        key = (c.get("name", ""), c.get("city", ""), c.get("time", ""))
-        if key not in seen:
-            seen.add(key)
-            unique.append(c)
+    # 智能去重：同城市 + 相似名称 + 相近日期 → 合并
+    unique = merge_concerts(all_data)
 
     # 按省份、城市和时间排序
     unique.sort(key=lambda x: (x.get("province", ""), x.get("city", ""), x.get("time", "")))

@@ -297,6 +297,9 @@
         .concert-card:hover .card-name {
             color: var(--primary);
         }
+        .concert-card {
+            cursor: pointer;
+        }
         .card-footer-link {
             display: inline-flex;
             align-items: center;
@@ -373,7 +376,24 @@
         .card-price {
             font-size: 15px;
             font-weight: 600;
+            display: flex;
+            align-items: baseline;
+            gap: 0;
+        }
+        .card-price .price-currency {
+            color: var(--text2);
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .card-price .price-amount {
             color: var(--yellow);
+            font-weight: 700;
+        }
+        .card-price .price-suffix {
+            color: var(--text2);
+            font-size: 12px;
+            font-weight: 400;
+            margin-left: 2px;
         }
         .card-status {
             font-size: 12px;
@@ -589,6 +609,14 @@
             return '';
         }
 
+        function formatPrice(price) {
+            // 支持 ¥1400起、1400起、¥3199起 等格式
+            const match = price.match(/^(¥?)(\d+)(.*)/);
+            if (!match) return price;
+            const [, currency, amount, suffix] = match;
+            return `<span class="price-currency">${currency || '¥'}</span><span class="price-amount">${amount}</span><span class="price-suffix">${suffix || '起'}</span>`;
+        }
+
         function getStatusClass(status) {
             if (status === '预售') return 'status-presale';
             if (status === '在售') return 'status-selling';
@@ -607,8 +635,21 @@
         }
 
         function renderCard(c) {
+            const hasMulti = c.url2;
+            // 多源时也用 <a> 标签，直接点击跳到最优平台
+            const href = `href="${c.url || '#'}" target="_blank" rel="noopener noreferrer"`;
+            const source2Name = c.source2 || '其他';
+            const source2Label = source2Name.replace('网', '');
+            const buyLinks = hasMulti
+                ? `<span class="card-footer-link" onclick="event.stopPropagation();window.open('${c.url2}','_blank')">${source2Label}</span>`
+                : '';
+            // 多源时不显示 source badge，单源时显示
+            const sourceBadge = hasMulti
+                ? ''
+                : `<span class="source-badge ${getSourceClass(c.source)}">${c.source}</span>`;
+
             return `
-                <a class="concert-card" href="${c.url || '#'}" target="_blank" rel="noopener noreferrer">
+                <a class="concert-card" ${href}>
                     <div class="card-inner">
                         ${c.img
                             ? `<img class="card-img" src="${c.img}" alt="${c.name}" referrerpolicy="no-referrer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">🎵</div>`
@@ -623,11 +664,11 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <span class="card-price">${c.price || '暂无'}</span>
+                        <span class="card-price">${c.price ? formatPrice(c.price) : '<span style="color:var(--text2)">暂无</span>'}</span>
                         <span style="display:flex;align-items:center;gap:6px;">
                             <span class="card-status ${getStatusClass(c.status)}">${c.status || '未知'}</span>
-                            <span class="source-badge ${getSourceClass(c.source)}">${c.source}</span>
-                            <span class="card-footer-link">购票 →</span>
+                            ${sourceBadge}
+                            ${buyLinks}
                         </span>
                     </div>
                 </a>`;
