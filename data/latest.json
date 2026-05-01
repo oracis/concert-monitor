@@ -210,6 +210,21 @@
     "url": "https://www.ypiao.com/t_115009/"
   },
   {
+    "id": "pn_775796",
+    "name": "「吾爱&middot;影视之歌」巡回演唱会",
+    "city": "呼和浩特",
+    "province": "内蒙古",
+    "time": "2026.05.04 20:00",
+    "venue": "呼和浩特体育场",
+    "price": "¥134起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/bd5302ca21dcf5c4963dc84484897fdfdda4dc48.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/775796"
+  },
+  {
     "id": "pn_762400",
     "name": "雍和金曲演唱会北京站",
     "city": "北京",
@@ -523,6 +538,21 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/770964"
+  },
+  {
+    "id": "pn_775186",
+    "name": "2026爱尚银川演唱会",
+    "city": "银川",
+    "province": "宁夏",
+    "time": "2026.05.23 19:00",
+    "venue": "贺兰山体育场",
+    "price": "¥434起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/06fc44b6da97bfcca251f9f23884c1fe890bc0eb.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/775186"
   },
   {
     "id": "pn_770547",
@@ -1077,7 +1107,7 @@
     "province": "广东",
     "time": "2026.04.24 - 05.04",
     "venue": "深圳大运中心体育场",
-    "price": "¥1124起",
+    "price": "¥1127起",
     "status": "预售",
     "img": "https://img.piaoniu.com/poster/130be78f628a13bf627307d8ae5a6269061698cf.jpg",
     "artist": "",
@@ -2682,6 +2712,21 @@
     "url": "https://www.piaoniu.com/activity/766283"
   },
   {
+    "id": "pn_770930",
+    "name": "当风舞集原创民族舞剧《白蛇传》2026巡演 重庆站(大剧场）",
+    "city": "重庆",
+    "province": "重庆",
+    "time": "2026.06.18  19:30",
+    "venue": "重庆大剧院-大剧场",
+    "price": "¥118起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/my_file/90d3ff1a-fae2-447d-8881-d8cb509a58c2.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/770930"
+  },
+  {
     "id": "pn_770120",
     "name": "G.E.M.邓紫棋 I AM GLORIA世界巡回演唱会2.0",
     "city": "重庆",
@@ -2838,7 +2883,7 @@
     "province": "黑龙江",
     "time": "2026.05.03-05.04",
     "venue": "哈尔滨国际会展中心体育场",
-    "price": "¥1271起",
+    "price": "¥1687起",
     "status": "在售",
     "img": "https://statics.ypiao.com/event/eventface-b9a76307ca86e35edfdd7e15ddb9569f?x-oss-process=style/eventface",
     "artist": "",
