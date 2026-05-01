@@ -106,6 +106,19 @@
             background: rgba(233, 69, 96, 0.2);
         }
         .location-badge .loc-icon { font-size: 15px; }
+        .location-badge.has-update {
+            background: rgba(0, 149, 255, 0.15);
+            border-color: var(--blue);
+            color: var(--blue);
+            animation: pulse-blue 2s infinite;
+        }
+        @keyframes pulse-blue {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 149, 255, 0.2); }
+            50% { box-shadow: 0 0 0 4px rgba(0, 149, 255, 0); }
+        }
+        .location-badge.has-update:hover {
+            background: rgba(0, 149, 255, 0.25);
+        }
 
         .stats-summary {
             max-width: 1400px;
@@ -551,6 +564,7 @@
         let currentConcerts = [];
         let provinces = {};
         let currentProvince = '';
+        let manualOverride = false;
         const DATA_URL = 'data.json';
 
         // Cloudflare loc 代码 → 中文省份
@@ -706,8 +720,24 @@
                 </a>`;
         }
 
-        function switchProvince(province) {
+        function switchProvince(province, isManual) {
             currentProvince = province;
+
+            // 手动选择省份 → 设置手动覆盖标志，下次刷新不自动跳转
+            if (isManual) {
+                manualOverride = !!province;  // 选全国时不阻塞自动定位
+                // 清除提示状态
+                document.getElementById('locationBadge').classList.remove('has-update');
+                document.getElementById('locationBadge').title = '点击查看全部省份';
+                // 保存到 localStorage
+                try {
+                    if (province) {
+                        localStorage.setItem('concert_pref_province', province);
+                    } else {
+                        localStorage.removeItem('concert_pref_province');
+                    }
+                } catch (e) {}
+            }
 
             // 更新标签样式
             document.querySelectorAll('.province-tag').forEach(tag => {
@@ -721,19 +751,6 @@
             } else {
                 currentConcerts = allConcerts;
                 document.getElementById('locationBadge').querySelector('#locationText').textContent = '全国';
-            }
-
-            // 用户手动点击省份标签时，保存到 localStorage（排除 init 时自动调用）
-            if (arguments.length > 1 && arguments[1] === true) {
-                try {
-                    if (province) {
-                        localStorage.setItem('concert_pref_province', province);
-                        localStorage.setItem('concert_pref_manual', '1');
-                    } else {
-                        localStorage.removeItem('concert_pref_province');
-                        localStorage.setItem('concert_pref_manual', '1');
-                    }
-                } catch (e) {}
             }
 
             // 更新统计
@@ -867,9 +884,22 @@
             } catch (e) {}
         }
 
-        // 定位徽章点击 → 切换回全国（视为手动操作）
+        // 定位徽章点击
+        // - 如果有检测到的新省份 → 切换到该省份
+        // - 否则 → 切换到全国
         document.getElementById('locationBadge').addEventListener('click', () => {
-            switchProvince('', true);
+            const badge = document.getElementById('locationBadge');
+            const detectedProvince = badge.dataset.detectedProvince;
+            if (detectedProvince) {
+                delete badge.dataset.detectedProvince;
+                badge.classList.remove('has-update');
+                badge.title = '点击查看全部省份';
+                manualOverride = false;
+                switchProvince(detectedProvince, false);
+                showToast(`📍 已切换到${detectedProvince}`, 'success');
+            } else {
+                switchProvince('', true);
+            }
         });
 
         // 页面加载
@@ -893,33 +923,40 @@
                     ).join('');
                 provinceBar.style.display = '';
 
-                // IP 定位（优先使用 localStorage 缓存）
-                let useProvince = '';
-
-                // 如果用户之前手动选过省份，直接使用
-                const savedManual = localStorage.getItem('concert_pref_manual');
-                const savedProvince = localStorage.getItem('concert_pref_province');
-                if (savedManual && savedProvince && provinces[savedProvince]) {
-                    useProvince = savedProvince;
-                } else {
-                    // 尝试 IP 定位
-                    const detected = await detectLocation();
-                    const matched = matchProvince(detected);
-                    if (matched && provinces[matched]) {
-                        useProvince = matched;
-                        // 缓存定位结果到 localStorage（下次直接用）
-                        try { localStorage.setItem('concert_pref_province', matched); } catch (e) {}
-                    }
-                }
-
-                if (useProvince) {
-                    document.getElementById('locationText').textContent = useProvince;
-                    switchProvince(useProvince, false);
-                    showToast(`📍 已定位到${useProvince}，共 ${provinces[useProvince]} 场演唱会`, 'success');
+                // 第一步：从 localStorage 加载缓存的省份，立即显示（不等 IP 检测）
+                const cachedProvince = localStorage.getItem('concert_pref_province');
+                if (cachedProvince && provinces[cachedProvince]) {
+                    document.getElementById('locationText').textContent = cachedProvince;
+                    switchProvince(cachedProvince, false);
                 } else {
                     document.getElementById('locationText').textContent = '全国';
                     switchProvince('', false);
                 }
+
+                // 第二步：后台进行 IP 检测，完成后自动更新
+                detectLocation().then(detected => {
+                    const matched = matchProvince(detected);
+                    if (matched && provinces[matched]) {
+                        // 缓存结果
+                        try { localStorage.setItem('concert_pref_province', matched); } catch (e) {}
+
+                        if (manualOverride) {
+                            // 用户手动选过省份 → 不自动切换，但徽章给提示
+                            if (matched !== currentProvince && currentProvince) {
+                                const badge = document.getElementById('locationBadge');
+                                badge.dataset.detectedProvince = matched;
+                                badge.classList.add('has-update');
+                                badge.title = `📍 检测到你当前在${matched}，点击切换到${matched}`;
+                            }
+                        } else {
+                            // 没有手动选择 → 自动更新
+                            if (matched !== currentProvince) {
+                                switchProvince(matched, false);
+                                showToast(`📍 已定位到${matched}，共 ${provinces[matched]} 场演唱会`, 'success');
+                            }
+                        }
+                    }
+                });
 
                 startAutoRefresh();
             } catch (e) {
