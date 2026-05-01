@@ -600,6 +600,29 @@
                 console.warn('ipapi 定位失败:', e);
             }
 
+            // 方案3: ip-api.com /json/（HTTPS，返回中文 regionName）
+            try {
+                const resp = await fetch('https://ip-api.com/json/?lang=zh-CN', { signal: AbortSignal.timeout(5000) });
+                const data = await resp.json();
+                if (data && data.status === 'success' && data.regionName) {
+                    // ip-api 中文模式可能直接返回中文
+                    return data.regionName;
+                }
+            } catch (e) {
+                console.warn('ip-api 定位失败:', e);
+            }
+
+            // 方案4: myip.ipip.net（国内服务，国内用户可靠）
+            try {
+                const resp = await fetch('https://myip.ipip.net/json', { signal: AbortSignal.timeout(5000) });
+                const data = await resp.json();
+                if (data && data.data && data.data.region) {
+                    return data.data.region;
+                }
+            } catch (e) {
+                console.warn('ipip 定位失败:', e);
+            }
+
             return '';
         }
 
@@ -698,6 +721,19 @@
             } else {
                 currentConcerts = allConcerts;
                 document.getElementById('locationBadge').querySelector('#locationText').textContent = '全国';
+            }
+
+            // 用户手动点击省份标签时，保存到 localStorage（排除 init 时自动调用）
+            if (arguments.length > 1 && arguments[1] === true) {
+                try {
+                    if (province) {
+                        localStorage.setItem('concert_pref_province', province);
+                        localStorage.setItem('concert_pref_manual', '1');
+                    } else {
+                        localStorage.removeItem('concert_pref_province');
+                        localStorage.setItem('concert_pref_manual', '1');
+                    }
+                } catch (e) {}
             }
 
             // 更新统计
@@ -831,9 +867,9 @@
             } catch (e) {}
         }
 
-        // 定位徽章点击 → 切换回全国
+        // 定位徽章点击 → 切换回全国（视为手动操作）
         document.getElementById('locationBadge').addEventListener('click', () => {
-            switchProvince('');
+            switchProvince('', true);
         });
 
         // 页面加载
@@ -851,25 +887,38 @@
                 const provinceBar = document.getElementById('provinceBar');
                 const provinceTags = document.getElementById('provinceTags');
                 const sortedProvinces = Object.entries(provinces).sort((a, b) => b[1] - a[1]);
-                provinceTags.innerHTML = `<span class="province-tag" data-province="" onclick="switchProvince('')">全国</span>` +
+                provinceTags.innerHTML = `<span class="province-tag" data-province="" onclick="switchProvince('',true)">全国</span>` +
                     sortedProvinces.map(([p, count]) =>
-                        `<span class="province-tag" data-province="${p}" onclick="switchProvince('${p}')">${p}<span class="tag-count">${count}</span></span>`
+                        `<span class="province-tag" data-province="${p}" onclick="switchProvince('${p}',true)">${p}<span class="tag-count">${count}</span></span>`
                     ).join('');
                 provinceBar.style.display = '';
 
-                // IP 定位
-                const detected = await detectLocation();
-                const matched = matchProvince(detected);
-                if (matched && provinces[matched]) {
-                    document.getElementById('locationText').textContent = matched;
-                    switchProvince(matched);
-                    showToast(`📍 已定位到${matched}，共 ${provinces[matched]} 场演唱会`, 'success');
+                // IP 定位（优先使用 localStorage 缓存）
+                let useProvince = '';
+
+                // 如果用户之前手动选过省份，直接使用
+                const savedManual = localStorage.getItem('concert_pref_manual');
+                const savedProvince = localStorage.getItem('concert_pref_province');
+                if (savedManual && savedProvince && provinces[savedProvince]) {
+                    useProvince = savedProvince;
+                } else {
+                    // 尝试 IP 定位
+                    const detected = await detectLocation();
+                    const matched = matchProvince(detected);
+                    if (matched && provinces[matched]) {
+                        useProvince = matched;
+                        // 缓存定位结果到 localStorage（下次直接用）
+                        try { localStorage.setItem('concert_pref_province', matched); } catch (e) {}
+                    }
+                }
+
+                if (useProvince) {
+                    document.getElementById('locationText').textContent = useProvince;
+                    switchProvince(useProvince, false);
+                    showToast(`📍 已定位到${useProvince}，共 ${provinces[useProvince]} 场演唱会`, 'success');
                 } else {
                     document.getElementById('locationText').textContent = '全国';
-                    switchProvince('');
-                    if (detected) {
-                        document.getElementById('locationText').textContent = `${detected}(暂无数据)`;
-                    }
+                    switchProvince('', false);
                 }
 
                 startAutoRefresh();
