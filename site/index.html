@@ -592,18 +592,7 @@
         };
 
         async function detectLocation() {
-            // 方案1: freeipapi.com（HTTPS，CORS 友好，免费）
-            try {
-                const resp = await fetch('https://freeipapi.com/api/json', { signal: AbortSignal.timeout(5000) });
-                const data = await resp.json();
-                if (data && data.regionName) {
-                    return EN_REGION_TO_CN[data.regionName] || data.regionName;
-                }
-            } catch (e) {
-                console.warn('freeipapi 定位失败:', e);
-            }
-
-            // 方案2: ipapi.co（HTTPS，CORS 友好，免费）
+            // 方案1: ipapi.co（HTTPS，CORS 友好，国内访问稳定）
             try {
                 const resp = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(5000) });
                 const data = await resp.json();
@@ -614,24 +603,24 @@
                 console.warn('ipapi 定位失败:', e);
             }
 
-            // 方案3: ip-api.com /json/（HTTPS，返回中文 regionName）
+            // 方案2: free.freeipapi.com（跟随 302 重定向）
             try {
-                const resp = await fetch('https://ip-api.com/json/?lang=zh-CN', { signal: AbortSignal.timeout(5000) });
+                const resp = await fetch('https://free.freeipapi.com/api/json', { signal: AbortSignal.timeout(5000) });
                 const data = await resp.json();
-                if (data && data.status === 'success' && data.regionName) {
-                    // ip-api 中文模式可能直接返回中文
-                    return data.regionName;
+                if (data && data.regionName) {
+                    return EN_REGION_TO_CN[data.regionName] || data.regionName;
                 }
             } catch (e) {
-                console.warn('ip-api 定位失败:', e);
+                console.warn('freeipapi 定位失败:', e);
             }
 
-            // 方案4: myip.ipip.net（国内服务，国内用户可靠）
+            // 方案3: myip.ipip.net（国内服务，HTTPS 可用）
             try {
                 const resp = await fetch('https://myip.ipip.net/json', { signal: AbortSignal.timeout(5000) });
                 const data = await resp.json();
-                if (data && data.data && data.data.region) {
-                    return data.data.region;
+                // 返回格式: {"ret":"ok","data":{"location":["中国","江苏","苏州","","电信"]}}
+                if (data && data.ret === 'ok' && data.data && data.data.location) {
+                    return data.data.location[1] || '';
                 }
             } catch (e) {
                 console.warn('ipip 定位失败:', e);
