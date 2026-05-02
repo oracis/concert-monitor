@@ -441,7 +441,7 @@
     "province": "四川",
     "time": "2026.05.01-05.03",
     "venue": "五粮液文化体育中心综合体育馆",
-    "price": "¥1111起",
+    "price": "¥1110起",
     "status": "预售",
     "img": "https://img.piaoniu.com/poster/65cac397aa5a901f0cfd3a27c9868c1a8bf61f2a.jpg",
     "artist": "",
@@ -1834,6 +1834,21 @@
     "url": "https://www.piaoniu.com/activity/771573"
   },
   {
+    "id": "pn_775147",
+    "name": "BY2「撇清关系2.0」十七周年巡回演唱会",
+    "city": "杭州",
+    "province": "浙江",
+    "time": "2026.05.09 周六 19:30",
+    "venue": "杭州奥体AT中心体育馆",
+    "price": "¥462起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/65f32f82dd3d41e5aaa85642b7dcda5fa4e5bca2.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/775147"
+  },
+  {
     "id": "pn_767101",
     "name": "王力宏「最好的地方II」世界巡回演唱会",
     "city": "杭州",
@@ -1847,6 +1862,21 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/767101"
+  },
+  {
+    "id": "pn_772343",
+    "name": "郑润泽2026「旷野」巡回演唱会",
+    "city": "杭州",
+    "province": "浙江",
+    "time": "2026.05.30",
+    "venue": "杭州奥体AT中心体育馆",
+    "price": "¥637起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/e546679b4cf98cca3f0870d8245d55befda6ec4a.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/772343"
   },
   {
     "id": "yp_107282",
@@ -2815,7 +2845,7 @@
     "province": "香港",
     "time": "2026.05.03-05.04",
     "venue": "启德体育公园主场馆",
-    "price": "¥2800起",
+    "price": "¥2047起",
     "status": "补票中",
     "img": "https://statics.ypiao.com/event/eventface-da1f462019fbb1d75a2980abec9435a6?x-oss-process=style/eventface",
     "artist": "",
