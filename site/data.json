@@ -1,6 +1,6 @@
 {
-  "update_time": "2026-05-09 20:12:55",
-  "total": 198,
+  "update_time": "2026-05-09 21:14:00",
+  "total": 197,
   "provinces": {
     "其他": 3,
     "上海": 5,
@@ -8,7 +8,7 @@
     "北京": 11,
     "台湾": 11,
     "吉林": 2,
-    "四川": 6,
+    "四川": 5,
     "天津": 4,
     "安徽": 3,
     "山东": 12,
@@ -588,21 +588,6 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/774335"
-    },
-    {
-      "id": "pn_766193",
-      "name": "年度京味大戏&middot;老舍经典话剧《茶馆》全国巡演",
-      "city": "成都",
-      "province": "四川",
-      "time": "2026.05.22-05.23",
-      "venue": "成都城市音乐厅-歌剧厅",
-      "price": "¥184起",
-      "status": "在售",
-      "img": "https://img.piaoniu.com/my_file/81c40a37-ffd8-4302-a001-59e7935996a5.jpg",
-      "artist": "",
-      "category": "演唱会",
-      "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/766193"
     },
     {
       "id": "pn_767578",
