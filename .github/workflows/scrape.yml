@@ -1,4 +1,4 @@
-name: 刷新演唱会数据
+name: 刷新演唱会数据并部署
 
 on:
   schedule:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  scrape:
+  scrape-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,10 +25,54 @@ jobs:
       - name: 执行爬虫
         run: python scraper.py
 
-      - name: 提交更新
+      - name: 提交数据更新
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add site/data.json data/
           git diff --cached --quiet || git commit -m "🎵 刷新演唱会数据 ($(date '+%Y-%m-%d %H:%M'))"
           git push
+
+      - name: 安装 oss2 SDK
+        run: pip install oss2
+
+      - name: 上传到阿里云 OSS
+        env:
+          OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
+          OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+          OSS_BUCKET: ${{ secrets.OSS_BUCKET }}
+        run: |
+          python << 'EOF'
+          import oss2
+          import os
+
+          auth = oss2.Auth(os.environ['OSS_ACCESS_KEY_ID'], os.environ['OSS_ACCESS_KEY_SECRET'])
+          bucket = oss2.Bucket(auth, 'https://oss-cn-hongkong.aliyuncs.com', os.environ['OSS_BUCKET'])
+
+          mime_types = {
+              '.html': 'text/html; charset=utf-8',
+              '.css': 'text/css',
+              '.js': 'application/javascript',
+              '.json': 'application/json',
+              '.png': 'image/png',
+              '.jpg': 'image/jpeg',
+              '.jpeg': 'image/jpeg',
+              '.gif': 'image/gif',
+              '.svg': 'image/svg+xml',
+              '.ico': 'image/x-icon',
+              '.woff': 'font/woff',
+              '.woff2': 'font/woff2',
+              '.ttf': 'font/ttf',
+              '.eot': 'application/vnd.ms-fontobject',
+          }
+
+          for root, dirs, files in os.walk('site'):
+              for f in files:
+                  filepath = os.path.join(root, f)
+                  oss_key = os.path.relpath(filepath, 'site')
+                  ext = os.path.splitext(f)[1].lower()
+                  content_type = mime_types.get(ext, 'application/octet-stream')
+                  bucket.put_object_from_file(oss_key, filepath, headers={'Content-Type': content_type})
+                  print(f'Uploaded: {oss_key}')
+          print('✅ 全部上传完成')
+          EOF
