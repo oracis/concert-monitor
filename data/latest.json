@@ -75,13 +75,28 @@
     "url": "https://www.ypiao.com/t_111686/"
   },
   {
+    "id": "yp_115292",
+    "name": "TOMORROW X TOGETHER（TXT）MOA CON巡回演唱会 神户市",
+    "city": "神户",
+    "province": "其他",
+    "time": "2026.06.23-06.24",
+    "venue": "GLION ARENA KOBE",
+    "price": "¥4300起",
+    "status": "预售",
+    "img": "https://statics.ypiao.com/event/eventface-32733d73efd512be2ac3fed89547917d?x-oss-process=style/eventface",
+    "artist": "",
+    "category": "演唱会",
+    "source": "有票网",
+    "url": "https://www.ypiao.com/t_115292/"
+  },
+  {
     "id": "pn_773159",
     "name": "蒲熠星《银河系旅行攻略》巡回演唱会",
     "city": "上海",
     "province": "上海",
     "time": "2026.05.16 - 05.17",
     "venue": "上海梅赛德斯-奔驰文化中心",
-    "price": "¥462起",
+    "price": "¥440起",
     "status": "预售",
     "img": "https://img.piaoniu.com/mtl/default/img/2026/3/22/DmZY66f28k_.png",
     "artist": "",
@@ -615,21 +630,6 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/775437"
-  },
-  {
-    "id": "yp_116597",
-    "name": "陈楚生“荒芜之境”2026巡回演唱会一济南站",
-    "city": "济南",
-    "province": "山东",
-    "time": "2026.06.20  19:30",
-    "venue": "济南奥林匹克体育中心体育场",
-    "price": "¥583起",
-    "status": "预售",
-    "img": "https://statics.ypiao.com/event/eventface-480b52fec90d07da477f6d10f638eb1a?x-oss-process=style/eventface",
-    "artist": "",
-    "category": "演唱会",
-    "source": "有票网",
-    "url": "https://www.ypiao.com/t_116597/"
   },
   {
     "id": "pn_767195",
