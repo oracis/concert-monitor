@@ -1075,6 +1075,36 @@
     "url": "https://www.ypiao.com/t_112531/"
   },
   {
+    "id": "pn_774243",
+    "name": "星动亚心 潮流之夜巨星演唱会",
+    "city": "乌鲁木齐",
+    "province": "新疆",
+    "time": "2026.05.30 21:00",
+    "venue": "乌鲁木齐奥体中心体育场",
+    "price": "¥364起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/14a189835c3fe205008752f39fd7e0bcb1b86473.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/774243"
+  },
+  {
+    "id": "pn_773172",
+    "name": "黄丽玲A-Lin 歌 迹 Journey世界巡回演唱会",
+    "city": "乌鲁木齐",
+    "province": "新疆",
+    "time": "2026.08.15 - 08.16",
+    "venue": "乌鲁木齐奥体中心综合体育馆",
+    "price": "¥613起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/d247396e6b590e237ff70d8c649c004dcd3270bc.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/773172"
+  },
+  {
     "id": "pn_768492",
     "name": "薛之谦&ldquo;万兽之王&rdquo;巡回演唱会",
     "city": "南京",
@@ -1495,6 +1525,21 @@
     "url": "https://www.piaoniu.com/activity/775745"
   },
   {
+    "id": "pn_774856",
+    "name": "张韶涵2026「玩家」巡回演唱会",
+    "city": "洛阳",
+    "province": "河南",
+    "time": "2026.10.31 00:00",
+    "venue": "场馆待定",
+    "price": "",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/53114d085c36ce54d754c07d8c111adddd485bd3.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/774856"
+  },
+  {
     "id": "pn_772064",
     "name": "陈楚生2026&ldquo;荒芜之境&rdquo;巡回演唱会",
     "city": "郑州",
@@ -1555,19 +1600,36 @@
     "url": "https://www.ypiao.com/t_115551/"
   },
   {
-    "id": "yp_114052",
-    "name": "张韶涵-世界巡回演唱会 嘉兴站",
+    "id": "pn_773221",
+    "name": "张韶涵2026玩家巡回演唱会",
     "city": "嘉兴",
     "province": "浙江",
     "time": "2026.05.29",
     "venue": "嘉兴市体育中心体育场",
-    "price": "¥2043起",
+    "price": "¥1685起",
     "status": "在售",
-    "img": "https://statics.ypiao.com/event/eventface-100cd875815414874349f055890186cf?x-oss-process=style/eventface",
+    "img": "https://img.piaoniu.com/poster/fa243221eaeae69f8eeac139a17c9014210b16e1.jpg",
     "artist": "",
     "category": "演唱会",
-    "source": "有票网",
-    "url": "https://www.ypiao.com/t_114052/"
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/773221",
+    "url2": "https://www.ypiao.com/t_114052/",
+    "source2": "有票网"
+  },
+  {
+    "id": "pn_775650",
+    "name": "徐怀钰2026光致蜕变Light It Up巡回演唱会",
+    "city": "宁波",
+    "province": "浙江",
+    "time": "2026.06.06 19:30",
+    "venue": "宁波奥体中心体育馆",
+    "price": "¥637起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/mtl/default/img/2026/4/27/zfaG34MYzy_.png",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/775650"
   },
   {
     "id": "yp_113856",
@@ -1583,6 +1645,36 @@
     "category": "演唱会",
     "source": "有票网",
     "url": "https://www.ypiao.com/t_113856/"
+  },
+  {
+    "id": "pn_775649",
+    "name": "光良&ldquo;不会分离&middot;今晚我不孤独3.0⁺&rdquo;巡回演唱会",
+    "city": "宁波",
+    "province": "浙江",
+    "time": "2026.07.25 19:00",
+    "venue": "宁波奥体中心体育馆",
+    "price": "¥715起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/882cc5ec1deed53de26f7f645036852b4e62d0c6.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/775649"
+  },
+  {
+    "id": "pn_776367",
+    "name": "MC法老2026「生于未来」巡回演唱会",
+    "city": "宁波",
+    "province": "浙江",
+    "time": "2026.08.08 19:00",
+    "venue": "宁波奥体中心体育馆",
+    "price": "¥702起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/mtl/default/img/2026/5/8/FrxcEMsYyk_.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/776367"
   },
   {
     "id": "pn_768845",
@@ -1705,6 +1797,21 @@
     "url": "https://www.piaoniu.com/activity/774980"
   },
   {
+    "id": "pn_775667",
+    "name": "王力宏演唱会",
+    "city": "温州",
+    "province": "浙江",
+    "time": "待定",
+    "venue": "场馆待定",
+    "price": "",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/02140cda009aa55e74d4b589ddb22a9202618cdf.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/775667"
+  },
+  {
     "id": "pn_775665",
     "name": "谢霆锋演唱会",
     "city": "温州",
@@ -1735,6 +1842,21 @@
     "url": "https://www.piaoniu.com/activity/764389"
   },
   {
+    "id": "pn_774385",
+    "name": "鼎玉&middot;文邦 超级LIVE演唱会",
+    "city": "湖州",
+    "province": "浙江",
+    "time": "2026.05.30 19:30",
+    "venue": "湖州奥体中心体育场",
+    "price": "¥440起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/mtl/default/img/2026/4/9/MsGrX5WbiW_.png",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/774385"
+  },
+  {
     "id": "pn_773203",
     "name": "诸暨&middot;黎明ROBBABA演唱会",
     "city": "绍兴",
@@ -1763,6 +1885,21 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/776415"
+  },
+  {
+    "id": "pn_775743",
+    "name": "声声不息&middot;港乐经典金曲演唱会金华站",
+    "city": "金华",
+    "province": "浙江",
+    "time": "",
+    "venue": "",
+    "price": "¥111起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/my_file/156e9aca-7575-434b-b88c-8fb0076a2f0c.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/775743"
   },
   {
     "id": "pn_777112",
@@ -2007,6 +2144,21 @@
     "category": "演唱会",
     "source": "有票网",
     "url": "https://www.ypiao.com/t_111570/"
+  },
+  {
+    "id": "pn_767906",
+    "name": "凤凰传奇2026「吉祥如意」巡回演唱会",
+    "city": "兰州",
+    "province": "甘肃",
+    "time": "2026.05.29-05.31",
+    "venue": "兰州奥体中心玫瑰体育场",
+    "price": "¥671起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/0c62cf4a450ae57ec361b6cd97a9d7fe4daa2e74.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/767906"
   },
   {
     "id": "yp_113684",
