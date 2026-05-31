@@ -377,6 +377,21 @@
     "url": "https://www.piaoniu.com/activity/770637"
   },
   {
+    "id": "yp_114955",
+    "name": "EXO PLAIIET #6EXhOrizon巡回演唱会-高雄站",
+    "city": "高雄",
+    "province": "台湾",
+    "time": "2026.07.18-08.19 18:00",
+    "venue": "高雄巨蛋",
+    "price": "¥3225起",
+    "status": "预售",
+    "img": "https://statics.ypiao.com/event/eventface-19823d5a0c55f5b07fa7040c84ad9523?x-oss-process=style/eventface",
+    "artist": "",
+    "category": "演唱会",
+    "source": "有票网",
+    "url": "https://www.ypiao.com/t_114955/"
+  },
+  {
     "id": "pn_773435",
     "name": "任贤齐《齐迹2026》巡回演唱会",
     "city": "成都",
@@ -719,7 +734,7 @@
     "province": "山东",
     "time": "2026.07.11 19:00",
     "venue": "青岛市民健身中心体育场",
-    "price": "¥508起",
+    "price": "¥507起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/5a38e2c3812ac53e7da4ce2de914106f35e21690.jpg",
     "artist": "",
@@ -893,19 +908,19 @@
     "url": "https://www.piaoniu.com/activity/776507"
   },
   {
-    "id": "pn_774806",
-    "name": "杨丞琳《房间里的大象》巡回演唱会",
+    "id": "pn_774036",
+    "name": "侧田 2026 再一起演唱会 COMEGETHER",
     "city": "东莞",
     "province": "广东",
-    "time": "2026.06.20 19:00",
+    "time": "2026.06.27 19:30",
     "venue": "东莞银行篮球中心(原东莞篮球中心)",
-    "price": "¥849起",
+    "price": "¥543起",
     "status": "在售",
-    "img": "https://img.piaoniu.com/poster/d6cf118d3e0d2c70ab643384ffe203ca0a99d5b6.jpg",
+    "img": "https://img.piaoniu.com/poster/6b69fa5ecf4f1db0cd57f6d6eb7ba270bc29ed88.jpg",
     "artist": "",
     "category": "演唱会",
     "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/774806"
+    "url": "https://www.piaoniu.com/activity/774036"
   },
   {
     "id": "pn_773242",
@@ -1531,7 +1546,7 @@
     "province": "河南",
     "time": "2026.06.27 19:30",
     "venue": "郑州奥林匹克体育中心 洋河&middot;梦之蓝体育馆",
-    "price": "¥467起",
+    "price": "¥401起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/52f6a7298b78224a414f9ea78f918135c2448f87.jpg",
     "artist": "",
@@ -1546,7 +1561,7 @@
     "province": "河南",
     "time": "2026.07.04 19:00",
     "venue": "郑州奥林匹克体育中心 洋河&middot;梦之蓝体育馆",
-    "price": "¥669起",
+    "price": "¥667起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/1f70a903dd13e66d8e8574db1be110c373150aa2.jpg",
     "artist": "",
@@ -2330,7 +2345,7 @@
     "province": "贵州",
     "time": "2026.08.29 19:30",
     "venue": "贵阳奥林匹克体育中心体育场",
-    "price": "¥517起",
+    "price": "¥516起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/a582159db7954ec310b4ba6673d8d0a05d417bd3.jpg",
     "artist": "",
@@ -2720,12 +2735,14 @@
     "province": "黑龙江",
     "time": "2026.06.20-06.21",
     "venue": "哈尔滨国际会展体育中心体育馆",
-    "price": "¥1241起",
+    "price": "¥1200起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/158cf3ec87bccfd41113aa890f49d8e220fa6fc8.jpg",
     "artist": "",
     "category": "演唱会",
     "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/767185"
+    "url": "https://www.piaoniu.com/activity/767185",
+    "url2": "https://www.ypiao.com/t_113933/",
+    "source2": "有票网"
   }
 ]
