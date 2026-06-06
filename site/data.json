@@ -1,6 +1,6 @@
 {
-  "update_time": "2026-06-06 20:17:37",
-  "total": 177,
+  "update_time": "2026-06-06 21:41:59",
+  "total": 181,
   "provinces": {
     "其他": 5,
     "上海": 3,
@@ -16,7 +16,7 @@
     "江苏": 16,
     "江西": 6,
     "河南": 7,
-    "浙江": 17,
+    "浙江": 21,
     "海南": 2,
     "湖北": 5,
     "湖南": 7,
@@ -737,7 +737,7 @@
       "province": "山西",
       "time": "2026.06.12-06.14",
       "venue": "山西体育中心体育场",
-      "price": "¥580起",
+      "price": "¥581起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/ae2c55c848cc65f3ced9f9f97438d05ba735d140.jpg",
       "artist": "",
@@ -1652,6 +1652,36 @@
       "url": "https://www.piaoniu.com/activity/776490"
     },
     {
+      "id": "pn_772843",
+      "name": "陈洁仪2026 ATRIUM(心房)巡回演唱会",
+      "city": "杭州",
+      "province": "浙江",
+      "time": "2026.06.13 19:00",
+      "venue": "乐动力钱塘体育中心篮球赛馆",
+      "price": "¥275起",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/poster/eb4e14f4b10053b0dec63f89dfe33a876c570708.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/772843"
+    },
+    {
+      "id": "pn_774793",
+      "name": "周传雄「念念不忘&middot;再遇见plus」巡回演唱会",
+      "city": "杭州",
+      "province": "浙江",
+      "time": "2026.06.27 周六 19:30",
+      "venue": "杭州奥体中心体育场",
+      "price": "¥656起",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/poster/8df1c322267b325bcd1ecb447c65305839ba1bdb.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/774793"
+    },
+    {
       "id": "pn_766214",
       "name": "G.E.M.邓紫棋 I AM GLORIA世界巡回演唱会2.0",
       "city": "杭州",
@@ -1665,6 +1695,21 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/766214"
+    },
+    {
+      "id": "pn_676657",
+      "name": "薛之谦2026&lsquo;&lsquo;万兽之王&rsquo;&rsquo;巡回演唱会",
+      "city": "杭州",
+      "province": "浙江",
+      "time": "2026.08.07",
+      "venue": "杭州奥体中心主体育场",
+      "price": "",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/poster/04a29c13c3ea8fd5c300bf619d09061d398dfad6.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/676657"
     },
     {
       "id": "yp_107282",
@@ -1800,6 +1845,21 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/778110"
+    },
+    {
+      "id": "pn_777440",
+      "name": "陈慧娴2026&ldquo;The Fabulous 40&rdquo;巡回演唱会",
+      "city": "绍兴",
+      "province": "浙江",
+      "time": "2026.07.18 19:00",
+      "venue": "西施篮球中心",
+      "price": "¥528起",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/mtl/default/img/2026/5/22/CfANHHRXyE_.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/777440"
     },
     {
       "id": "pn_777045",
