@@ -1,8 +1,8 @@
 {
-  "update_time": "2026-06-07 17:29:03",
-  "total": 174,
+  "update_time": "2026-06-07 18:54:56",
+  "total": 170,
   "provinces": {
-    "其他": 6,
+    "其他": 7,
     "上海": 4,
     "内蒙古": 4,
     "北京": 6,
@@ -16,7 +16,7 @@
     "江苏": 17,
     "江西": 5,
     "河南": 7,
-    "浙江": 23,
+    "浙江": 19,
     "海南": 1,
     "湖北": 6,
     "湖南": 9,
@@ -28,7 +28,7 @@
     "重庆": 5,
     "陕西": 1,
     "青海": 2,
-    "香港": 5,
+    "香港": 4,
     "黑龙江": 2
   },
   "concerts": [
@@ -76,6 +76,21 @@
       "category": "演唱会",
       "source": "有票网",
       "url": "https://www.ypiao.com/t_114150/"
+    },
+    {
+      "id": "yp_113138",
+      "name": "EXO PLAIIET #6EXhOrizon巡回演唱会 新加坡",
+      "city": "新加坡",
+      "province": "其他",
+      "time": "2026.07.24-07.26",
+      "venue": "新加坡室内体育馆SINGAPORE INDOOR STADIUM",
+      "price": "¥3500起",
+      "status": "预售",
+      "img": "https://statics.ypiao.com/event/eventface-050bd0acb494ffbb263b315e0d6ba67f?x-oss-process=style/eventface",
+      "artist": "",
+      "category": "演唱会",
+      "source": "有票网",
+      "url": "https://www.ypiao.com/t_113138/"
     },
     {
       "id": "yp_111686",
@@ -174,7 +189,7 @@
       "province": "上海",
       "time": "2026.07.18 19:30",
       "venue": "静安体育中心-体育馆",
-      "price": "¥949起",
+      "price": "¥1010起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/00ae676f3c20ffcfd61895be3c09cbf00d51a71a.jpg",
       "artist": "",
@@ -1405,7 +1420,7 @@
       "province": "河南",
       "time": "2026.06.20 - 06.21",
       "venue": "郑州奥林匹克体育中心 洋河&middot;梦之蓝体育馆",
-      "price": "¥784起",
+      "price": "¥783起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/b14771a9bbe074d7377e4e8d80e3b112afd3bf2b.jpg",
       "artist": "",
@@ -1566,36 +1581,6 @@
       "url": "https://www.piaoniu.com/activity/776490"
     },
     {
-      "id": "pn_772843",
-      "name": "陈洁仪2026 ATRIUM(心房)巡回演唱会",
-      "city": "杭州",
-      "province": "浙江",
-      "time": "2026.06.13 19:00",
-      "venue": "乐动力钱塘体育中心篮球赛馆",
-      "price": "¥275起",
-      "status": "在售",
-      "img": "https://img.piaoniu.com/poster/eb4e14f4b10053b0dec63f89dfe33a876c570708.jpg",
-      "artist": "",
-      "category": "演唱会",
-      "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/772843"
-    },
-    {
-      "id": "pn_774793",
-      "name": "周传雄「念念不忘&middot;再遇见plus」巡回演唱会",
-      "city": "杭州",
-      "province": "浙江",
-      "time": "2026.06.27 周六 19:30",
-      "venue": "杭州奥体中心体育场",
-      "price": "¥653起",
-      "status": "在售",
-      "img": "https://img.piaoniu.com/poster/8df1c322267b325bcd1ecb447c65305839ba1bdb.jpg",
-      "artist": "",
-      "category": "演唱会",
-      "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/774793"
-    },
-    {
       "id": "pn_766214",
       "name": "G.E.M.邓紫棋 I AM GLORIA世界巡回演唱会2.0",
       "city": "杭州",
@@ -1609,21 +1594,6 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/766214"
-    },
-    {
-      "id": "pn_676657",
-      "name": "薛之谦2026&lsquo;&lsquo;万兽之王&rsquo;&rsquo;巡回演唱会",
-      "city": "杭州",
-      "province": "浙江",
-      "time": "2026.08.07",
-      "venue": "杭州奥体中心主体育场",
-      "price": "",
-      "status": "在售",
-      "img": "https://img.piaoniu.com/poster/04a29c13c3ea8fd5c300bf619d09061d398dfad6.jpg",
-      "artist": "",
-      "category": "演唱会",
-      "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/676657"
     },
     {
       "id": "yp_107282",
@@ -1729,21 +1699,6 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/776415"
-    },
-    {
-      "id": "pn_777361",
-      "name": "TF_ING穆祉丞演唱会绍兴诸暨站",
-      "city": "绍兴",
-      "province": "浙江",
-      "time": "2026.06.27 - 06.28",
-      "venue": "场馆待定",
-      "price": "",
-      "status": "在售",
-      "img": "https://img.piaoniu.com/poster/8d73a54be480e5e1a4725ce406c730f568fb0dae.jpg",
-      "artist": "",
-      "category": "演唱会",
-      "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/777361"
     },
     {
       "id": "pn_778110",
@@ -2172,7 +2127,7 @@
       "province": "福建",
       "time": "2026.07.25 19:30",
       "venue": "晋江第二体育中心体育馆",
-      "price": "¥517起",
+      "price": "¥473起",
       "status": "在售",
       "img": "https://img.piaoniu.com/mtl/default/img/2026/3/18/Ar5Xh7E7KF_.jpg",
       "artist": "",
@@ -2504,7 +2459,7 @@
       "province": "重庆",
       "time": "2026.08.22 周六 19:00",
       "venue": "重庆奥体中心体育场",
-      "price": "¥600起",
+      "price": "¥598起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/38eb72091bf634dc1cd1b415453ea169a476e1ae.jpg",
       "artist": "",
@@ -2586,21 +2541,6 @@
       "category": "演唱会",
       "source": "有票网",
       "url": "https://www.ypiao.com/t_113133/"
-    },
-    {
-      "id": "yp_111687",
-      "name": "2026 i-dle WORLD TOUR [Syncopation]香港",
-      "city": "中国香港",
-      "province": "香港",
-      "time": "2026.06.27-06.28",
-      "venue": "启德体育公园主场馆",
-      "price": "¥1202起",
-      "status": "预售",
-      "img": "https://statics.ypiao.com/event/eventface-e2715b74c63599e150752e73d0f69c26?x-oss-process=style/eventface",
-      "artist": "",
-      "category": "演唱会",
-      "source": "有票网",
-      "url": "https://www.ypiao.com/t_111687/"
     },
     {
       "id": "yp_115252",
