@@ -1379,6 +1379,21 @@
     "url": "https://www.piaoniu.com/activity/767505"
   },
   {
+    "id": "pn_773962",
+    "name": "李荣浩「黑马」世界巡回演唱会",
+    "city": "赣州",
+    "province": "江西",
+    "time": "2026.07.18 19:00",
+    "venue": "赣州市全民健身中心",
+    "price": "¥432起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/68d553cfb6e97b789f21988e19a19dbbec01908f.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/773962"
+  },
+  {
     "id": "pn_765022",
     "name": "张杰2026巡回演唱会",
     "city": "赣州",
@@ -2642,6 +2657,8 @@
     "artist": "",
     "category": "演唱会",
     "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/767185"
+    "url": "https://www.piaoniu.com/activity/767185",
+    "url2": "https://www.ypiao.com/t_113933/",
+    "source2": "有票网"
   }
 ]
