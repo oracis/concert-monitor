@@ -1,8 +1,8 @@
 {
-  "update_time": "2026-06-09 18:18:09",
+  "update_time": "2026-06-09 20:33:45",
   "total": 180,
   "provinces": {
-    "其他": 7,
+    "其他": 6,
     "上海": 4,
     "内蒙古": 5,
     "北京": 8,
@@ -29,7 +29,7 @@
     "重庆": 5,
     "陕西": 2,
     "青海": 2,
-    "香港": 4,
+    "香港": 5,
     "黑龙江": 3
   },
   "concerts": [
@@ -47,21 +47,6 @@
       "category": "演唱会",
       "source": "有票网",
       "url": "https://www.ypiao.com/t_111685/"
-    },
-    {
-      "id": "yp_116853",
-      "name": "IRENE裴珠泫[ I-WILL ]巡回演唱会-新加坡站",
-      "city": "新加坡",
-      "province": "其他",
-      "time": "2026.07.04 18:00",
-      "venue": "The Theatre at Mediacorp",
-      "price": "¥2613起",
-      "status": "预售",
-      "img": "https://statics.ypiao.com/event/eventface-fff47f9c27130856208b0d0565e2da43?x-oss-process=style/eventface",
-      "artist": "",
-      "category": "演唱会",
-      "source": "有票网",
-      "url": "https://www.ypiao.com/t_116853/"
     },
     {
       "id": "yp_114150",
@@ -766,7 +751,7 @@
       "province": "山东",
       "time": "2026.07.25-07.26",
       "venue": "青岛市民健身中心体育场",
-      "price": "¥628起",
+      "price": "¥627起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/e1c61b648053066323fa2ac45c440e38dcf5e440.jpg",
       "artist": "",
@@ -1027,7 +1012,7 @@
       "province": "广东",
       "time": "2026.06.13 19:00",
       "venue": "深圳大运中心体育馆",
-      "price": "¥420起",
+      "price": "¥838起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/54c3470eda16cf1cc14c5bf2634ac3e79dd8e253.jpg",
       "artist": "",
@@ -2222,7 +2207,7 @@
       "province": "福建",
       "time": "2026.07.04 19:30",
       "venue": "晋江市第二体育中心主体育馆",
-      "price": "¥525起",
+      "price": "¥504起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/67ccdb28d3fdd3c98899e2ff1ae0c1da2ca7e59f.jpg",
       "artist": "",
@@ -2614,7 +2599,7 @@
       "province": "陕西",
       "time": "2026.06.27-06.28",
       "venue": "西安奥体中心体育场",
-      "price": "¥735起",
+      "price": "¥734起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/05b57401f3f31cf381317c519fd733197b525f2c.jpg",
       "artist": "",
@@ -2651,6 +2636,21 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/778328"
+    },
+    {
+      "id": "yp_114402",
+      "name": "罗志祥 SHOW LO 30周年世界巡回演唱会 – 香港",
+      "city": "中国香港",
+      "province": "香港",
+      "time": "2026.06.13",
+      "venue": "香港体育馆",
+      "price": "¥3500起",
+      "status": "在售",
+      "img": "https://statics.ypiao.com/event/eventface-670931418655e888dd8b366fdf4dfc59?x-oss-process=style/eventface",
+      "artist": "",
+      "category": "演唱会",
+      "source": "有票网",
+      "url": "https://www.ypiao.com/t_114402/"
     },
     {
       "id": "yp_113133",
