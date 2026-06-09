@@ -912,21 +912,6 @@
     "url": "https://www.piaoniu.com/activity/776360"
   },
   {
-    "id": "yp_115336",
-    "name": "凤凰传奇「吉祥如意」巡回演唱会-广州站",
-    "city": "广州",
-    "province": "广东",
-    "time": "2026.06.12-06.21",
-    "venue": "广东省奥林匹克体育中心体育场",
-    "price": "¥746起",
-    "status": "在售",
-    "img": "https://statics.ypiao.com/event/eventface-11971d2a464dff06db0db6c070612907?x-oss-process=style/eventface",
-    "artist": "",
-    "category": "演唱会",
-    "source": "有票网",
-    "url": "https://www.ypiao.com/t_115336/"
-  },
-  {
     "id": "pn_775962",
     "name": "钟镇涛 2026 &ldquo;及时行乐 Live in the Moment&rdquo;巡回演唱会",
     "city": "广州",
@@ -948,7 +933,7 @@
     "province": "广东",
     "time": "2026.06.27 - 06.28",
     "venue": "宝能广州国际体育演艺中心",
-    "price": "¥662起",
+    "price": "¥683起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/e3b24497bff0ce82a2f7e035c95d9742ad791331.jpg",
     "artist": "",
@@ -1083,7 +1068,7 @@
     "province": "江苏",
     "time": "2026.07.17-07.19",
     "venue": "梦之蓝青奥体育公园体育馆",
-    "price": "¥2606起",
+    "price": "¥2605起",
     "status": "预售",
     "img": "https://statics.ypiao.com/event/eventface-8aece1b15d8e922e3e77c50d2b6c1756?x-oss-process=style/eventface",
     "artist": "",
@@ -2075,6 +2060,21 @@
     "url": "https://www.piaoniu.com/activity/778145",
     "url2": "https://www.ypiao.com/t_118561/",
     "source2": "有票网"
+  },
+  {
+    "id": "yp_115772",
+    "name": "姜涛 KEUNG TO “LAVA” LIVE TOUR 2026澳门站",
+    "city": "中国澳门",
+    "province": "澳门",
+    "time": "2026.06.19-06.21",
+    "venue": "澳门银河综艺馆",
+    "price": "¥1123起",
+    "status": "预售",
+    "img": "https://statics.ypiao.com/event/eventface-246d0b9c6f9f8ba669e06699a37d9902?x-oss-process=style/eventface",
+    "artist": "",
+    "category": "演唱会",
+    "source": "有票网",
+    "url": "https://www.ypiao.com/t_115772/"
   },
   {
     "id": "yp_118030",
