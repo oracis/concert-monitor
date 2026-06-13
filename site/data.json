@@ -1,6 +1,6 @@
 {
-  "update_time": "2026-06-13 18:24:33",
-  "total": 173,
+  "update_time": "2026-06-13 20:06:36",
+  "total": 178,
   "provinces": {
     "其他": 5,
     "上海": 4,
@@ -16,9 +16,9 @@
     "江苏": 20,
     "江西": 5,
     "河南": 5,
-    "浙江": 17,
+    "浙江": 20,
     "海南": 1,
-    "湖北": 4,
+    "湖北": 6,
     "湖南": 11,
     "澳门": 2,
     "甘肃": 1,
@@ -340,7 +340,7 @@
       "province": "北京",
       "time": "2026.07.17-07.19",
       "venue": "华熙生物 · 润百颜中心",
-      "price": "¥800起",
+      "price": "¥806起",
       "status": "预售",
       "img": "https://statics.ypiao.com/event/eventface-c7b2dd37955735b005d5f5d6221ff657?x-oss-process=style/eventface",
       "artist": "",
@@ -895,6 +895,21 @@
       "url": "https://www.piaoniu.com/activity/775386"
     },
     {
+      "id": "yp_114033",
+      "name": "“万物安生时”李健巡回演唱会-佛山站",
+      "city": "佛山",
+      "province": "广东",
+      "time": "2026.06.27  19:30",
+      "venue": "佛山国际体育文化演艺中心",
+      "price": "¥1530起",
+      "status": "预售",
+      "img": "https://statics.ypiao.com/event/eventface-2638ca7cbd31fccb7bfee5715019694c?x-oss-process=style/eventface",
+      "artist": "",
+      "category": "演唱会",
+      "source": "有票网",
+      "url": "https://www.ypiao.com/t_114033/"
+    },
+    {
       "id": "pn_771511",
       "name": "李健&ldquo;万物安生时&rdquo;巡回演唱会",
       "city": "佛山",
@@ -983,21 +998,6 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/775793"
-    },
-    {
-      "id": "yp_116251",
-      "name": "2026陈慧娴40周年“Fabulous 40” 巡回演唱会-深圳站",
-      "city": "深圳",
-      "province": "广东",
-      "time": "2026.06.27  19:00",
-      "venue": "深圳大运中心体育馆",
-      "price": "¥910起",
-      "status": "预售",
-      "img": "https://statics.ypiao.com/event/eventface-8b83fc064df448fd909ba1e117b6c7c7?x-oss-process=style/eventface",
-      "artist": "",
-      "category": "演唱会",
-      "source": "有票网",
-      "url": "https://www.ypiao.com/t_116251/"
     },
     {
       "id": "pn_775384",
@@ -1713,19 +1713,51 @@
       "url": "https://www.piaoniu.com/activity/778907"
     },
     {
-      "id": "yp_118582",
-      "name": "Evolution Nic Live 谢霆锋进化演唱会-温州站",
+      "id": "pn_774980",
+      "name": "张韶涵2026 玩家 巡回演唱会",
+      "city": "温州",
+      "province": "浙江",
+      "time": "2026.06.20 19:30",
+      "venue": "场馆待定",
+      "price": "",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/mtl/default/img/2026/4/17/2RBiPAbQdB_.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/774980"
+    },
+    {
+      "id": "pn_777301",
+      "name": "【温州】KNOWKNOW Mr. Enjoy Da Melody 2026巡回演唱会 - 温州站",
+      "city": "温州",
+      "province": "浙江",
+      "time": "2026.06.21 20:00",
+      "venue": "SEELAB意空间见(西鹿店)",
+      "price": "¥796起",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/poster/55a7140d3e0269789ed52c3674225f8d021b0e2e.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/777301"
+    },
+    {
+      "id": "pn_775665",
+      "name": "谢霆锋演唱会",
       "city": "温州",
       "province": "浙江",
       "time": "2026.10.31-11.01",
       "venue": "温州奥体中心体育场",
       "price": "¥927起",
-      "status": "预售",
-      "img": "https://statics.ypiao.com/event/eventface-f0512c9fd83d905a40e0943ada9b218f?x-oss-process=style/eventface",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/poster/e6b75db89cd76d2ea2ec0db98f9becf32a1e3ee1.jpg",
       "artist": "",
       "category": "演唱会",
-      "source": "有票网",
-      "url": "https://www.ypiao.com/t_118582/"
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/775665",
+      "url2": "https://www.ypiao.com/t_118582/",
+      "source2": "有票网"
     },
     {
       "id": "pn_775667",
@@ -1741,6 +1773,21 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/775667"
+    },
+    {
+      "id": "pn_764389",
+      "name": "张杰未&middot;LIVE&mdash;「开往1982」世界巡回演唱会",
+      "city": "温州",
+      "province": "浙江",
+      "time": "时间待定",
+      "venue": "场馆待定",
+      "price": "",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/poster/d73d9c52da0a58fd76270794192eb273aabab3cb.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/764389"
     },
     {
       "id": "pn_778109",
@@ -1848,6 +1895,21 @@
       "url": "https://www.piaoniu.com/activity/777516"
     },
     {
+      "id": "pn_777112",
+      "name": "2026年《快乐车都》群星演唱会",
+      "city": "十堰",
+      "province": "湖北",
+      "time": "2026.06.27 19:30",
+      "venue": "十堰体育中心",
+      "price": "¥102起",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/poster/179df7f8aa236d35c80bbecc91abf90a5b8264e6.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/777112"
+    },
+    {
       "id": "pn_774786",
       "name": "郭富城2026 ICONIC世界巡回演唱会",
       "city": "武汉",
@@ -1861,6 +1923,21 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/774786"
+    },
+    {
+      "id": "pn_778240",
+      "name": "陆虎2026「像你这样的朋友3.0」巡演",
+      "city": "武汉",
+      "province": "湖北",
+      "time": "2026.07.11 19:00",
+      "venue": "武汉体育中心体育馆",
+      "price": "¥592起",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/poster/9b0be18cfb34c6bc33bcf3a73ef98cdc3b68c649.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/778240"
     },
     {
       "id": "pn_778832",
@@ -2531,7 +2608,7 @@
       "province": "陕西",
       "time": "2026.06.27-06.28",
       "venue": "西安奥体中心体育场",
-      "price": "¥716起",
+      "price": "¥714起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/05b57401f3f31cf381317c519fd733197b525f2c.jpg",
       "artist": "",
