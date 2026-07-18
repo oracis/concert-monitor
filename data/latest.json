@@ -186,7 +186,7 @@
     "province": "上海",
     "time": "2026.08.02-08.06",
     "venue": "上海体育场",
-    "price": "¥4628起",
+    "price": "¥4618起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/69ce41148a1602e28aabc430a5d178bdfba33744.jpg",
     "artist": "",
@@ -293,13 +293,15 @@
     "province": "北京",
     "time": "2026.07.17 - 07.19",
     "venue": "华熙生物 &middot; 润百颜ECM中心",
-    "price": "",
+    "price": "¥1220起",
     "status": "已售罄",
     "img": "https://img.piaoniu.com/poster/4870c4b9b2da8f38845efd07e0ada963f3d0cb83.jpg",
     "artist": "",
     "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/770637"
+    "source": "有票网",
+    "url": "https://www.ypiao.com/t_113857/",
+    "url2": "https://www.ypiao.com/t_113857/",
+    "source2": "票牛网"
   },
   {
     "id": "pn_779250",
@@ -978,9 +980,7 @@
     "artist": "",
     "category": "演唱会",
     "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/774700",
-    "url2": "https://www.ypiao.com/t_113180/",
-    "source2": "有票网"
+    "url": "https://www.piaoniu.com/activity/774700"
   },
   {
     "id": "pn_777782",
@@ -2208,7 +2208,7 @@
     "province": "澳门",
     "time": "2026.08.02-08.03",
     "venue": "威尼斯人综艺馆",
-    "price": "¥3590起",
+    "price": "¥2935起",
     "status": "预售",
     "img": "https://statics.ypiao.com/event/eventface-f9573b71a6af58dd09520d3f12ddd7a1?x-oss-process=style/eventface",
     "artist": "",
