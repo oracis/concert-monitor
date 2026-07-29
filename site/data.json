@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-07-29 20:35:45",
+  "update_time": "2026-07-29 22:08:42",
   "total": 187,
   "provinces": {
     "其他": 11,
@@ -231,6 +231,21 @@
       "url": "https://www.piaoniu.com/activity/769142"
     },
     {
+      "id": "yp_120155",
+      "name": "徐良“时间折叠”巡回演唱会-上海站",
+      "city": "上海",
+      "province": "上海",
+      "time": "2026.07.31-08.02",
+      "venue": "梅赛德斯-奔驰文化中心",
+      "price": "¥8906起",
+      "status": "在售",
+      "img": "https://statics.ypiao.com/event/eventface-dd22811fb7ee93353c39315d29da1fb9?x-oss-process=style/eventface",
+      "artist": "",
+      "category": "演唱会",
+      "source": "有票网",
+      "url": "https://www.ypiao.com/t_120155/"
+    },
+    {
       "id": "pn_779504",
       "name": "时代少年团「加冠礼」演唱会-收官场",
       "city": "上海",
@@ -246,21 +261,6 @@
       "url": "https://www.piaoniu.com/activity/779504",
       "url2": "https://www.ypiao.com/t_120235/",
       "source2": "有票网"
-    },
-    {
-      "id": "yp_116817",
-      "name": "杨千嬅 Live MY LIVE 1.0 世界巡回演唱会-上海站",
-      "city": "上海",
-      "province": "上海",
-      "time": "2026.08.29 19:00",
-      "venue": "虹口足球场",
-      "price": "¥716起",
-      "status": "预售",
-      "img": "https://statics.ypiao.com/event/eventface-98789a32eabf71eba0511d840f9bd67a?x-oss-process=style/eventface",
-      "artist": "",
-      "category": "演唱会",
-      "source": "有票网",
-      "url": "https://www.ypiao.com/t_116817/"
     },
     {
       "id": "pn_776461",
@@ -2372,7 +2372,7 @@
       "province": "福建",
       "time": "2026.08.01 19:00",
       "venue": "厦门奥林匹克体育中心-凤凰体育馆",
-      "price": "¥805起",
+      "price": "¥804起",
       "status": "在售",
       "img": "https://img.piaoniu.com/mtl/default/img/2026/5/20/6mZNR85htm_.jpg",
       "artist": "",
