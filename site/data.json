@@ -1,6 +1,6 @@
 {
-  "update_time": "2026-08-03 20:47:49",
-  "total": 188,
+  "update_time": "2026-08-03 22:15:43",
+  "total": 187,
   "provinces": {
     "其他": 10,
     "上海": 4,
@@ -14,7 +14,7 @@
     "安徽": 6,
     "山东": 12,
     "山西": 6,
-    "广东": 20,
+    "广东": 19,
     "广西": 1,
     "新疆": 4,
     "江苏": 21,
@@ -303,7 +303,7 @@
       "province": "北京",
       "time": "2026.08.14-08.30",
       "venue": "国家体育场（鸟巢）",
-      "price": "¥508起",
+      "price": "¥515起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/2658b39b386e2755245af7a50487eb70b09d9e08.jpg",
       "artist": "",
@@ -506,7 +506,9 @@
       "artist": "",
       "category": "演唱会",
       "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/774635"
+      "url": "https://www.piaoniu.com/activity/774635",
+      "url2": "https://www.ypiao.com/t_116697/",
+      "source2": "有票网"
     },
     {
       "id": "pn_767725",
@@ -1051,21 +1053,6 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/780071"
-    },
-    {
-      "id": "yp_117306",
-      "name": "Jolin蔡依林PLEASURE巡回演唱会2026 - 广州站",
-      "city": "广州",
-      "province": "广东",
-      "time": "2026.08.07-08.08",
-      "venue": "广东奥林匹克中心体育场",
-      "price": "¥927起",
-      "status": "在售",
-      "img": "https://statics.ypiao.com/event/eventface-081a65f7d7d18dd2ea14a63d7987db82?x-oss-process=style/eventface",
-      "artist": "",
-      "category": "演唱会",
-      "source": "有票网",
-      "url": "https://www.ypiao.com/t_117306/"
     },
     {
       "id": "pn_777089",
