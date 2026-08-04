@@ -375,10 +375,10 @@
     "img": "https://img.piaoniu.com/poster/d2f589c63b8c5132f19662225c115da7e6227e10.jpg",
     "artist": "",
     "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/749676",
+    "source": "有票网",
+    "url": "https://www.ypiao.com/t_119521/",
     "url2": "https://www.ypiao.com/t_119521/",
-    "source2": "有票网"
+    "source2": "票牛网"
   },
   {
     "id": "pn_778280",
@@ -432,7 +432,7 @@
     "province": "四川",
     "time": "2026.09.05 19:00",
     "venue": "成都东安湖体育公园主体育场",
-    "price": "¥459起",
+    "price": "¥461起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/69a8bdb5e346db8aad541ad58c3868e2c09effa4.jpg",
     "artist": "",
@@ -468,7 +468,9 @@
     "artist": "",
     "category": "演唱会",
     "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/774635"
+    "url": "https://www.piaoniu.com/activity/774635",
+    "url2": "https://www.ypiao.com/t_116697/",
+    "source2": "有票网"
   },
   {
     "id": "pn_767725",
@@ -1021,7 +1023,7 @@
     "province": "广东",
     "time": "2026.08.07 / 08.08",
     "venue": "广东省奥林匹克体育中心体育场",
-    "price": "¥994起",
+    "price": "¥1040起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/d964ba2d0546ed1a433ec6636122106307375caa.jpg",
     "artist": "",
@@ -1126,7 +1128,7 @@
     "province": "广东",
     "time": "2026.08.15-08.16",
     "venue": "深圳大运中心体育馆",
-    "price": "¥9866起",
+    "price": "¥1268起",
     "status": "预售",
     "img": "https://statics.ypiao.com/event/eventface-1706db933f1482449a8faef7f01edc76?x-oss-process=style/eventface",
     "artist": "",
@@ -1608,7 +1610,7 @@
     "province": "江西",
     "time": "2026.10.17 19:00",
     "venue": "南昌国际体育中心体育场",
-    "price": "¥821起",
+    "price": "¥820起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/26731772de877d667796623afaa32e052e883f29.jpg",
     "artist": "",
@@ -2615,7 +2617,7 @@
     "name": "谢霆锋EvolutionNicLive进化演唱会",
     "city": "沈阳",
     "province": "辽宁",
-    "time": "2026.08.08-08.09",
+    "time": "2026.08.08 19:30",
     "venue": "沈阳奥林匹克体育中心体育场",
     "price": "¥1059起",
     "status": "在售",
@@ -2623,9 +2625,7 @@
     "artist": "",
     "category": "演唱会",
     "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/774255",
-    "url2": "https://www.ypiao.com/t_115784/",
-    "source2": "有票网"
+    "url": "https://www.piaoniu.com/activity/774255"
   },
   {
     "id": "yp_115313",
