@@ -670,7 +670,7 @@
     "province": "山东",
     "time": "2026.08.13 - 08.17",
     "venue": "青岛市民健身中心体育场",
-    "price": "¥3024起",
+    "price": "¥3023起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/3dec1361809aaaefbcc21042ff5113822469c06d.jpg",
     "artist": "",
@@ -685,17 +685,15 @@
     "name": "汪峰《相信未来》巡回演唱会",
     "city": "青岛",
     "province": "山东",
-    "time": "2026.08.29 周六 19:30",
-    "venue": "青岛市体育中心国信体育馆",
+    "time": "2026.08.29 19:30",
+    "venue": "青岛体育中心国信体育馆",
     "price": "¥452起",
     "status": "在售",
     "img": "https://img.piaoniu.com/mtl/default/img/2026/5/9/Ex2XkyYjad_.jpg",
     "artist": "",
     "category": "演唱会",
     "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/776779",
-    "url2": "https://www.ypiao.com/t_116999/",
-    "source2": "有票网"
+    "url": "https://www.piaoniu.com/activity/776779"
   },
   {
     "id": "pn_776805",
@@ -796,7 +794,7 @@
     "province": "山西",
     "time": "2026.10.17 19:30",
     "venue": "山西体育中心体育场",
-    "price": "¥594起",
+    "price": "¥540起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/1bc747ffc7d0f26fead78ca60d54d85e075cd78c.jpg",
     "artist": "",
@@ -1125,7 +1123,9 @@
     "artist": "",
     "category": "演唱会",
     "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/773172"
+    "url": "https://www.piaoniu.com/activity/773172",
+    "url2": "https://www.ypiao.com/t_116392/",
+    "source2": "有票网"
   },
   {
     "id": "pn_781974",
@@ -2385,7 +2385,7 @@
     "province": "福建",
     "time": "2026.09.06 20:00",
     "venue": "厦门Ovogo旺来现场",
-    "price": "¥270起",
+    "price": "¥269起",
     "status": "在售",
     "img": "https://img.piaoniu.com/my_file/d9036906-f1a9-4bb4-91bd-9e0e707b7ec5.jpg",
     "artist": "",
