@@ -529,6 +529,21 @@
     "url": "https://www.piaoniu.com/activity/780967"
   },
   {
+    "id": "pn_782117",
+    "name": "&ldquo;廿念不忘&rdquo;青曲社苗阜王声合作20周年巡演&middot;合肥站",
+    "city": "合肥",
+    "province": "安徽",
+    "time": "",
+    "venue": "",
+    "price": "¥62起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/3a7c66c9e67916c7cfcd1c457d243e1fdc68c7e8.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/782117"
+  },
+  {
     "id": "pn_769037",
     "name": "陈粒2026「一粒」十周年巡回演唱会",
     "city": "合肥",
@@ -711,6 +726,21 @@
     "url": "https://www.piaoniu.com/activity/779166"
   },
   {
+    "id": "pn_781457",
+    "name": "队长Young Captain 2026新专辑同名巡演「I AM WHAT I AM」-太原站",
+    "city": "太原",
+    "province": "山西",
+    "time": "2026.08.13 20:00",
+    "venue": "The Boo(山姆士广场店)",
+    "price": "¥695起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/my_file/1a57082c-5e19-42ff-9a01-ce5de0cd8bac.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/781457"
+  },
+  {
     "id": "pn_776158",
     "name": "谢霆锋EvolutionNicLive进化演唱会",
     "city": "太原",
@@ -726,6 +756,51 @@
     "url": "https://www.piaoniu.com/activity/776158",
     "url2": "https://www.ypiao.com/t_116908/",
     "source2": "有票网"
+  },
+  {
+    "id": "pn_768530",
+    "name": "任贤齐《齐迹2026》巡回演唱会",
+    "city": "太原",
+    "province": "山西",
+    "time": "2026.09.19-09.26",
+    "venue": "山西体育中心汾酒体育馆",
+    "price": "¥694起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/a55ab18a016d80052eedd08b52dc9fbfa22c75f7.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/768530"
+  },
+  {
+    "id": "pn_771850",
+    "name": "张韶涵2026「玩家」巡回演唱会",
+    "city": "太原",
+    "province": "山西",
+    "time": "2026.09.26",
+    "venue": "山西体育中心体育场",
+    "price": "¥464起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/a4a18bf35aa86e2617780be0ad7499829383b29d.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/771850"
+  },
+  {
+    "id": "pn_781783",
+    "name": "音浪巅峰超级演唱会",
+    "city": "太原",
+    "province": "山西",
+    "time": "2026.10.17 19:30",
+    "venue": "山西体育中心体育场",
+    "price": "¥540起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/1bc747ffc7d0f26fead78ca60d54d85e075cd78c.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/781783"
   },
   {
     "id": "pn_780995",
