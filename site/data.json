@@ -1,6 +1,6 @@
 {
-  "update_time": "2026-08-12 20:13:06",
-  "total": 187,
+  "update_time": "2026-08-12 21:28:40",
+  "total": 185,
   "provinces": {
     "其他": 8,
     "上海": 4,
@@ -10,7 +10,7 @@
     "四川": 6,
     "天津": 3,
     "宁夏": 2,
-    "安徽": 4,
+    "安徽": 2,
     "山东": 10,
     "山西": 5,
     "广东": 19,
@@ -535,36 +535,6 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/769037"
-    },
-    {
-      "id": "pn_774871",
-      "name": "张韶涵2026玩家巡回演唱会",
-      "city": "合肥",
-      "province": "安徽",
-      "time": "2026.09.19 周六 19:00",
-      "venue": "合肥体育中心体育场",
-      "price": "¥457起",
-      "status": "在售",
-      "img": "https://img.piaoniu.com/poster/54d29760842e1b3fa525350f141e098428d4077c.jpg",
-      "artist": "",
-      "category": "演唱会",
-      "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/774871"
-    },
-    {
-      "id": "pn_779056",
-      "name": "王力宏「最好的地方II」世界巡回演唱会",
-      "city": "合肥",
-      "province": "安徽",
-      "time": "2026.10.03-10.04",
-      "venue": "合肥体育中心体育场",
-      "price": "¥883起",
-      "status": "在售",
-      "img": "https://img.piaoniu.com/poster/a74dc914f9f9bee608a524e5b388c048d0953470.jpg",
-      "artist": "",
-      "category": "演唱会",
-      "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/779056"
     },
     {
       "id": "pn_771465",
