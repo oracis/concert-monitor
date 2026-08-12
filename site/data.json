@@ -1,8 +1,8 @@
 {
-  "update_time": "2026-08-12 19:12:52",
-  "total": 188,
+  "update_time": "2026-08-12 20:13:06",
+  "total": 187,
   "provinces": {
-    "其他": 9,
+    "其他": 8,
     "上海": 4,
     "内蒙古": 1,
     "北京": 6,
@@ -35,21 +35,6 @@
     "黑龙江": 1
   },
   "concerts": [
-    {
-      "id": "yp_119283",
-      "name": "BIGBANG 2026 World Tour 巡回演唱会-东京站",
-      "city": "东京",
-      "province": "其他",
-      "time": "2026.12.13-12.15",
-      "venue": "Tokyo Dome",
-      "price": "¥2750起",
-      "status": "预售",
-      "img": "https://statics.ypiao.com/event/eventface-bb3e0d9ee7b74f20512157e3ca1166d8?x-oss-process=style/eventface",
-      "artist": "",
-      "category": "演唱会",
-      "source": "有票网",
-      "url": "https://www.ypiao.com/t_119283/"
-    },
     {
       "id": "yp_121346",
       "name": "Dearest Dear Jane Live 2026 in 吉隆坡",
@@ -693,15 +678,17 @@
       "name": "汪峰《相信未来》巡回演唱会",
       "city": "青岛",
       "province": "山东",
-      "time": "2026.08.29 19:30",
-      "venue": "青岛体育中心国信体育馆",
+      "time": "2026.08.29 周六 19:30",
+      "venue": "青岛市体育中心国信体育馆",
       "price": "¥452起",
       "status": "在售",
       "img": "https://img.piaoniu.com/mtl/default/img/2026/5/9/Ex2XkyYjad_.jpg",
       "artist": "",
       "category": "演唱会",
       "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/776779"
+      "url": "https://www.piaoniu.com/activity/776779",
+      "url2": "https://www.ypiao.com/t_116999/",
+      "source2": "有票网"
     },
     {
       "id": "pn_776805",
@@ -2158,19 +2145,21 @@
       "url": "https://www.piaoniu.com/activity/778720"
     },
     {
-      "id": "yp_118263",
-      "name": "2026 陈慧娴 The Fabulous 40Priscilla Live 巡回演唱会-海口站",
+      "id": "pn_778017",
+      "name": "陈慧娴2026 The Fabulous 40Priscilla Live 巡回演唱会",
       "city": "海口",
       "province": "海南",
       "time": "2026.08.15 19:30",
       "venue": "海口市五源河体育中心体育馆",
       "price": "¥546起",
       "status": "在售",
-      "img": "https://statics.ypiao.com/event/eventface-fd7ee0c4152ad82daf2b9cc038c005c6?x-oss-process=style/eventface",
+      "img": "https://img.piaoniu.com/poster/d0dcefa42bef93195907c1e0fb185a9a785db1fe.jpg",
       "artist": "",
       "category": "演唱会",
-      "source": "有票网",
-      "url": "https://www.ypiao.com/t_118263/"
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/778017",
+      "url2": "https://www.ypiao.com/t_118263/",
+      "source2": "有票网"
     },
     {
       "id": "pn_783363",
