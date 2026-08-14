@@ -111,8 +111,8 @@
     "province": "上海",
     "time": "2026.08.15 - 08.16",
     "venue": "上海虹口足球场",
-    "price": "¥1188起",
-    "status": "预售",
+    "price": "",
+    "status": "已售罄",
     "img": "https://img.piaoniu.com/poster/a5f74d51cd5ba6c8ced07ebc7a920fdf8512986f.jpg",
     "artist": "",
     "category": "演唱会",
@@ -197,19 +197,36 @@
     "url": "https://www.piaoniu.com/activity/774866"
   },
   {
-    "id": "yp_120320",
-    "name": "凤凰传奇「吉祥如意」2026巡回演唱会-呼和浩特站",
+    "id": "pn_775738",
+    "name": "凤凰传奇2026「吉祥如意」巡回演唱会",
     "city": "呼和浩特",
     "province": "内蒙古",
     "time": "2026.09.04-09.06",
     "venue": "呼和浩特体育场",
-    "price": "¥880起",
-    "status": "预售",
-    "img": "https://statics.ypiao.com/event/eventface-42331e2f9cd7025ca13ee14108446a84?x-oss-process=style/eventface",
+    "price": "¥868起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/7f61a44a6e0c1fc1489323db1a2ed7dea834b7fc.jpg",
     "artist": "",
     "category": "演唱会",
-    "source": "有票网",
-    "url": "https://www.ypiao.com/t_120320/"
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/775738",
+    "url2": "https://www.ypiao.com/t_120320/",
+    "source2": "有票网"
+  },
+  {
+    "id": "pn_782237",
+    "name": "李宗盛2026【有歌之年】巡回演唱会",
+    "city": "鄂尔多斯",
+    "province": "内蒙古",
+    "time": "2026.09.11 - 09.13",
+    "venue": "鄂尔多斯市体育事业发展中心综合体育馆",
+    "price": "¥797起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/ace5a981f11f8f1941af967ca69ab0f0a1ec36b9.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/782237"
   },
   {
     "id": "pn_779034",
@@ -244,6 +261,21 @@
     "source2": "票牛网"
   },
   {
+    "id": "pn_775636",
+    "name": "Ella陈嘉桦2026It's Me艾拉主意巡回演唱会",
+    "city": "北京",
+    "province": "北京",
+    "time": "2026.08.15 - 08.16",
+    "venue": "华熙生物 &middot; 润百颜ECM中心",
+    "price": "¥932起",
+    "status": "预售",
+    "img": "https://img.piaoniu.com/poster/944ade99fd8bb942a6dd3860b7fc808a7194169d.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/775636"
+  },
+  {
     "id": "yp_116584",
     "name": "2026 Ella陈嘉桦It’s Me艾拉主意巡回演唱会北京站",
     "city": "北京",
@@ -274,19 +306,19 @@
     "url": "https://www.piaoniu.com/activity/780945"
   },
   {
-    "id": "pn_778547",
-    "name": "赵雷2026&ldquo;没有信号&rdquo;演唱会",
+    "id": "pn_768730",
+    "name": "李宇春2026「皇后与梦想」演唱会",
     "city": "北京",
     "province": "北京",
-    "time": "2026.09.12-09.13",
-    "venue": "鸟巢（国家体育场）",
-    "price": "",
+    "time": "2026.09.05-09.06",
+    "venue": "北京华熙生物&middot;润百颜ECM中心",
+    "price": "¥824起",
     "status": "在售",
-    "img": "https://img.piaoniu.com/poster/78b1b6673591d889996f42f9027aa20c371a8ee9.jpg",
+    "img": "https://img.piaoniu.com/poster/0ccfaceaab22d28f6149b1f39a5d886d9ca26cbd.jpg",
     "artist": "",
     "category": "演唱会",
     "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/778547"
+    "url": "https://www.piaoniu.com/activity/768730"
   },
   {
     "id": "yp_115530",
@@ -332,6 +364,21 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/781151"
+  },
+  {
+    "id": "pn_782882",
+    "name": "老舍经典话剧《骆驼祥子》巡演",
+    "city": "成都",
+    "province": "四川",
+    "time": "2026.08.14-08.15",
+    "venue": "成都城市音乐厅-歌剧厅",
+    "price": "",
+    "status": "已售罄",
+    "img": "https://img.piaoniu.com/mtl/default/img/2026/5/11/GbDhWypa6c_.png",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/782882"
   },
   {
     "id": "pn_782461",
@@ -407,6 +454,21 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/778900"
+  },
+  {
+    "id": "pn_767725",
+    "name": "王力宏2026「最好的地方II」世界巡回演唱会",
+    "city": "天津",
+    "province": "天津",
+    "time": "2026.08.29-08.30",
+    "venue": "天津奥林匹克中心体育场",
+    "price": "¥1097起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/d4578c1e66343fec01d789ea8d857290c63afe0e.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/767725"
   },
   {
     "id": "pn_580415",
@@ -621,36 +683,6 @@
     "url": "https://www.piaoniu.com/activity/781613"
   },
   {
-    "id": "pn_782456",
-    "name": "N次方&times;EE-LUNA「海上生明月」音乐节",
-    "city": "烟台",
-    "province": "山东",
-    "time": "2026.08.22 - 08.23",
-    "venue": "烟台市养马岛音乐营地(牟平区里蹦岛)",
-    "price": "¥312起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/ba2a7c6031d5694431cf8ec87dbeab3499b9b4f9.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/782456"
-  },
-  {
-    "id": "pn_782864",
-    "name": "周传雄2026「念念不忘&bull;再遇见plus」演唱会",
-    "city": "烟台",
-    "province": "山东",
-    "time": "2026.09.19 19:00",
-    "venue": "烟台体育公园体育场",
-    "price": "¥468起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/4d399cb9d716b54ff1634c608e3443cba7a1d11a.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/782864"
-  },
-  {
     "id": "pn_782687",
     "name": "TF家族四代练习生「第肆象限」演唱会",
     "city": "青岛",
@@ -685,6 +717,21 @@
     "source2": "有票网"
   },
   {
+    "id": "pn_776805",
+    "name": "许嵩2026「安泊猜想」巡回演唱会",
+    "city": "青岛",
+    "province": "山东",
+    "time": "2026.09.04-09.06",
+    "venue": "青岛市民健身中心体育场",
+    "price": "¥858起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/bd97c6f9c420de0f0cb8a281b40906cdde83526b.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/776805"
+  },
+  {
     "id": "pn_779166",
     "name": "周杰伦2026 爱琴海 青岛 嘉年华巡回演唱会",
     "city": "青岛",
@@ -698,21 +745,6 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/779166"
-  },
-  {
-    "id": "pn_777896",
-    "name": "黄丽玲A-Lin 歌 迹 Journey世界巡回演唱会",
-    "city": "青岛",
-    "province": "山东",
-    "time": "2026.10.17-10.18",
-    "venue": "青岛市民健身中心体育馆",
-    "price": "¥592起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/4ab26a36ae456c154d9f86360832906cb52fbd00.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/777896"
   },
   {
     "id": "pn_775835",
@@ -760,21 +792,6 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/770932"
-  },
-  {
-    "id": "pn_768530",
-    "name": "任贤齐《齐迹2026》巡回演唱会",
-    "city": "太原",
-    "province": "山西",
-    "time": "2026.09.19-09.26",
-    "venue": "山西体育中心汾酒体育馆",
-    "price": "¥648起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/a55ab18a016d80052eedd08b52dc9fbfa22c75f7.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/768530"
   },
   {
     "id": "pn_771850",
@@ -939,7 +956,7 @@
     "province": "广东",
     "time": "2026.08.15 - 08.16",
     "venue": "广州天河体育中心体育场",
-    "price": "¥675起",
+    "price": "¥674起",
     "status": "预售",
     "img": "https://img.piaoniu.com/poster/49682754798b4a1d48078cdfc9a71e3fdb7e9c6d.jpg",
     "artist": "",
@@ -954,7 +971,7 @@
     "province": "广东",
     "time": "2026.08.16 19:30",
     "venue": "广州大学城体育中心体育场",
-    "price": "¥301起",
+    "price": "¥303起",
     "status": "预售",
     "img": "https://img.piaoniu.com/poster/466ffef932e42a43e03e05f3f3e5604ed72a684e.jpg",
     "artist": "",
@@ -1006,6 +1023,21 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/781605"
+  },
+  {
+    "id": "pn_780630",
+    "name": "周慧敏2026「地老天荒爱一场」巡回演唱会",
+    "city": "江门",
+    "province": "广东",
+    "time": "2026.09.26 20:00",
+    "venue": "江门市滨江体育中心体育馆",
+    "price": "¥361起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/mtl/default/img/2026/7/2/yniWek8Zan_.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/780630"
   },
   {
     "id": "pn_779360",
@@ -1061,7 +1093,7 @@
     "province": "广东",
     "time": "2026.08.21 - 08.30",
     "venue": "深圳大运中心体育场",
-    "price": "¥896起",
+    "price": "¥915起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/78c30a24f11f20f02be747f055acec63f0411c79.jpg",
     "artist": "",
@@ -1100,21 +1132,6 @@
     "url": "https://www.piaoniu.com/activity/780401"
   },
   {
-    "id": "pn_781846",
-    "name": "潮音风暴超级演唱会-颜人中/李荣浩/潘玮柏/周柏豪",
-    "city": "南宁",
-    "province": "广西",
-    "time": "2026.10.03 20:00",
-    "venue": "广西体育中心主体育场",
-    "price": "¥357起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/b0f5d65804af04d8d49bf59cdaecde42812bdf70.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/781846"
-  },
-  {
     "id": "pn_783335",
     "name": "BIGBANG 2026 世界巡演",
     "city": "南宁",
@@ -1128,21 +1145,6 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/783335"
-  },
-  {
-    "id": "pn_782666",
-    "name": "疆来无限CMV东天山沙漠音乐节",
-    "city": "乌鲁木齐",
-    "province": "新疆",
-    "time": "2026.08.14 - 08.16",
-    "venue": "新疆第十三师新星市东天山自然地质博览园",
-    "price": "",
-    "status": "已售罄",
-    "img": "https://img.piaoniu.com/poster/f0c7b13fa73f8702de7eff1abdcf4682f4a8e0ca.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/782666"
   },
   {
     "id": "pn_773172",
@@ -1612,21 +1614,6 @@
     "url": "https://www.piaoniu.com/activity/775405",
     "url2": "https://www.ypiao.com/t_119394/",
     "source2": "有票网"
-  },
-  {
-    "id": "pn_778634",
-    "name": "超级音雄巨星LIVE演唱会",
-    "city": "石家庄",
-    "province": "河北",
-    "time": "2026.08.30 19:30",
-    "venue": "河北奥林匹克体育中心体育场",
-    "price": "¥356起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/0ad9b7380abdd4d008037994534a4a97aa042ff4.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/778634"
   },
   {
     "id": "pn_779392",
@@ -2314,7 +2301,7 @@
     "province": "福建",
     "time": "2026.08.15 - 08.16",
     "venue": "厦门奥林匹克体育中心-凤凰体育馆",
-    "price": "¥1458起",
+    "price": "¥1436起",
     "status": "预售",
     "img": "https://img.piaoniu.com/mtl/default/img/2026/7/23/cbFBRspd78_.jpg",
     "artist": "",
@@ -2758,21 +2745,6 @@
     "url": "https://www.piaoniu.com/activity/780661"
   },
   {
-    "id": "pn_782742",
-    "name": "ROCK THE MUSICAL摇滚音乐剧演唱会西安站",
-    "city": "西安",
-    "province": "陕西",
-    "time": "",
-    "venue": "",
-    "price": "¥179起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/mtl/default/img/2026/8/2/MxEtXTxcRh_.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/782742"
-  },
-  {
     "id": "pn_756283",
     "name": "张韶涵2026玩家巡回演唱会",
     "city": "西安",
@@ -2786,21 +2758,6 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/756283"
-  },
-  {
-    "id": "pn_771514",
-    "name": "李健&ldquo;万物安生时&rdquo;巡回演唱会",
-    "city": "西安",
-    "province": "陕西",
-    "time": "2026.09.19 19:00",
-    "venue": "西安奥体中心体育馆",
-    "price": "¥996起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/1caaee655db33897700a828a240dd2f5cdbcab7f.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/771514"
   },
   {
     "id": "yp_115085",
