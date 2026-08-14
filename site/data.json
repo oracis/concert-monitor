@@ -1,6 +1,6 @@
 {
-  "update_time": "2026-08-14 20:09:53",
-  "total": 186,
+  "update_time": "2026-08-14 21:00:59",
+  "total": 189,
   "provinces": {
     "其他": 7,
     "上海": 4,
@@ -30,7 +30,7 @@
     "甘肃": 2,
     "福建": 10,
     "贵州": 5,
-    "辽宁": 6,
+    "辽宁": 9,
     "重庆": 4,
     "陕西": 5,
     "香港": 2,
@@ -1022,7 +1022,7 @@
       "province": "广东",
       "time": "2026.08.21-08.23",
       "venue": "广东奥林匹克中心体育场",
-      "price": "¥745起",
+      "price": "¥4646起",
       "status": "在售",
       "img": "https://statics.ypiao.com/event/eventface-5d1465bd6ee313b33049864de0d6b898?x-oss-process=style/eventface",
       "artist": "",
@@ -2586,6 +2586,36 @@
       "url": "https://www.ypiao.com/t_115742/"
     },
     {
+      "id": "pn_778182",
+      "name": "李玉刚2026《刚好遇见你》巡回演唱会",
+      "city": "大连",
+      "province": "辽宁",
+      "time": "2026.09.05 19:30",
+      "venue": "大连体育中心体育馆",
+      "price": "¥440起",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/poster/d31f8b4f5f12c68ca865d43ca4d0169afb60c39d.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/778182"
+    },
+    {
+      "id": "pn_782565",
+      "name": "喜力星银&middot;2026大连草莓音乐节",
+      "city": "大连",
+      "province": "辽宁",
+      "time": "2026.09.12 - 09.13",
+      "venue": "大连市东港音乐喷泉广场",
+      "price": "¥345起",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/poster/be553a899f03457b0807c53daa5e7b03dcaf5667.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/782565"
+    },
+    {
       "id": "pn_777054",
       "name": "薛之谦&ldquo;万兽之王&rdquo;巡回演唱会",
       "city": "大连",
@@ -2599,6 +2629,21 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/777054"
+    },
+    {
+      "id": "pn_774594",
+      "name": "徐良&ldquo;时间折叠&rdquo;巡回演唱会",
+      "city": "大连",
+      "province": "辽宁",
+      "time": "2026.12.31 19:00",
+      "venue": "场馆待定",
+      "price": "",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/poster/e87135fd2e33b1db4c39bcd306df6d82fe8b521a.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/774594"
     },
     {
       "id": "pn_778446",
