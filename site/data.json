@@ -1,6 +1,6 @@
 {
-  "update_time": "2026-08-15 19:29:21",
-  "total": 176,
+  "update_time": "2026-08-15 19:49:18",
+  "total": 178,
   "provinces": {
     "其他": 7,
     "上海": 5,
@@ -8,6 +8,7 @@
     "内蒙古": 2,
     "北京": 7,
     "台湾": 1,
+    "吉林": 1,
     "四川": 5,
     "天津": 4,
     "宁夏": 2,
@@ -21,7 +22,7 @@
     "江西": 6,
     "河北": 1,
     "河南": 7,
-    "浙江": 18,
+    "浙江": 19,
     "湖北": 7,
     "湖南": 5,
     "澳门": 1,
@@ -415,6 +416,21 @@
       "category": "演唱会",
       "source": "有票网",
       "url": "https://www.ypiao.com/t_115530/"
+    },
+    {
+      "id": "pn_781852",
+      "name": "宝石Gem2026「原石季节」巡回演唱会",
+      "city": "长春",
+      "province": "吉林",
+      "time": "2026.09.05 19:30",
+      "venue": "长春东北亚国际博览中心-P4地上停车场",
+      "price": "¥469起",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/poster/7834256f48ffbbc9aa2ea841f690c89d2e2e7e54.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/781852"
     },
     {
       "id": "pn_781041",
@@ -1984,6 +2000,21 @@
       "url": "https://www.piaoniu.com/activity/782373"
     },
     {
+      "id": "pn_780829",
+      "name": "陈粒「一粒」十周年巡回演唱会",
+      "city": "绍兴",
+      "province": "浙江",
+      "time": "2026.09.05 19:00",
+      "venue": "西施篮球中心",
+      "price": "¥659起",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/mtl/default/img/2026/7/7/ThWi3F3neX_.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/780829"
+    },
+    {
       "id": "pn_773249",
       "name": "黄丽玲A-Lin 歌 迹 Journey世界巡回演唱会",
       "city": "绍兴",
@@ -2564,7 +2595,7 @@
       "province": "重庆",
       "time": "2026.09.12 - 09.13",
       "venue": "重庆奥体中心体育场",
-      "price": "¥980起",
+      "price": "¥979起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/d726208b1dee644f49dd432b72ed00a62ee35f41.jpg",
       "artist": "",
