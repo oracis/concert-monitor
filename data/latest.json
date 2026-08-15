@@ -60,21 +60,6 @@
     "url": "https://www.ypiao.com/t_115508/"
   },
   {
-    "id": "yp_117119",
-    "name": "威肯The Weeknd: After Hours Til Dawn Tour巡回演唱会-新加坡站",
-    "city": "新加坡",
-    "province": "其他",
-    "time": "2026.10.02- 10.03 20:00",
-    "venue": "新加坡国家体育场Singapore National Stadium",
-    "price": "¥2130起",
-    "status": "预售",
-    "img": "https://statics.ypiao.com/event/eventface-e5fa6a8101687b1afdfba62da6f34705?x-oss-process=style/eventface",
-    "artist": "",
-    "category": "演唱会",
-    "source": "有票网",
-    "url": "https://www.ypiao.com/t_117119/"
-  },
-  {
     "id": "yp_120443",
     "name": "2027 ENHYPEN WORLD TOUR 'BLOOD SAGA' IN SINGAPORE",
     "city": "新加坡",
@@ -334,6 +319,21 @@
     "category": "演唱会",
     "source": "有票网",
     "url": "https://www.ypiao.com/t_116584/"
+  },
+  {
+    "id": "yp_116596",
+    "name": "杨丞琳《房间里的大象》演唱会-北京站",
+    "city": "北京",
+    "province": "北京",
+    "time": "2026.08.16 18:30",
+    "venue": "国家体育馆",
+    "price": "¥1012起",
+    "status": "在售",
+    "img": "https://statics.ypiao.com/event/eventface-74e19680b7b36c7c7d37ef0dbbeeab99?x-oss-process=style/eventface",
+    "artist": "",
+    "category": "演唱会",
+    "source": "有票网",
+    "url": "https://www.ypiao.com/t_116596/"
   },
   {
     "id": "pn_780945",
@@ -2535,6 +2535,21 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/774854"
+  },
+  {
+    "id": "pn_770120",
+    "name": "G.E.M.邓紫棋 I AM GLORIA世界巡回演唱会2.0",
+    "city": "重庆",
+    "province": "重庆",
+    "time": "2026.08.22 - 08.23",
+    "venue": "重庆奥体中心体育场",
+    "price": "¥772起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/38eb72091bf634dc1cd1b415453ea169a476e1ae.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/770120"
   },
   {
     "id": "pn_778810",
