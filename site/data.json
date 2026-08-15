@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-08-15 05:33:09",
+  "update_time": "2026-08-15 05:57:01",
   "total": 182,
   "provinces": {
     "其他": 7,
@@ -761,7 +761,7 @@
       "province": "山东",
       "time": "2026.10.03 - 10.05",
       "venue": "青岛市民健身中心体育场",
-      "price": "¥2582起",
+      "price": "¥2507起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/bfccee2a26442794d41faf3373d3b8d6fa26aec1.jpg",
       "artist": "",
@@ -1206,15 +1206,15 @@
       "province": "新疆",
       "time": "2026.08.15 - 08.16",
       "venue": "乌鲁木齐奥体中心综合体育馆",
-      "price": "¥630起",
+      "price": "¥692起",
       "status": "预售",
       "img": "https://img.piaoniu.com/poster/d247396e6b590e237ff70d8c649c004dcd3270bc.jpg",
       "artist": "",
       "category": "演唱会",
-      "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/773172",
+      "source": "有票网",
+      "url": "https://www.ypiao.com/t_116392/",
       "url2": "https://www.ypiao.com/t_116392/",
-      "source2": "有票网"
+      "source2": "票牛网"
     },
     {
       "id": "pn_768659",
@@ -1840,7 +1840,7 @@
       "province": "浙江",
       "time": "2026.08.23-08.24",
       "venue": "宁波奥体中心体育馆",
-      "price": "¥1047起",
+      "price": "¥1632起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/70e6f12aa7fd118ec4a7a0ef242111aa9b9d0591.jpg",
       "artist": "",
@@ -2309,7 +2309,7 @@
       "province": "福建",
       "time": "2026.08.22 19:00",
       "venue": "厦门奥体中心-凤凰体育馆",
-      "price": "¥688起",
+      "price": "¥684起",
       "status": "在售",
       "img": "https://statics.ypiao.com/event/eventface-d4dcef7c6eb8d95f1e7beed9cd6f6aa1?x-oss-process=style/eventface",
       "artist": "",
