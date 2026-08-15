@@ -1,20 +1,5 @@
 [
   {
-    "id": "yp_119283",
-    "name": "BIGBANG 2026 World Tour 巡回演唱会-东京站",
-    "city": "东京",
-    "province": "其他",
-    "time": "2026.12.13-12.15",
-    "venue": "Tokyo Dome",
-    "price": "¥2750起",
-    "status": "预售",
-    "img": "https://statics.ypiao.com/event/eventface-bb3e0d9ee7b74f20512157e3ca1166d8?x-oss-process=style/eventface",
-    "artist": "",
-    "category": "演唱会",
-    "source": "有票网",
-    "url": "https://www.ypiao.com/t_119283/"
-  },
-  {
     "id": "yp_117785",
     "name": "任贤齐｜齐迹・在路上 2026–2027 世界巡回演唱会-吉隆坡站",
     "city": "吉隆坡",
@@ -73,6 +58,21 @@
     "category": "演唱会",
     "source": "有票网",
     "url": "https://www.ypiao.com/t_115508/"
+  },
+  {
+    "id": "yp_117119",
+    "name": "威肯The Weeknd: After Hours Til Dawn Tour巡回演唱会-新加坡站",
+    "city": "新加坡",
+    "province": "其他",
+    "time": "2026.10.02- 10.03 20:00",
+    "venue": "新加坡国家体育场Singapore National Stadium",
+    "price": "¥2130起",
+    "status": "预售",
+    "img": "https://statics.ypiao.com/event/eventface-e5fa6a8101687b1afdfba62da6f34705?x-oss-process=style/eventface",
+    "artist": "",
+    "category": "演唱会",
+    "source": "有票网",
+    "url": "https://www.ypiao.com/t_117119/"
   },
   {
     "id": "yp_120443",
@@ -143,7 +143,7 @@
     "province": "上海",
     "time": "2026.09.05-09.06",
     "venue": "上海体育场",
-    "price": "¥499起",
+    "price": "¥3326起",
     "status": "预售",
     "img": "https://statics.ypiao.com/event/eventface-d831790d8f05421b59c75761f104065d?x-oss-process=style/eventface",
     "artist": "",
@@ -755,7 +755,7 @@
     "province": "山东",
     "time": "2026.10.03 - 10.05",
     "venue": "青岛市民健身中心体育场",
-    "price": "¥2570起",
+    "price": "¥2569起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/bfccee2a26442794d41faf3373d3b8d6fa26aec1.jpg",
     "artist": "",
@@ -1614,21 +1614,6 @@
     "category": "演唱会",
     "source": "有票网",
     "url": "https://www.ypiao.com/t_119211/"
-  },
-  {
-    "id": "pn_774856",
-    "name": "张韶涵2026玩家巡回演唱会",
-    "city": "洛阳",
-    "province": "河南",
-    "time": "2026.10.03 19:30",
-    "venue": "洛阳市奥林匹克中心体育场",
-    "price": "¥437起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/1eac5169ebcb419c30718fc03dd2bd83fb5fb9e5.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/774856"
   },
   {
     "id": "pn_777277",
