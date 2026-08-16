@@ -75,6 +75,21 @@
     "url": "https://www.ypiao.com/t_115508/"
   },
   {
+    "id": "yp_117119",
+    "name": "威肯The Weeknd: After Hours Til Dawn Tour巡回演唱会-新加坡站",
+    "city": "新加坡",
+    "province": "其他",
+    "time": "2026.10.02- 10.03 20:00",
+    "venue": "新加坡国家体育场Singapore National Stadium",
+    "price": "¥2128起",
+    "status": "预售",
+    "img": "https://statics.ypiao.com/event/eventface-e5fa6a8101687b1afdfba62da6f34705?x-oss-process=style/eventface",
+    "artist": "",
+    "category": "演唱会",
+    "source": "有票网",
+    "url": "https://www.ypiao.com/t_117119/"
+  },
+  {
     "id": "yp_120443",
     "name": "2027 ENHYPEN WORLD TOUR 'BLOOD SAGA' IN SINGAPORE",
     "city": "新加坡",
@@ -143,7 +158,7 @@
     "province": "上海",
     "time": "2026.09.05-09.06",
     "venue": "上海体育场",
-    "price": "¥494起",
+    "price": "¥493起",
     "status": "预售",
     "img": "https://statics.ypiao.com/event/eventface-d831790d8f05421b59c75761f104065d?x-oss-process=style/eventface",
     "artist": "",
@@ -387,7 +402,7 @@
     "province": "台湾",
     "time": "2026.09.11-09.13",
     "venue": "台北小巨蛋",
-    "price": "¥3800起",
+    "price": "¥1499起",
     "status": "预售",
     "img": "https://statics.ypiao.com/event/eventface-8396e8d853ea3918736b6bfa197c4ce7?x-oss-process=style/eventface",
     "artist": "",
@@ -578,21 +593,6 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/780967"
-  },
-  {
-    "id": "pn_782117",
-    "name": "&ldquo;廿念不忘&rdquo;青曲社苗阜王声合作20周年巡演&middot;合肥站",
-    "city": "合肥",
-    "province": "安徽",
-    "time": "",
-    "venue": "",
-    "price": "¥62起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/3a7c66c9e67916c7cfcd1c457d243e1fdc68c7e8.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/782117"
   },
   {
     "id": "pn_774871",
@@ -1321,21 +1321,6 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/780112"
-  },
-  {
-    "id": "pn_782930",
-    "name": "王俊凯「当&middot;潮汐漫溢」巡回演唱会",
-    "city": "南京",
-    "province": "江苏",
-    "time": "2026.08.29 - 08.30",
-    "venue": "南京梦之蓝青奥体育公园体育馆",
-    "price": "",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/758878f30d4790a163b0ba7591913c29b192bbb7.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/782930"
   },
   {
     "id": "pn_780947",
@@ -2293,7 +2278,7 @@
     "province": "湖南",
     "time": "2026.08.22 19:00",
     "venue": "张家界贺龙体育中心",
-    "price": "¥222起",
+    "price": "¥221起",
     "status": "在售",
     "img": "https://img.piaoniu.com/mtl/default/img/2026/7/22/72K6bmpFx4_.jpg",
     "artist": "",
@@ -2574,21 +2559,6 @@
     "url": "https://www.piaoniu.com/activity/780126"
   },
   {
-    "id": "yp_115742",
-    "name": "周华健2026“少年的奇幻之旅3.0”巡回演唱会-大连站",
-    "city": "大连",
-    "province": "辽宁",
-    "time": "2026.08.14-08.16",
-    "venue": "大连体育中心体育馆",
-    "price": "¥1253起",
-    "status": "在售",
-    "img": "https://statics.ypiao.com/event/eventface-1de55ed8fc2609e8a5f011ccd14acf92?x-oss-process=style/eventface",
-    "artist": "",
-    "category": "演唱会",
-    "source": "有票网",
-    "url": "https://www.ypiao.com/t_115742/"
-  },
-  {
     "id": "pn_778182",
     "name": "李玉刚2026《刚好遇见你》巡回演唱会",
     "city": "大连",
@@ -2792,7 +2762,7 @@
     "province": "香港",
     "time": "2026.09.04-09.06",
     "venue": "亚洲国际博览馆",
-    "price": "¥1104起",
+    "price": "¥1002起",
     "status": "预售",
     "img": "https://statics.ypiao.com/event/eventface-619e9f0d8e65a632b7726f8e5e70bf5f?x-oss-process=style/eventface",
     "artist": "",
