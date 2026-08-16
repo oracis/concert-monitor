@@ -1,6 +1,6 @@
 {
-  "update_time": "2026-08-16 13:39:03",
-  "total": 189,
+  "update_time": "2026-08-16 14:31:38",
+  "total": 190,
   "provinces": {
     "其他": 9,
     "上海": 5,
@@ -31,7 +31,7 @@
     "辽宁": 8,
     "重庆": 4,
     "陕西": 5,
-    "香港": 2,
+    "香港": 3,
     "黑龙江": 1
   },
   "concerts": [
@@ -316,7 +316,7 @@
       "province": "内蒙古",
       "time": "2026.09.11 - 09.13",
       "venue": "鄂尔多斯市体育事业发展中心综合体育馆",
-      "price": "¥797起",
+      "price": "¥796起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/ace5a981f11f8f1941af967ca69ab0f0a1ec36b9.jpg",
       "artist": "",
@@ -515,7 +515,7 @@
       "province": "天津",
       "time": "2026.09.11/09.13",
       "venue": "天津奥林匹克中心体育场",
-      "price": "¥3038起",
+      "price": "¥3037起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/a9bbb32fb52d7d2cfc69f677375b4f8bd16a5530.jpg",
       "artist": "",
@@ -682,7 +682,7 @@
       "province": "山东",
       "time": "2026.10.24 19:00",
       "venue": "临沂奥体公园体育馆",
-      "price": "¥595起",
+      "price": "¥594起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/28c199a7b52a1c6330f7c088da4a0a1707eacd2c.jpg",
       "artist": "",
@@ -763,9 +763,7 @@
       "artist": "",
       "category": "演唱会",
       "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/782687",
-      "url2": "https://www.ypiao.com/t_121205/",
-      "source2": "有票网"
+      "url": "https://www.piaoniu.com/activity/782687"
     },
     {
       "id": "yp_116999",
@@ -1033,7 +1031,7 @@
       "province": "广东",
       "time": "2026.08.21-08.23",
       "venue": "广东奥林匹克中心体育场",
-      "price": "¥708起",
+      "price": "¥711起",
       "status": "在售",
       "img": "https://statics.ypiao.com/event/eventface-5d1465bd6ee313b33049864de0d6b898?x-oss-process=style/eventface",
       "artist": "",
@@ -1603,7 +1601,7 @@
       "province": "江苏",
       "time": "2026.10.04-10.06",
       "venue": "苏州奥体中心体育场",
-      "price": "¥909起",
+      "price": "¥906起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/14fa94cc4a20a3acf465265914f0978eefc94166.jpg",
       "artist": "",
@@ -2327,7 +2325,7 @@
       "province": "湖南",
       "time": "2026.10.17 - 10.18",
       "venue": "长沙贺龙体育场（长沙贺龙体育中心）",
-      "price": "¥688起",
+      "price": "¥686起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/dcb210097a24ddd538c4476e1c2a3c68419ba931.jpg",
       "artist": "",
@@ -2811,7 +2809,7 @@
       "province": "陕西",
       "time": "2026.08.28-08.30",
       "venue": "西安奥体中心体育馆",
-      "price": "¥1708起",
+      "price": "¥1707起",
       "status": "预售",
       "img": "https://statics.ypiao.com/event/eventface-b2086064cfd2d07a6a0d1b035e585e6e?x-oss-process=style/eventface",
       "artist": "",
@@ -2863,6 +2861,21 @@
       "category": "演唱会",
       "source": "有票网",
       "url": "https://www.ypiao.com/t_115085/"
+    },
+    {
+      "id": "yp_120695",
+      "name": "汪苏泷2026「明日世界」世界巡回演唱会-中国香港站",
+      "city": "中国香港",
+      "province": "香港",
+      "time": "2026.09.04-09.06",
+      "venue": "启德体育公园主场馆",
+      "price": "¥849起",
+      "status": "预售",
+      "img": "https://statics.ypiao.com/event/eventface-5908423011cb94cab05dbb13f0cbc806?x-oss-process=style/eventface",
+      "artist": "",
+      "category": "演唱会",
+      "source": "有票网",
+      "url": "https://www.ypiao.com/t_120695/"
     },
     {
       "id": "yp_118503",
