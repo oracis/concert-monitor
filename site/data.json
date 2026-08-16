@@ -1,6 +1,6 @@
 {
-  "update_time": "2026-08-16 23:29:06",
-  "total": 185,
+  "update_time": "2026-08-16 23:49:01",
+  "total": 186,
   "provinces": {
     "其他": 9,
     "上海": 5,
@@ -31,7 +31,7 @@
     "辽宁": 8,
     "重庆": 4,
     "陕西": 3,
-    "香港": 2,
+    "香港": 3,
     "黑龙江": 1
   },
   "concerts": [
@@ -408,7 +408,7 @@
       "province": "台湾",
       "time": "2026.09.11-09.13",
       "venue": "台北小巨蛋",
-      "price": "¥1499起",
+      "price": "¥1486起",
       "status": "预售",
       "img": "https://statics.ypiao.com/event/eventface-8396e8d853ea3918736b6bfa197c4ce7?x-oss-process=style/eventface",
       "artist": "",
@@ -776,9 +776,7 @@
       "artist": "",
       "category": "演唱会",
       "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/782687",
-      "url2": "https://www.ypiao.com/t_121205/",
-      "source2": "有票网"
+      "url": "https://www.piaoniu.com/activity/782687"
     },
     {
       "id": "pn_776779",
@@ -1787,7 +1785,7 @@
       "province": "河南",
       "time": "2026.09.25-09.26",
       "venue": "郑州奥林匹克体育中心体育馆",
-      "price": "¥687起",
+      "price": "¥688起",
       "status": "预售",
       "img": "https://statics.ypiao.com/event/eventface-e2ea9e1f3d2660dc641143e35e7e6767?x-oss-process=style/eventface",
       "artist": "",
@@ -2802,13 +2800,28 @@
       "province": "香港",
       "time": "2026.09.04-09.06",
       "venue": "亚洲国际博览馆",
-      "price": "¥1002起",
+      "price": "¥1145起",
       "status": "预售",
       "img": "https://statics.ypiao.com/event/eventface-619e9f0d8e65a632b7726f8e5e70bf5f?x-oss-process=style/eventface",
       "artist": "",
       "category": "演唱会",
       "source": "有票网",
       "url": "https://www.ypiao.com/t_115085/"
+    },
+    {
+      "id": "yp_120695",
+      "name": "汪苏泷2026「明日世界」世界巡回演唱会-中国香港站",
+      "city": "中国香港",
+      "province": "香港",
+      "time": "2026.09.04-09.06",
+      "venue": "启德体育公园主场馆",
+      "price": "¥748起",
+      "status": "预售",
+      "img": "https://statics.ypiao.com/event/eventface-5908423011cb94cab05dbb13f0cbc806?x-oss-process=style/eventface",
+      "artist": "",
+      "category": "演唱会",
+      "source": "有票网",
+      "url": "https://www.ypiao.com/t_120695/"
     },
     {
       "id": "yp_118503",
