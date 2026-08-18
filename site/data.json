@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-08-18 17:36:50",
+  "update_time": "2026-08-18 18:50:29",
   "total": 188,
   "provinces": {
     "其他": 8,
@@ -9,7 +9,7 @@
     "北京": 5,
     "台湾": 1,
     "吉林": 1,
-    "四川": 4,
+    "四川": 5,
     "天津": 3,
     "宁夏": 3,
     "安徽": 5,
@@ -32,7 +32,7 @@
     "辽宁": 8,
     "重庆": 4,
     "陕西": 3,
-    "香港": 3,
+    "香港": 2,
     "黑龙江": 2
   },
   "concerts": [
@@ -416,6 +416,21 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/781852"
+    },
+    {
+      "id": "yp_118867",
+      "name": "2026张韶涵玩家巡回演唱会-成都站",
+      "city": "成都",
+      "province": "四川",
+      "time": "2026.08.22-08.23",
+      "venue": "东安湖体育公园主体育场",
+      "price": "¥628起",
+      "status": "在售",
+      "img": "https://statics.ypiao.com/event/eventface-d58c80b85f67436593913026df23c87b?x-oss-process=style/eventface",
+      "artist": "",
+      "category": "演唱会",
+      "source": "有票网",
+      "url": "https://www.ypiao.com/t_118867/"
     },
     {
       "id": "pn_766594",
@@ -961,7 +976,7 @@
       "province": "广东",
       "time": "2026.09.04 - 09.06",
       "venue": "佛山国际体育文化演艺中心",
-      "price": "¥1527起",
+      "price": "¥1526起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/b0995eb1b425eb95158cd68be05998ef7273fa02.jpg",
       "artist": "",
@@ -1081,7 +1096,7 @@
       "province": "广东",
       "time": "2026.10.31 19:30",
       "venue": "汕头体育中心体育场",
-      "price": "¥524起",
+      "price": "¥523起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/2393cbccdd59700dc3d75ffb3a613f6ff02582c3.jpg",
       "artist": "",
@@ -2711,7 +2726,7 @@
       "province": "重庆",
       "time": "2026.08.22 - 08.23",
       "venue": "重庆奥体中心体育场",
-      "price": "¥977起",
+      "price": "¥974起",
       "status": "在售",
       "img": "https://img.piaoniu.com/poster/38eb72091bf634dc1cd1b415453ea169a476e1ae.jpg",
       "artist": "",
@@ -2823,21 +2838,6 @@
       "category": "演唱会",
       "source": "有票网",
       "url": "https://www.ypiao.com/t_115085/"
-    },
-    {
-      "id": "yp_120695",
-      "name": "汪苏泷2026「明日世界」世界巡回演唱会-中国香港站",
-      "city": "中国香港",
-      "province": "香港",
-      "time": "2026.09.04-09.06",
-      "venue": "启德体育公园主场馆",
-      "price": "¥488起",
-      "status": "预售",
-      "img": "https://statics.ypiao.com/event/eventface-5908423011cb94cab05dbb13f0cbc806?x-oss-process=style/eventface",
-      "artist": "",
-      "category": "演唱会",
-      "source": "有票网",
-      "url": "https://www.ypiao.com/t_120695/"
     },
     {
       "id": "yp_118503",
