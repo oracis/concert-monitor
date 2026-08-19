@@ -1,8 +1,8 @@
 {
-  "update_time": "2026-08-19 23:31:36",
-  "total": 191,
+  "update_time": "2026-08-19 23:53:13",
+  "total": 190,
   "provinces": {
-    "其他": 5,
+    "其他": 4,
     "上海": 5,
     "云南": 2,
     "内蒙古": 2,
@@ -36,21 +36,6 @@
     "黑龙江": 3
   },
   "concerts": [
-    {
-      "id": "yp_121346",
-      "name": "Dearest Dear Jane Live 2026 in 吉隆坡",
-      "city": "吉隆坡",
-      "province": "其他",
-      "time": "2026.09.13 18:00",
-      "venue": "Zepp Kuala Lumpur",
-      "price": "¥3000起",
-      "status": "预售",
-      "img": "https://statics.ypiao.com/event/eventface-b8c798e91cdee9d4e93de07d747e7db8?x-oss-process=style/eventface",
-      "artist": "",
-      "category": "演唱会",
-      "source": "有票网",
-      "url": "https://www.ypiao.com/t_121346/"
-    },
     {
       "id": "yp_117785",
       "name": "任贤齐｜齐迹・在路上 2026–2027 世界巡回演唱会-吉隆坡站",
@@ -332,7 +317,7 @@
       "province": "台湾",
       "time": "2026.09.11-09.13",
       "venue": "台北小巨蛋",
-      "price": "¥1275起",
+      "price": "¥1281起",
       "status": "预售",
       "img": "https://statics.ypiao.com/event/eventface-8396e8d853ea3918736b6bfa197c4ce7?x-oss-process=style/eventface",
       "artist": "",
@@ -1512,7 +1497,7 @@
       "province": "江苏",
       "time": "2026.08.22-08.23",
       "venue": "苏州奥林匹克体育中心体育馆",
-      "price": "¥1823起",
+      "price": "¥1013起",
       "status": "在售",
       "img": "https://statics.ypiao.com/event/eventface-ca4409ad11d2c616ae9acbb7fe126b6c?x-oss-process=style/eventface",
       "artist": "",
@@ -1799,7 +1784,7 @@
       "province": "河南",
       "time": "2026.09.25-09.26",
       "venue": "郑州奥林匹克体育中心体育馆",
-      "price": "¥2706起",
+      "price": "¥687起",
       "status": "预售",
       "img": "https://statics.ypiao.com/event/eventface-e2ea9e1f3d2660dc641143e35e7e6767?x-oss-process=style/eventface",
       "artist": "",
@@ -1925,7 +1910,9 @@
       "artist": "",
       "category": "演唱会",
       "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/776367"
+      "url": "https://www.piaoniu.com/activity/776367",
+      "url2": "https://www.ypiao.com/t_116923/",
+      "source2": "有票网"
     },
     {
       "id": "pn_779995",
@@ -2840,7 +2827,7 @@
       "province": "香港",
       "time": "2026.09.04-09.06",
       "venue": "亚洲国际博览馆",
-      "price": "¥1024起",
+      "price": "¥1020起",
       "status": "预售",
       "img": "https://statics.ypiao.com/event/eventface-619e9f0d8e65a632b7726f8e5e70bf5f?x-oss-process=style/eventface",
       "artist": "",
