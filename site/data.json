@@ -1,8 +1,8 @@
 {
-  "update_time": "2026-08-19 20:37:59",
+  "update_time": "2026-08-19 21:32:35",
   "total": 190,
   "provinces": {
-    "其他": 6,
+    "其他": 5,
     "上海": 5,
     "云南": 2,
     "内蒙古": 2,
@@ -15,7 +15,7 @@
     "安徽": 5,
     "山东": 8,
     "山西": 4,
-    "广东": 20,
+    "广东": 21,
     "广西": 3,
     "新疆": 2,
     "江苏": 24,
@@ -96,21 +96,6 @@
       "category": "演唱会",
       "source": "有票网",
       "url": "https://www.ypiao.com/t_115508/"
-    },
-    {
-      "id": "yp_117119",
-      "name": "威肯The Weeknd: After Hours Til Dawn Tour巡回演唱会-新加坡站",
-      "city": "新加坡",
-      "province": "其他",
-      "time": "2026.10.02- 10.03 20:00",
-      "venue": "新加坡国家体育场Singapore National Stadium",
-      "price": "¥2002起",
-      "status": "预售",
-      "img": "https://statics.ypiao.com/event/eventface-e5fa6a8101687b1afdfba62da6f34705?x-oss-process=style/eventface",
-      "artist": "",
-      "category": "演唱会",
-      "source": "有票网",
-      "url": "https://www.ypiao.com/t_117119/"
     },
     {
       "id": "yp_121330",
@@ -1014,6 +999,21 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/778260"
+    },
+    {
+      "id": "yp_119869",
+      "name": "门尼「印·IN」2026巡回演唱会广州站",
+      "city": "广州",
+      "province": "广东",
+      "time": "2026.08.22-08.23",
+      "venue": "广州亚运城综合体育馆",
+      "price": "¥796起",
+      "status": "在售",
+      "img": "https://statics.ypiao.com/event/eventface-b42e91be87b9a383f4011796228adc77?x-oss-process=style/eventface",
+      "artist": "",
+      "category": "演唱会",
+      "source": "有票网",
+      "url": "https://www.ypiao.com/t_119869/"
     },
     {
       "id": "pn_779916",
