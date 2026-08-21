@@ -1,6 +1,6 @@
 {
-  "update_time": "2026-08-21 19:33:36",
-  "total": 167,
+  "update_time": "2026-08-21 19:52:59",
+  "total": 166,
   "provinces": {
     "上海": 4,
     "云南": 3,
@@ -19,7 +19,7 @@
     "江西": 6,
     "河北": 2,
     "河南": 7,
-    "浙江": 21,
+    "浙江": 20,
     "海南": 1,
     "湖北": 6,
     "湖南": 5,
@@ -1876,21 +1876,6 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/780829"
-    },
-    {
-      "id": "pn_773249",
-      "name": "黄丽玲A-Lin 歌 迹 Journey世界巡回演唱会",
-      "city": "绍兴",
-      "province": "浙江",
-      "time": "2026.09.12 - 09.13",
-      "venue": "西施篮球中心",
-      "price": "",
-      "status": "在售",
-      "img": "https://img.piaoniu.com/poster/94005bd551671fa7fc02f5e0c61281294ca8565d.jpg",
-      "artist": "",
-      "category": "演唱会",
-      "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/773249"
     },
     {
       "id": "pn_783319",
