@@ -1,6 +1,6 @@
 {
-  "update_time": "2026-08-23 19:49:27",
-  "total": 150,
+  "update_time": "2026-08-23 20:32:35",
+  "total": 152,
   "provinces": {
     "上海": 4,
     "内蒙古": 2,
@@ -17,7 +17,7 @@
     "江西": 6,
     "河北": 3,
     "河南": 5,
-    "浙江": 18,
+    "浙江": 20,
     "湖北": 5,
     "湖南": 4,
     "甘肃": 1,
@@ -1752,6 +1752,36 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/773249"
+    },
+    {
+      "id": "pn_783522",
+      "name": "光良2026&ldquo;不会分离&middot;今晚我不孤独3.0&rdquo;巡回演唱会",
+      "city": "绍兴",
+      "province": "浙江",
+      "time": "2026.10.31 19:30",
+      "venue": "绍兴奥体中心体育馆",
+      "price": "¥530起",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/mtl/default/img/2026/8/8/caRRSiT3dE_.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/783522"
+    },
+    {
+      "id": "pn_783319",
+      "name": "任贤齐《齐迹2026》巡回演唱会",
+      "city": "衢州",
+      "province": "浙江",
+      "time": "2026.10.03 19:00",
+      "venue": "衢州体育中心体育馆",
+      "price": "¥616起",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/mtl/default/img/2026/8/10/MKRTrSw3TF_.png",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/783319"
     },
     {
       "id": "pn_779811",
