@@ -1,9 +1,9 @@
 {
-  "update_time": "2026-08-23 21:53:04",
-  "total": 152,
+  "update_time": "2026-08-23 22:31:07",
+  "total": 155,
   "provinces": {
     "上海": 4,
-    "内蒙古": 2,
+    "内蒙古": 3,
     "北京": 5,
     "四川": 5,
     "天津": 3,
@@ -24,7 +24,7 @@
     "福建": 6,
     "贵州": 3,
     "辽宁": 8,
-    "重庆": 4,
+    "重庆": 6,
     "陕西": 4
   },
   "concerts": [
@@ -89,6 +89,36 @@
       "url": "https://www.piaoniu.com/activity/776461"
     },
     {
+      "id": "pn_783388",
+      "name": "小沈阳2026&ldquo;不差面儿&rdquo;巡回演唱会",
+      "city": "包头",
+      "province": "内蒙古",
+      "time": "2026.09.19 19:30",
+      "venue": "包头奥林匹克体育中心体育场",
+      "price": "¥350起",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/mtl/default/img/2026/8/8/tb7skFFnnE_.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/783388"
+    },
+    {
+      "id": "pn_779399",
+      "name": "周华健 2026&ldquo;少年的奇幻之旅 3.0&rdquo;演唱会",
+      "city": "呼和浩特",
+      "province": "内蒙古",
+      "time": "2026.08.29 20:00",
+      "venue": "国家北方足球训练基地综合馆",
+      "price": "¥752起",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/poster/c6d390a78390e3628642fb45a8d1dc3eb38c05c1.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/779399"
+    },
+    {
       "id": "pn_775738",
       "name": "凤凰传奇2026「吉祥如意」巡回演唱会",
       "city": "呼和浩特",
@@ -102,21 +132,6 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/775738"
-    },
-    {
-      "id": "pn_782237",
-      "name": "李宗盛2026【有歌之年】巡回演唱会",
-      "city": "鄂尔多斯",
-      "province": "内蒙古",
-      "time": "2026.09.11 - 09.13",
-      "venue": "鄂尔多斯市体育事业发展中心综合体育馆",
-      "price": "¥772起",
-      "status": "在售",
-      "img": "https://img.piaoniu.com/poster/ace5a981f11f8f1941af967ca69ab0f0a1ec36b9.jpg",
-      "artist": "",
-      "category": "演唱会",
-      "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/782237"
     },
     {
       "id": "pn_762400",
@@ -2219,6 +2234,21 @@
       "url": "https://www.piaoniu.com/activity/780639"
     },
     {
+      "id": "pn_779389",
+      "name": "王力宏「最好的地方II」世界巡回演唱会",
+      "city": "重庆",
+      "province": "重庆",
+      "time": "2026.09.12 - 09.13",
+      "venue": "重庆奥体中心体育场",
+      "price": "¥1031起",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/poster/d726208b1dee644f49dd432b72ed00a62ee35f41.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/779389"
+    },
+    {
       "id": "pn_780528",
       "name": "谢霆锋EvolutionNicLive进化演唱会",
       "city": "重庆",
@@ -2247,6 +2277,21 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/782066"
+    },
+    {
+      "id": "pn_780636",
+      "name": "王嘉尔JACKSON WANG MAGICMAN 2 WORLD TOUR演唱会",
+      "city": "重庆",
+      "province": "重庆",
+      "time": "2026.11.28 19:30",
+      "venue": "待定",
+      "price": "",
+      "status": "在售",
+      "img": "https://img.piaoniu.com/poster/311f8b0eba767277c154f2e8943d232c783b7b60.jpg",
+      "artist": "",
+      "category": "演唱会",
+      "source": "票牛网",
+      "url": "https://www.piaoniu.com/activity/780636"
     },
     {
       "id": "pn_782742",
