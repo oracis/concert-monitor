@@ -240,36 +240,6 @@
     "url": "https://www.piaoniu.com/activity/771530"
   },
   {
-    "id": "pn_767725",
-    "name": "王力宏2026「最好的地方II」世界巡回演唱会",
-    "city": "天津",
-    "province": "天津",
-    "time": "2026.08.29-08.30",
-    "venue": "天津奥林匹克中心体育场",
-    "price": "¥1265起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/d4578c1e66343fec01d789ea8d857290c63afe0e.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/767725"
-  },
-  {
-    "id": "pn_580415",
-    "name": "孙燕姿《就在日落以后》巡回演唱会",
-    "city": "天津",
-    "province": "天津",
-    "time": "2026.09.11/09.13",
-    "venue": "天津奥林匹克中心体育场",
-    "price": "¥2992起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/a9bbb32fb52d7d2cfc69f677375b4f8bd16a5530.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/580415"
-  },
-  {
     "id": "pn_776921",
     "name": "许嵩2026「安泊猜想」巡回演唱会",
     "city": "天津",
@@ -525,36 +495,6 @@
     "url": "https://www.piaoniu.com/activity/777896"
   },
   {
-    "id": "pn_776158",
-    "name": "谢霆锋EvolutionNicLive进化演唱会",
-    "city": "太原",
-    "province": "山西",
-    "time": "2026.08.29 19:30",
-    "venue": "山西体育中心体育场",
-    "price": "¥700起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/6ef979e5217b4cbfca06fcdb3edcfb9752d03f5f.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/776158"
-  },
-  {
-    "id": "pn_770932",
-    "name": "Ella陈嘉桦2026It's Me艾拉主意巡回演唱会",
-    "city": "太原",
-    "province": "山西",
-    "time": "2026.09.12 19:30",
-    "venue": "山西体育中心汾酒体育馆",
-    "price": "¥638起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/b2340e00daf04fd4263afffae4eded31d9b3ae3a.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/770932"
-  },
-  {
     "id": "pn_768530",
     "name": "任贤齐《齐迹2026》巡回演唱会",
     "city": "太原",
@@ -568,36 +508,6 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/768530"
-  },
-  {
-    "id": "pn_771850",
-    "name": "张韶涵2026「玩家」巡回演唱会",
-    "city": "太原",
-    "province": "山西",
-    "time": "2026.09.26",
-    "venue": "山西体育中心体育场",
-    "price": "¥451起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/a4a18bf35aa86e2617780be0ad7499829383b29d.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/771850"
-  },
-  {
-    "id": "pn_781783",
-    "name": "音浪巅峰超级演唱会",
-    "city": "太原",
-    "province": "山西",
-    "time": "2026.10.17 19:30",
-    "venue": "山西体育中心体育场",
-    "price": "¥647起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/1bc747ffc7d0f26fead78ca60d54d85e075cd78c.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/781783"
   },
   {
     "id": "pn_780229",
@@ -838,21 +748,6 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/781836"
-  },
-  {
-    "id": "pn_780844",
-    "name": "艾志恒Asen 2026 在雨后醒来 巡回演唱会",
-    "city": "深圳",
-    "province": "广东",
-    "time": "2026.08.22-23",
-    "venue": "深圳大运中心体育馆",
-    "price": "¥1080起",
-    "status": "已结束",
-    "img": "https://img.piaoniu.com/mtl/default/img/2026/7/8/HSCaAhBEim_.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/780844"
   },
   {
     "id": "pn_776957",
@@ -1185,6 +1080,21 @@
     "url": "https://www.piaoniu.com/activity/782729"
   },
   {
+    "id": "pn_782518",
+    "name": "&ldquo;廿念不忘&rdquo;青曲社苗阜王声合作20周年巡演&middot;扬州站",
+    "city": "扬州",
+    "province": "江苏",
+    "time": "",
+    "venue": "",
+    "price": "¥172起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/8556a7b3b7b0d5ad01c702ead15a35dd10d10c50.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/782518"
+  },
+  {
     "id": "pn_782611",
     "name": "荷乡味道&middot;2026宝应群星演唱会",
     "city": "扬州",
@@ -1198,6 +1108,21 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/782611"
+  },
+  {
+    "id": "pn_782376",
+    "name": "潮流之声超级LIVE演唱会",
+    "city": "扬州",
+    "province": "江苏",
+    "time": "2026.09.13 19:30",
+    "venue": "扬州体育公园体育场",
+    "price": "¥330起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/mtl/default/img/2026/7/27/HmFikXXN7w_.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/782376"
   },
   {
     "id": "pn_766426",
