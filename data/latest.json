@@ -345,21 +345,6 @@
     "url": "https://www.piaoniu.com/activity/768657"
   },
   {
-    "id": "pn_784581",
-    "name": "2026「一诺千年 」摇滚之夜超级演唱会",
-    "city": "银川",
-    "province": "宁夏",
-    "time": "2026.09.27 19:30",
-    "venue": "石嘴山体育中心体育场",
-    "price": "¥284起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/63864974f7f99d8534a4a2745f6657a5800f7354.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/784581"
-  },
-  {
     "id": "pn_784272",
     "name": "老狼「纯真年代」巡回演唱会",
     "city": "银川",
@@ -900,21 +885,6 @@
     "url": "https://www.piaoniu.com/activity/784262"
   },
   {
-    "id": "pn_782179",
-    "name": "超级音雄巨星LIVE演唱会",
-    "city": "常州",
-    "province": "江苏",
-    "time": "2026.09.27 19:30",
-    "venue": "常州奥体中心体育场",
-    "price": "¥320起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/mtl/default/img/2026/7/18/5tbifmZs8J_.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/782179"
-  },
-  {
     "id": "pn_784226",
     "name": "喜力&reg;星银&reg;&middot;第十三届常州太湖湾音乐节2026",
     "city": "常州",
@@ -928,21 +898,6 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/784226"
-  },
-  {
-    "id": "pn_785290",
-    "name": "2026gapday音乐节",
-    "city": "常州",
-    "province": "江苏",
-    "time": "2026.10.17 - 10.18",
-    "venue": "常州新龙生态林",
-    "price": "¥790起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/d829a0cac09c116e2e7937210e8f4c15b0d36f8a.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/785290"
   },
   {
     "id": "pn_781619",
@@ -1476,7 +1431,7 @@
     "province": "浙江",
     "time": "2026.09.19 19:00",
     "venue": "西施篮球中心",
-    "price": "¥263起",
+    "price": "¥262起",
     "status": "在售",
     "img": "https://img.piaoniu.com/mtl/default/img/2026/6/1/BQwkX8ce66_.jpg",
     "artist": "",
@@ -1536,7 +1491,7 @@
     "province": "海南",
     "time": "2026.09.19 19:30",
     "venue": "海口市五源河体育中心体育馆",
-    "price": "¥788起",
+    "price": "¥777起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/75ad5dc4030843e3e6e8360b4a4a0ea995623780.jpg",
     "artist": "",
@@ -1558,6 +1513,21 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/785324"
+  },
+  {
+    "id": "pn_781063",
+    "name": "英国大秀&middot;金刚王国&middot;巨兽觉醒2026世界巡演&middot;武汉站",
+    "city": "武汉",
+    "province": "湖北",
+    "time": "",
+    "venue": "",
+    "price": "¥172起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/d5f20edac13a77ed4ed68293698416afddc5a4a4.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/781063"
   },
   {
     "id": "pn_778290",
@@ -1665,21 +1635,6 @@
     "url": "https://www.piaoniu.com/activity/780691"
   },
   {
-    "id": "pn_783436",
-    "name": "GAI周延2026 「REAL G」巡回演唱会",
-    "city": "长沙",
-    "province": "湖南",
-    "time": "2026.09.30 19:30",
-    "venue": "长沙贺龙体育场（长沙贺龙体育中心）",
-    "price": "¥656起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/9f8028ef8164b3fe9bfe2d2c7505ca47916ecda1.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/783436"
-  },
-  {
     "id": "pn_777090",
     "name": "周深2026「深深的」巡回演唱会",
     "city": "长沙",
@@ -1708,21 +1663,6 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/774654"
-  },
-  {
-    "id": "pn_777230",
-    "name": "杨丞琳《房间里的大象》世界巡回演唱会",
-    "city": "长沙",
-    "province": "湖南",
-    "time": "2026.11.14 19:30",
-    "venue": "湖南国际会展中心芒果馆",
-    "price": "¥609起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/66e43aca06abafd152c0b94b29b85a1491e49251.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/777230"
   },
   {
     "id": "pn_785362",
@@ -2218,6 +2158,21 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/782939"
+  },
+  {
+    "id": "pn_784581",
+    "name": "2026「一诺千年 」摇滚之夜超级演唱会",
+    "city": "西宁",
+    "province": "青海",
+    "time": "2026.09.27 19:30",
+    "venue": "石嘴山体育中心体育场",
+    "price": "¥284起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/63864974f7f99d8534a4a2745f6657a5800f7354.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/784581"
   },
   {
     "id": "pn_778048",
