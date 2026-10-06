@@ -156,7 +156,7 @@
     "province": "北京",
     "time": "2026.10.30-11.08",
     "venue": "国家体育场（鸟巢）",
-    "price": "¥668起",
+    "price": "¥664起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/fe8f9fc11ecd07757dcef5533c47f55565e2bd5c.jpg",
     "artist": "",
@@ -510,6 +510,21 @@
     "url": "https://www.piaoniu.com/activity/778694"
   },
   {
+    "id": "pn_781783",
+    "name": "音浪巅峰超级演唱会",
+    "city": "太原",
+    "province": "山西",
+    "time": "2026.10.17 19:30",
+    "venue": "山西体育中心体育场",
+    "price": "¥756起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/1bc747ffc7d0f26fead78ca60d54d85e075cd78c.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/781783"
+  },
+  {
     "id": "pn_786731",
     "name": "声声不息&middot;港乐经典金曲演唱会 佛山站",
     "city": "佛山",
@@ -735,21 +750,6 @@
     "url": "https://www.piaoniu.com/activity/786700"
   },
   {
-    "id": "pn_784074",
-    "name": "任贤齐《齐迹2026》巡回演唱会",
-    "city": "湛江",
-    "province": "广东",
-    "time": "2026.10.17- 10.18",
-    "venue": "湛江奥林匹克体育中心综合训练馆",
-    "price": "¥626起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/d4987e95a9551d10d07c9ed6e60213a8cfbe9c09.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/784074"
-  },
-  {
     "id": "pn_786459",
     "name": "许嵩2026「安泊猜想」巡回演唱会",
     "city": "南宁",
@@ -793,21 +793,6 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/785701"
-  },
-  {
-    "id": "pn_784962",
-    "name": "潮音风暴超级演唱会-柳州站(返场)",
-    "city": "柳州",
-    "province": "广西",
-    "time": "2026.11.14 19:30",
-    "venue": "柳州体育中心体育场",
-    "price": "¥336起",
-    "status": "在售",
-    "img": "https://img.piaoniu.com/poster/e5705f5a3a3c07ee53897c8abcf63405340dd015.jpg",
-    "artist": "",
-    "category": "演唱会",
-    "source": "票牛网",
-    "url": "https://www.piaoniu.com/activity/784962"
   },
   {
     "id": "pn_784452",
@@ -936,7 +921,7 @@
     "province": "江苏",
     "time": "2026.11.07 - 11.08",
     "venue": "常州奥体中心体育场",
-    "price": "¥792起",
+    "price": "¥791起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/3e555675b849d9bef112f42df37bb79ad0edc2e5.jpg",
     "artist": "",
@@ -1131,7 +1116,7 @@
     "province": "江苏",
     "time": "2026.11.07 19:00",
     "venue": "镇江体育会展中心体育场",
-    "price": "¥942起",
+    "price": "¥938起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/4a5dd898566bceac204bd65cf149651ac53b4c58.jpg",
     "artist": "",
@@ -1461,7 +1446,7 @@
     "province": "浙江",
     "time": "2026.11.14-11.15",
     "venue": "杭州奥体中心体育场",
-    "price": "¥682起",
+    "price": "¥681起",
     "status": "在售",
     "img": "https://img.piaoniu.com/poster/668e72dd69b7cefb1f88815a3c3b1a68bbbfa0a9.jpg",
     "artist": "",
@@ -2188,6 +2173,21 @@
     "category": "演唱会",
     "source": "票牛网",
     "url": "https://www.piaoniu.com/activity/782294"
+  },
+  {
+    "id": "pn_785178",
+    "name": "《亲密敌人》李波单口喜剧巡演&middot;西安站",
+    "city": "西安",
+    "province": "陕西",
+    "time": "",
+    "venue": "",
+    "price": "¥168起",
+    "status": "在售",
+    "img": "https://img.piaoniu.com/poster/52f13e80de88039fe999c40f8b506d01493646ba.jpg",
+    "artist": "",
+    "category": "演唱会",
+    "source": "票牛网",
+    "url": "https://www.piaoniu.com/activity/785178"
   },
   {
     "id": "pn_783426",
