@@ -1,6 +1,6 @@
 {
-  "update_time": "2026-10-17 19:14:42",
-  "total": 145,
+  "update_time": "2026-10-17 21:42:22",
+  "total": 142,
   "provinces": {
     "上海": 3,
     "云南": 3,
@@ -24,7 +24,7 @@
     "甘肃": 3,
     "福建": 9,
     "贵州": 4,
-    "辽宁": 7,
+    "辽宁": 4,
     "重庆": 5,
     "陕西": 6,
     "黑龙江": 1
@@ -847,7 +847,7 @@
       "province": "江苏",
       "time": "2026.11.28 - 11.29",
       "venue": "南京梦之蓝青奥体育公园体育馆",
-      "price": "¥628起",
+      "price": "¥572起",
       "status": "在售",
       "img": "https://img.piaoniu.com/mtl/default/img/2026/8/31/87QTC4s8C7_.jpg",
       "artist": "",
@@ -1921,21 +1921,6 @@
       "url": "https://www.piaoniu.com/activity/785634"
     },
     {
-      "id": "pn_785181",
-      "name": "《亲密敌人》李波单口喜剧巡演&middot;大连站",
-      "city": "大连",
-      "province": "辽宁",
-      "time": "",
-      "venue": "",
-      "price": "",
-      "status": "已售罄",
-      "img": "https://img.piaoniu.com/poster/3e3e548fbd8b701f71e30fb1e0dd33c48f99c9f3.jpg",
-      "artist": "",
-      "category": "演唱会",
-      "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/785181"
-    },
-    {
       "id": "pn_782141",
       "name": "刘若英2026「飞行日」巡回演唱会",
       "city": "大连",
@@ -1979,36 +1964,6 @@
       "category": "演唱会",
       "source": "票牛网",
       "url": "https://www.piaoniu.com/activity/661982"
-    },
-    {
-      "id": "pn_775093",
-      "name": "周传雄2026「念念不忘&middot;再遇见」巡回演唱会",
-      "city": "大连",
-      "province": "辽宁",
-      "time": "演出筹备中，时间待定",
-      "venue": "场馆待定",
-      "price": "",
-      "status": "在售",
-      "img": "https://img.piaoniu.com/poster/c9e9903cc86844621fa5bf2d933d0e92d08fd26d.jpg",
-      "artist": "",
-      "category": "演唱会",
-      "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/775093"
-    },
-    {
-      "id": "pn_787177",
-      "name": "魔力sir家族演唱会",
-      "city": "沈阳",
-      "province": "辽宁",
-      "time": "2026.11.14 19:00",
-      "venue": "三生制药体育馆（原辽宁体育馆）",
-      "price": "¥480起",
-      "status": "在售",
-      "img": "https://img.piaoniu.com/mtl/default/img/2026/9/24/5yQsmrK8cx_.png",
-      "artist": "",
-      "category": "演唱会",
-      "source": "票牛网",
-      "url": "https://www.piaoniu.com/activity/787177"
     },
     {
       "id": "pn_774595",
